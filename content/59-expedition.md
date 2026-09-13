@@ -31,6 +31,8 @@ updated: 2026-09-13
 
 Start Warrior: its early levels need a third of Ranger's Might. The gap closes by difficulty 30.
 
+<div data-widget="gate-check" data-gate="expedition"></div>
+
 ## Expedition Shop
 
 Best buy is **1,000 gearstones for 300 medals** (limit 10). UR Omni Shards and Raven Essence next; universal awakening fragments are 300 but lower priority.

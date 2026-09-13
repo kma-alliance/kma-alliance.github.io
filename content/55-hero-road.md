@@ -25,6 +25,8 @@ updated: 2026-09-13
 
 Bosses also drop resources and hero XP. The wiki text says nine difficulties; its table lists eleven, so two were probably added later.
 
+<div data-widget="gate-check" data-gate="heroroad"></div>
+
 ## Mechanics
 
 2 boss attempts per difficulty. 5 free help calls per difficulty (20 total). Extra helps cost 50 diamonds each for the first five, then 100.

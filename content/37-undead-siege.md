@@ -18,6 +18,8 @@ updated: 2026-09-13
 | Eligible | 48+ hours in the alliance, online in the last 72 hours, Sanctuary at the stage's level |
 | Shields | **Ignored.** Blight attacks go straight through |
 
+<div data-widget="gate-check" data-gate="siege"></div>
+
 ## How it works
 
 The Death Prison appears on the map and sends 20 waves at every participating member's territory. Your garrison fights automatically; there is nothing to click once it starts. A breached territory is skipped for the rest of the run.
