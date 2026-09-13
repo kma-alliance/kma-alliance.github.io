@@ -42,10 +42,25 @@
     try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch (e) {}
     document.dispatchEvent(new CustomEvent("kma:profile"));
   }
+  // The profile stores the server's first day as a date, but players only ever type the
+  // day number the game shows. Both conversions use the server clock, so "day 84" rolls
+  // to 85 at the in-game reset rather than at the player's midnight.
   function serverDay(p) {
     if (!p.start) return null;
     var t = Date.parse(p.start + "T00:00:00Z"); if (isNaN(t)) return null;
-    return Math.max(1, Math.floor((Date.now() - t) / 864e5) + 1);
+    return Math.max(1, Math.floor((D.serverNow().getTime() - t) / 864e5) + 1);
+  }
+  function startFromDay(day) {
+    day = parseInt(day, 10);
+    if (!day || day < 1) return "";
+    var s = D.serverNow();
+    var d = new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth(), s.getUTCDate()) - (day - 1) * 864e5);
+    return d.toISOString().slice(0, 10);
+  }
+  var DAY_HINT = "Open the Monument building (unlocks at Sanctuary 9) and look for your server's age in days. Not sure? Ask an officer. Close is fine.";
+  function dayField(id, day) {
+    return fld("Server day", '<input id="' + id + '" type="number" inputmode="numeric" min="1" max="5000" placeholder="e.g. 84" value="' + (day || "") + '">' +
+      '<span class="hint">' + DAY_HINT + (day ? " Counts up by itself each day." : "") + "</span>");
   }
   function onProfile(el, fn) {
     var h = function () { if (document.body.contains(el)) fn(); else document.removeEventListener("kma:profile", h); };
@@ -59,7 +74,7 @@
       h += '<div class="tool-head"><div class="tool-title">Your account</div><div class="tool-sub">Saved in this browser only. Nothing is uploaded, and officers cannot see it. Every tool and several guides use these numbers.</div></div>';
       h += '<div class="fields">';
       h += fld("Server number", '<input id="pf-server" type="text" inputmode="numeric" placeholder="e.g. 218" value="' + esc(p.server) + '">');
-      h += fld("Server start date", '<input id="pf-start" type="date" value="' + esc(p.start) + '">' + (day ? '<span class="hint">day ' + day + '</span>' : '<span class="hint">unlocks a server timeline</span>'));
+      h += dayField("pf-day", day);
       h += fld("Sanctuary level", '<input id="pf-sanctuary" type="number" min="1" max="30" value="' + p.sanctuary + '">');
       h += fld("Training Grounds", '<input id="pf-tg" type="number" min="1" max="30" value="' + p.tg + '"><span class="hint">troops: ' + D.tierFor(p.tg) + '</span>');
       h += fld("Research Lab", '<input id="pf-lab" type="number" min="0" max="30" value="' + p.lab + '">');
@@ -73,7 +88,7 @@
       el.innerHTML = h;
       $("#pf-save", el).addEventListener("click", function () {
         setProfile({
-          server: $("#pf-server", el).value.trim(), start: $("#pf-start", el).value,
+          server: $("#pf-server", el).value.trim(), start: startFromDay($("#pf-day", el).value),
           sanctuary: +$("#pf-sanctuary", el).value || 1, tg: +$("#pf-tg", el).value || 1, lab: +$("#pf-lab", el).value || 0,
           might: +$("#pf-might", el).value || 0, vip: +$("#pf-vip", el).value || 1, faction: $("#pf-faction", el).value
         });
@@ -189,7 +204,7 @@
           h += '<div class="dash-big">In ' + (upcoming[0] - day) + ' day' + (upcoming[0] - day === 1 ? "" : "s") + '</div><div class="dash-todo">' + esc(upcoming[1]) + '</div>' +
             '<div class="dash-extra">Server day ' + upcoming[0] + ' · you are on ' + day + '</div>';
         } else {
-          h += '<div class="dash-big">' + (day ? "Day " + day : "Set a date") + '</div><div class="dash-todo">' + (day ? "Past every dated unlock." : "Add your server start date to fill this in.") + '</div>';
+          h += '<div class="dash-big">' + (day ? "Day " + day : "Add your server day") + '</div><div class="dash-todo">' + (day ? "Past every dated unlock." : "Enter your server day on Your account to fill this in.") + '</div>';
         }
         h += '<a class="dash-link" href="#/server-timeline">Full timeline</a></div>';
       } else {
@@ -517,8 +532,8 @@
     function draw() {
       var p = getProfile(), day = serverDay(p);
       var h = '<div class="tool"><div class="tool-head"><div class="tool-title">Server timeline</div><div class="tool-sub">' +
-        (day ? "Server " + (p.server ? esc(p.server) : "") + " is on day " + day + "." : "Set your server start date on the account page and this fills in with real dates.") + '</div></div>';
-      if (!day) h += '<div class="fields">' + fld("Server start date", '<input id="tl-start" type="date" value=""><span class="hint">saved to your account</span>') + "</div>";
+        (day ? "Server " + (p.server ? esc(p.server) : "") + " is on day " + day + "." : "Enter your server day below and this fills in with real dates.") + '</div></div>';
+      if (!day) h += '<div class="fields">' + dayField("tl-day", null) + '</div><div class="tool-actions"><button class="btn primary" id="tl-save">Save server day</button></div>';
       var era = day ? Math.floor((day - 1) / 56) + 1 : null, eraDay = day ? ((day - 1) % 56) + 1 : null;
       if (day) {
         h += '<div class="cards3">';
@@ -535,8 +550,11 @@
       });
       h += "</div></div>";
       el.innerHTML = h;
-      var s = $("#tl-start", el);
-      if (s) s.addEventListener("change", function () { var p2 = getProfile(); p2.start = s.value; delete p2._set; setProfile(p2); draw(); });
+      var b = $("#tl-save", el);
+      if (b) b.addEventListener("click", function () {
+        var st = startFromDay($("#tl-day", el).value); if (!st) return;
+        var p2 = getProfile(); p2.start = st; delete p2._set; setProfile(p2); draw();
+      });
     }
     draw(); onProfile(el, draw);
   };
