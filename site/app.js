@@ -103,7 +103,7 @@
     var hasProfile = false;
     try { hasProfile = !!localStorage.getItem("kma-profile"); } catch (e) {}
     var active = "/" + (location.hash.replace(/^#\/?/, "").split("/")[0] || "");
-    var html = '<div class="side-pins">';
+    var html = '<div class="side-head"><span>Guides</span><button type="button" class="side-close" aria-label="Close menu">Close ✕</button></div><div class="side-pins">';
     PINNED.forEach(function (p) {
       html += '<a href="#' + p[0] + '" data-route="' + p[0] + '"' + (p[0] === "/my-account" ? ' class="side-acct"' : "") + ">" +
         (ICO[p[2]] || ICO.ref).replace("<svg", '<svg class="g-ico"') + esc(p[1]) +
@@ -571,11 +571,14 @@
   // ---------- init ----------
   function init() {
     buildSidebar();
-    $("#menuBtn").innerHTML = ICO.menu;
+    $("#menuBtn").innerHTML = ICO.menu + '<span class="menu-label">Menu</span>';
     $("#searchIco").innerHTML = ICO.search;
     applyThemeBtn();
     $("#themeBtn").addEventListener("click", toggleTheme);
     $("#menuBtn").addEventListener("click", function () { document.body.classList.toggle("nav-open"); });
+    var fab = $("#navFab"); if (fab) fab.addEventListener("click", function () { document.body.classList.add("nav-open"); });
+    document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest(".side-close")) document.body.classList.remove("nav-open"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.body.classList.remove("nav-open"); });
     $("#scrim").addEventListener("click", function () { document.body.classList.remove("nav-open"); });
     searchBox = $("#search"); results = $("#searchResults");
     searchBox.addEventListener("input", function () { doSearch(searchBox.value); });

@@ -414,3 +414,31 @@ pre.bk-broken { border: 1px dashed var(--red); }
 }
 .article ol.quiz-list, .article ol.bk-steps-list { padding-left: 0; max-width: none; margin: 0; }
 .article .quiz-list li, .article .bk-steps-list li { margin-bottom: 0; }
+
+/* ---------- mobile menu: easier to find and open ---------- */
+.nav-fab, .side-head { display: none; }
+@media (max-width: 860px) {
+  .menu-btn { width: auto !important; flex: 0 0 auto !important; padding: 0 12px 0 10px; gap: 6px; height: 40px;
+    border: 1.5px solid var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 800; font-size: 14px; }
+  .menu-btn svg { width: 18px; height: 18px; }
+  .menu-label { letter-spacing: .02em; }
+  .nav-fab { position: fixed; right: 16px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 34;
+    display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 18px 0 16px; border: 0; border-radius: 999px;
+    background: var(--accent); color: var(--accent-ink); font: 800 15px var(--font-body); letter-spacing: .02em;
+    box-shadow: 0 6px 20px rgba(0,0,0,.35), 0 0 0 4px var(--glow); cursor: pointer; }
+  .nav-fab svg { width: 20px; height: 20px; }
+  .nav-fab:active { transform: scale(.97); }
+  body.nav-open .nav-fab { display: none; }
+  .side-head { display: flex; align-items: center; justify-content: space-between; margin: -4px 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .side-head span { font-family: var(--font-display); font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+  .side-close { border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); border-radius: 999px; padding: 6px 12px; font: 700 13px var(--font-body); cursor: pointer; }
+  .sidebar { width: min(88vw, 340px) !important; }
+  .content { padding-bottom: 96px !important; }
+}
+@media print { .nav-fab { display: none !important; } }
+@media (max-width: 860px) {
+  .topbar .brand { flex: 0 0 auto; }
+  .topbar .search-wrap { flex: 1 1 0; min-width: 0; }
+  .search-wrap input { min-width: 0; width: 100%; }
+}
+@media (max-width: 340px) { .menu-label { display: none; } .menu-btn { padding: 0 10px; } }
