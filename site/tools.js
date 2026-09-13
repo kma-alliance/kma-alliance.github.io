@@ -227,6 +227,8 @@
         if (/tank/i.test(hro[4])) roles.tank++; else if (/damage/i.test(hro[4])) roles.dmg++; else roles.sup++;
       });
       var fb = state.squad.length === 5 ? D.factionBonus(counts) : 0;
+      // The bench skill is counted once. Whether a second benched hero stacks is
+      // not documented by any source, so this does not assume it does.
       var benchOn = state.bench.length > 0;
       var mult = (1 + fb / 100) * (benchOn ? 1.2 : 1);
       surv *= mult; dmg *= mult;
@@ -266,6 +268,7 @@
         if (!state.squad.some(function (id) { return id === "arthur"; })) notes.push(["info", "No Arthur. Every top-ranked squad in the published simulation includes him; effectiveness drops from 100 to 64 without him."]);
       }
       if (!r.benchOn) notes.push(["info", "Bench is empty. A spare UR at level 30 and 8 stars gives the whole squad +20% ATK, HP and DEF plus +10% cooldown speed while sitting out."]);
+      else if (state.bench.length > 1) notes.push(["info", "This score counts the bench bonus once. No source says whether a second benched hero stacks, so the extra one may be doing nothing."]);
       else notes.push(["good", "Bench skill counted: +20% ATK, HP and DEF and +10% cooldown speed. Stacking across several bench heroes is not confirmed, so only one is applied here."]);
       h += '<div class="notes">' + notes.map(function (n) { return '<div class="note note-' + n[0] + '">' + esc(n[1]) + '</div>'; }).join("") + '</div>';
 
