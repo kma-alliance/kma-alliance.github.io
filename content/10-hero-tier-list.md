@@ -18,6 +18,8 @@ updated: 2026-09-12
 
 A fully invested A-tier hero beats a half-built S-tier hero in every mode. Do not spread shards.
 
+Try your own lineup in the [squad builder](#/squad-builder): it scores the faction bonus, role balance and bench skill live.
+
 ## The roster
 
 Every hero in the game with the tier from the tables below. Tap a card to jump to its table.
