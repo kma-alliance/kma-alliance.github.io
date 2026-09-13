@@ -304,6 +304,30 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
 .copy-btn { font-size: 12px; padding: 2px 8px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface); cursor: pointer; font-family: var(--font-mono); }
 .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+/* ---------- live codes, countdown, time zones ---------- */
+.codes-panel { margin: 4px 0 24px; }
+.codes-meta { font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+.codes-meta b { color: var(--text); font-family: var(--font-mono); font-weight: 600; }
+.codes-table code { font-size: 15px; font-weight: 600; }
+.chip { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; }
+.chip-active { background: var(--green-soft); color: var(--green); }
+.chip-disputed { background: var(--accent-soft); color: var(--accent); }
+.chip-unconfirmed { background: var(--surface-2); color: var(--muted); }
+.chip-expired { background: var(--red-soft); color: var(--red); }
+.chip-new { background: var(--accent); color: var(--accent-ink); }
+.muted { color: var(--muted); font-size: 12.5px; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.notice-list li.auto { border-left-color: var(--green); }
+.countdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 18px 0 8px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.cd-label { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); font-weight: 700; }
+.cd-big { font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.15; margin-top: 2px; }
+.cd-big.mono { font-family: var(--font-mono); font-size: 22px; font-weight: 600; }
+.tz-clocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 10px 0 12px; }
+.tz-clock { padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.tz-conv { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 18px; }
+.tz-conv input, .tz-conv select, .section-sub select { font: inherit; padding: 4px 8px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface); color: var(--text); }
+.tz-conv b { font-size: 20px; }
+
 /* ---------- footer ---------- */
 .foot { margin-top: 60px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); line-height: 1.6; }
 

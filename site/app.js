@@ -86,6 +86,141 @@
     $$("#sidebar a").forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-route") === route); });
   }
 
+  // ---------- live gift codes (from scripts/scan_codes.py via GitHub Actions) ----------
+  var CODES = K.codes && K.codes.codes ? K.codes : null;
+  function codeStatusLabel(c) {
+    return { active: "Working", disputed: "Disputed", unconfirmed: "Unconfirmed", expired: "Expired" }[c.status] || c.status;
+  }
+  function isNewCode(c) { return c.status === "active" && daysSince(c.first_seen) <= 7; }
+  function copyBtn(text) {
+    return '<button class="copy-btn" data-copy="' + esc(text) + '">copy</button>';
+  }
+  function renderCodesPanel(full) {
+    if (!CODES) return '<div class="codes-panel"><p class="section-sub">The code scanner has not run yet. It runs automatically every 6 hours on GitHub.</p></div>';
+    var list = CODES.codes.filter(function (c) { return full ? c.status !== "expired" : c.status === "active"; });
+    var h = '<div class="codes-panel">';
+    h += '<div class="codes-meta">Scanned <b>' + esc(CODES.scanned) + '</b> across ' + CODES.sources_checked.length + ' of ' + CODES.sources_total + ' trackers. Codes are auto-collected; tap copy, redeem in-game, and tell an officer if one fails.</div>';
+    if (!list.length) { h += '<p class="section-sub">No working codes reported right now.</p></div>'; return h; }
+    h += '<div class="table-wrap"><table class="codes-table"><thead><tr><th>Code</th><th>Status</th><th>Trackers</th>' + (full ? '<th>First seen</th><th>Last active</th>' : '') + '</tr></thead><tbody>';
+    list.forEach(function (c) {
+      h += '<tr><td><code>' + esc(c.code) + '</code> ' + copyBtn(c.code) + (isNewCode(c) ? ' <span class="chip chip-new">new</span>' : '') + '</td>';
+      h += '<td><span class="chip chip-' + esc(c.status) + '">' + codeStatusLabel(c) + '</span></td>';
+      h += '<td title="' + esc(c.active_sources.join(", ")) + (c.expired_sources.length ? " | expired per: " + esc(c.expired_sources.join(", ")) : "") + '">' + c.active_sources.length + (c.expired_sources.length ? ' <span class="muted">(' + c.expired_sources.length + ' say expired)</span>' : '') + '</td>';
+      if (full) h += '<td>' + esc(fmtDate(c.first_seen)) + '</td><td>' + esc(fmtDate(c.last_active)) + '</td>';
+      h += '</tr>';
+    });
+    h += '</tbody></table></div>';
+    if (full) {
+      var dead = CODES.codes.filter(function (c) { return c.status === "expired"; });
+      if (dead.length) h += '<p class="section-sub">Expired: ' + dead.map(function (c) { return '<code>' + esc(c.code) + '</code>'; }).join(", ") + '</p>';
+    }
+    h += '</div>';
+    return h;
+  }
+  function autoNotices() {
+    if (!CODES) return [];
+    return CODES.codes.filter(isNewCode).slice(0, 5).map(function (c) {
+      return { date: c.first_seen, text: 'Scanner found a new gift code: **' + c.code + '** (reported working by ' + c.active_sources.length + ' tracker' + (c.active_sources.length === 1 ? '' : 's') + '). [Redeem it](#/gift-codes) before it expires.', auto: true };
+    });
+  }
+
+  // ---------- time helpers ----------
+  var DUEL_DAYS = ["Raven", "Construction", "Tech", "Heroes", "Preparation", "Raid", "Reset day"];
+  function serverOffset() { var v = parseFloat(localStorage.getItem("kma-server-offset")); return isNaN(v) ? -2 : v; }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function hm(d) { return pad(d.getHours()) + ":" + pad(d.getMinutes()); }
+  function shifted(date, offsetHours) { // a Date whose local fields show the wall clock at UTC+offset
+    return new Date(date.getTime() + (offsetHours * 60 + date.getTimezoneOffset()) * 60000);
+  }
+  function renderCountdown() {
+    var now = new Date();
+    var idx = (now.getUTCDay() + 6) % 7;
+    var next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
+    var ms = next - now, hh = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4), ss = Math.floor(ms % 6e4 / 1e3);
+    var label = idx < 6 ? "Duel day " + (idx + 1) + ": " + DUEL_DAYS[idx] : DUEL_DAYS[6];
+    var nextLabel = idx < 5 ? "Day " + (idx + 2) + ": " + DUEL_DAYS[idx + 1] : (idx === 5 ? "Reset day" : "Day 1: Raven");
+    return '<div class="countdown"><div><div class="cd-label">Right now (UTC)</div><div class="cd-big">' + esc(label) + '</div></div>' +
+      '<div><div class="cd-label">Resets in</div><div class="cd-big mono" id="cdTimer">' + pad(hh) + ":" + pad(mm) + ":" + pad(ss) + '</div></div>' +
+      '<div><div class="cd-label">Then</div><div class="cd-big">' + esc(nextLabel) + '</div></div>' +
+      '<div><div class="cd-label">Your local time</div><div class="cd-big mono" id="cdLocal">' + hm(now) + '</div></div></div>';
+  }
+  var tick = null;
+  function startTick(fn) { if (tick) clearInterval(tick); tick = setInterval(fn, 1000); }
+
+  // ---------- widgets embedded in guides via <div data-widget="..."> ----------
+  var WIDGETS = {
+    codes: function (el) { el.innerHTML = renderCodesPanel(true); },
+    countdown: function (el) { el.innerHTML = renderCountdown(); startTick(function () { var t = $("#cdTimer"); if (!t) return; var now = new Date(); var next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)); var ms = next - now; t.textContent = pad(Math.floor(ms / 36e5)) + ":" + pad(Math.floor(ms % 36e5 / 6e4)) + ":" + pad(Math.floor(ms % 6e4 / 1e3)); var l = $("#cdLocal"); if (l) l.textContent = hm(now); }); },
+    timezones: function (el) {
+      var zones = [
+        ["Los Angeles (Pacific)", "America/Los_Angeles"], ["Denver (Mountain)", "America/Denver"], ["Chicago (Central)", "America/Chicago"],
+        ["New York (Eastern)", "America/New_York"], ["São Paulo", "America/Sao_Paulo"], ["London", "Europe/London"], ["Paris / Berlin", "Europe/Paris"],
+        ["Istanbul", "Europe/Istanbul"], ["Dubai", "Asia/Dubai"], ["New Delhi", "Asia/Kolkata"], ["Jakarta", "Asia/Jakarta"], ["Manila / Singapore", "Asia/Manila"],
+        ["Tokyo / Seoul", "Asia/Tokyo"], ["Sydney", "Australia/Sydney"]
+      ];
+      var localZone = (Intl.DateTimeFormat().resolvedOptions().timeZone) || "your device";
+      var events = [
+        ["Alliance Duel day reset", { utc: 0 }],
+        ["Elixir Scramble window 1", { server: 9 }],
+        ["Elixir Scramble window 2", { server: 18 }],
+        ["Elixir Scramble window 3", { server: 23 }],
+        ["Cheese Trap difficulty lock (final day)", { server: 22 }]
+      ];
+      function draw() {
+        var now = new Date();
+        var off = serverOffset();
+        var utc = shifted(now, 0), srv = shifted(now, off);
+        var fmt = function (tz, d) { try { return new Intl.DateTimeFormat(undefined, { timeZone: tz, hour: "2-digit", minute: "2-digit", weekday: "short" }).format(d); } catch (e) { return "?"; } };
+        var h = '<div class="tz-clocks">';
+        h += '<div class="tz-clock"><div class="cd-label">Your time (' + esc(localZone) + ')</div><div class="cd-big mono">' + hm(now) + '</div></div>';
+        h += '<div class="tz-clock"><div class="cd-label">UTC (Duel reset clock)</div><div class="cd-big mono">' + hm(utc) + '</div></div>';
+        h += '<div class="tz-clock"><div class="cd-label">Server time (UTC' + (off >= 0 ? "+" : "") + off + ')</div><div class="cd-big mono">' + hm(srv) + '</div></div>';
+        h += '</div>';
+        h += '<p class="section-sub">Server offset: <select id="tzOffset">';
+        for (var o = -12; o <= 14; o++) h += '<option value="' + o + '"' + (o === off ? ' selected' : '') + '>UTC' + (o >= 0 ? "+" : "") + o + '</option>';
+        h += '</select> Compare the server clock above with the one shown in-game and pick the offset that matches. Saved on this device.</p>';
+        h += '<h3>Fixed event times in your local time</h3><div class="table-wrap"><table><thead><tr><th>Event</th><th>Game clock</th><th>Your local time</th></tr></thead><tbody>';
+        events.forEach(function (ev) {
+          var spec = ev[1], base = new Date(now), label, local;
+          if (spec.utc !== undefined) { base.setUTCHours(spec.utc, 0, 0, 0); label = pad(spec.utc) + ":00 UTC"; }
+          else { base = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), spec.server - off, 0, 0)); label = pad(spec.server) + ":00 server"; }
+          local = hm(base);
+          h += '<tr><td>' + esc(ev[0]) + '</td><td class="mono">' + label + '</td><td class="mono"><b>' + local + '</b></td></tr>';
+        });
+        h += '</tbody></table></div>';
+        h += '<h3>Converter</h3><p class="section-sub">Type a time from alliance mail and see it in your zone.</p>';
+        h += '<div class="tz-conv"><input id="tzIn" type="time" value="20:00"> <select id="tzKind"><option value="server">server time</option><option value="utc">UTC</option></select> <span class="cd-label">is</span> <b class="mono" id="tzOut">–</b> <span class="cd-label">for you</span></div>';
+        h += '<h3>What 00:00 UTC (Duel reset) is around the world</h3><div class="table-wrap"><table><thead><tr><th>City</th><th>Local time at reset</th><th>Right now there</th></tr></thead><tbody>';
+        var resetUtc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
+        zones.forEach(function (z) {
+          h += '<tr><td>' + esc(z[0]) + '</td><td class="mono">' + esc(fmt(z[1], resetUtc)) + '</td><td class="mono">' + esc(fmt(z[1], now)) + '</td></tr>';
+        });
+        h += '</tbody></table></div>';
+        el.innerHTML = h;
+        var conv = function () {
+          var v = ($("#tzIn") || {}).value; if (!v) return;
+          var parts = v.split(":"), hr = parseInt(parts[0], 10), mn = parseInt(parts[1], 10);
+          var kind = $("#tzKind").value, o = kind === "server" ? serverOffset() : 0;
+          var d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hr - o, mn, 0));
+          $("#tzOut").textContent = hm(d) + (d.getDate() !== now.getDate() ? (d > now ? " (next day)" : " (previous day)") : "");
+        };
+        $("#tzIn").addEventListener("input", conv); $("#tzKind").addEventListener("change", conv); conv();
+        $("#tzOffset").addEventListener("change", function () { try { localStorage.setItem("kma-server-offset", this.value); } catch (e) {} draw(); });
+      }
+      draw();
+      startTick(function () { var c = $$(".tz-clock .cd-big", el); if (c.length !== 3) return; var now = new Date(); c[0].textContent = hm(now); c[1].textContent = hm(shifted(now, 0)); c[2].textContent = hm(shifted(now, serverOffset())); });
+    }
+  };
+  function hydrateWidgets(container) {
+    $$("[data-widget]", container).forEach(function (el) { var fn = WIDGETS[el.getAttribute("data-widget")]; if (fn) fn(el); });
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".copy-btn[data-copy]"); if (!b) return;
+    var txt = b.getAttribute("data-copy");
+    var done = function () { b.textContent = "copied"; setTimeout(function () { b.textContent = "copy"; }, 1200); };
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, done); else done();
+  });
+
   // ---------- rendering ----------
   function renderHome() {
     var s = K.site;
@@ -101,11 +236,16 @@
     h += '<div class="stat-row"><span><b>' + K.guides.length + "</b> guides</span><span><b>" + K.categories.length + "</b> sections</span>";
     h += "<span>Newest update <b>" + esc(fmtDate(K.site.updated || "")) + "</b></span>" + (stale ? "<span><b>" + stale + "</b> guides older than 45 days</span>" : "") + "</div>";
 
-    if (K.notices && K.notices.length) {
-      h += '<h2 class="section-title">Alliance notices</h2><p class="section-sub">What leadership needs everyone to know right now.</p><ul class="notice-list">';
-      K.notices.forEach(function (n) { h += '<li><span class="n-date">' + esc(n.date) + "</span>" + md(n.text).replace(/^<p>|<\/p>\s*$/g, "") + "</li>"; });
+    h += '<div data-widget="countdown"></div>';
+
+    var notices = autoNotices().concat(K.notices || []);
+    if (notices.length) {
+      h += '<h2 class="section-title">Alliance notices</h2><p class="section-sub">What leadership needs everyone to know right now. Items marked auto come from the code scanner.</p><ul class="notice-list">';
+      notices.forEach(function (n) { h += '<li' + (n.auto ? ' class="auto"' : '') + '><span class="n-date">' + esc(n.date) + "</span>" + (n.auto ? '<span class="chip chip-new">auto</span> ' : '') + md(n.text).replace(/^<p>|<\/p>\s*$/g, "") + "</li>"; });
       h += "</ul>";
     }
+
+    h += '<h2 class="section-title">Working gift codes</h2><p class="section-sub">Auto-scanned from public trackers. <a href="#/gift-codes">Full list and how to redeem</a>.</p>' + renderCodesPanel(false);
 
     if (K.week && K.week.length) {
       var todayIdx = (new Date().getUTCDay() + 6) % 7; // Monday=0 in UTC
@@ -263,6 +403,7 @@
     closeSearch();
     if (!parts.length) {
       content.innerHTML = renderHome();
+      hydrateWidgets(content);
       $("#tocRail").innerHTML = "";
       setActive("/");
       document.title = K.site.name + " — " + (K.site.game || "");
@@ -273,6 +414,7 @@
     if (!g) { content.innerHTML = render404(); $("#tocRail").innerHTML = ""; setActive(null); return; }
     content.innerHTML = renderGuide(g);
     decorate(content, g);
+    hydrateWidgets(content);
     setupSpy();
     setActive("/" + g.id);
     document.title = g.title + " — " + K.site.name;
