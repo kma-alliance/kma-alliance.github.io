@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KMA Alliance Handbook</title>
+<meta name="description" content="[KMA] alliance guides for Last Asylum: Plague — heroes, sanctuary, alliance events, combat, codes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Alegreya+Sans:ital,wght@0,400;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"></button>
+  <a class="brand" href="#/"><span class="brand-tag">[KMA]</span><span class="brand-name">Alliance Handbook</span></a>
+  <div class="spacer"></div>
+  <div class="search-wrap">
+    <span id="searchIco"></span>
+    <label class="sr-only" for="search">Search guides</label>
+    <input id="search" type="search" placeholder="Search" title="Search guides (press / to focus)" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark theme"></button>
+</header>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Guides"></nav>
+  <div class="main">
+    <main class="content" id="content"></main>
+    <aside class="toc-rail" id="tocRail"></aside>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="content/guides.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
