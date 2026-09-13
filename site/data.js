@@ -235,14 +235,68 @@
   }
 
   // ---------- Server calendar ----------
+  // New-server calendar in Monument days (the opening day is day 1). Checked 2026-09-13 against
+  // official update notes, streams of a server opened 21 Aug 2026 that name the day on air, and
+  // datamined data (whose hero days run one lower than the Monument; they are corrected here).
+  // [day, what happens, confidence "high" | "med" | "low", kind "hero" | "event" | "war" | "unlock"]
   var serverDays = [
-    [2, "Survival Battle opens (needs Sanctuary 7)"], [4, "Cheese Trap arrives"], [7, "Alliance Boss Lv3, Cheese Trap Lv3"],
-    [14, "Alliance Boss Lv4, Cheese Trap Lv4, Joker unlocks, Undead Siege clue hunt"], [15, "Canyon Conquest opens, Annie in the Hero Pass"],
-    [21, "Cheese Trap Lv5"], [22, "Harper in the Daily Offer"], [27, "First Royal City Scramble"], [29, "Kingdom War announced, Daskal in the Daily Offer"],
-    [30, "Cheese Trap Lv6"], [36, "Red Lady in the Daily Offer"], [45, "Cheese Trap Lv7"], [56, "Era rollover (every 56 days)"],
-    [57, "Zoya"], [60, "Cheese Trap Lv8"], [64, "Louis"], [71, "Bell"], [85, "Billy"], [90, "Cheese Trap Lv9"], [99, "Nicole"],
-    [120, "Cheese Trap Lv10"], [130, "Era of Revival window opens; server closes to new characters"]
+    [1, "Marlena and Arthur available. Quiz of Wisdom, Final Dawn and Wandering Phantom open by Sanctuary level", "high", "hero"],
+    [2, "Survival Battle opens (Sanctuary 7)", "high", "event"],
+    [3, "Demon King Blight opens", "med", "event"],
+    [4, "Cheese Trap arrives (trap levels 1 and 2). Caravans open", "high", "event"],
+    [4, "Top Healer starts, runs 7 days (seen running on day 5)", "high", "event"],
+    [7, "Cheese Trap level 3", "high", "event"],
+    [8, "Cynthia (hero wheel, free daily spins) and Shadow (hero pass)", "high", "hero"],
+    [12, "Crystal Cluster Valley first session, some time on days 12 to 18 (Sanctuary 15)", "med", "event"],
+    [14, "Cheese Trap level 4", "high", "event"],
+    [15, "Undead Siege opens (official: 2 weeks after server launch)", "high", "event"],
+    [15, "Joker (hero wheel) and Annie (hero pass)", "high", "hero"],
+    [15, "Canyon Conquest first round, days 15 to 21 (15 members at Sanctuary 15+)", "med", "event"],
+    [20, "First Thief Hunt around days 20 to 21, then roughly every two weeks", "med", "event"],
+    [21, "Cheese Trap level 5", "high", "event"],
+    [22, "Harper (hero pass)", "high", "hero"],
+    [27, "First Royal City Scramble: the winner's leader becomes King", "high", "war"],
+    [29, "Kingdom War announced. Alliance Duel goes cross-server with a Saturday raid. Cross-server caravans", "med", "war"],
+    [29, "Daskal (hero pass; Daily Offer about two weeks later)", "high", "hero"],
+    [30, "Cheese Trap level 6", "high", "event"],
+    [31, "Harper joins the Tavern recruit pool", "med", "hero"],
+    [36, "Red Lady", "high", "hero"],
+    [43, "Ulfrid (formerly Brian)", "high", "hero"],
+    [45, "Cheese Trap level 7", "high", "event"],
+    [50, "Alliance League eligibility: kingdom online more than 7 weeks, top 16 alliances", "high", "war"],
+    [57, "Zoya", "high", "hero"],
+    [60, "Cheese Trap level 8", "high", "event"],
+    [64, "Louis", "high", "hero"],
+    [66, "Tavern pool adds Cynthia, Shadow, Annie, Joker and Marlena", "med", "hero"],
+    [71, "Bell", "high", "hero"],
+    [78, "Raven Runes unlock (their building on day 79)", "high", "unlock"],
+    [85, "Billy", "high", "hero"],
+    [90, "Cheese Trap level 9", "high", "event"],
+    [99, "Nicole, the last UR hero", "high", "hero"],
+    [120, "Cheese Trap level 10", "high", "event"],
+    [136, "Era of Revival, around days 136 to 160: servers enter in groups of 32 and close to new characters", "med", "war"]
   ];
+  // Weekly events first fire on a weekday, so their server day depends on the weekday the server opened.
+  function dayDate(start, day) { var t = Date.parse(start + "T00:00:00Z"); return isNaN(t) ? null : new Date(t + (day - 1) * 864e5); }
+  function firstWeekdayFrom(start, fromDay, weekday) { // weekday: 0 Sunday ... 6 Saturday
+    for (var d = fromDay; d < fromDay + 7; d++) { var dt = dayDate(start, d); if (dt && dt.getUTCDay() === weekday) return d; }
+    return null;
+  }
+  function serverCalendar(start) {
+    var rows = serverDays.map(function (r) { return { day: r[0], text: r[1], conf: r[2], kind: r[3] }; });
+    var ava = start ? firstWeekdayFrom(start, 8, 1) : null;
+    rows.push({ day: ava || 9, kind: "war", conf: ava ? "med" : "low",
+      text: ava ? "First Alliance Duel week (AvA) starts: same server, no raid day" : "First Alliance Duel week (AvA) starts on the first Monday on or after day 8: same server, no raid day" });
+    var elixir = start ? firstWeekdayFrom(start, 13, 5) : null;
+    rows.push({ day: elixir || 13, kind: "event", conf: elixir ? "med" : "low",
+      text: elixir ? "First Elixir Scramble, this Friday or the next (register Monday to Wednesday, Sanctuary 15)" : "First Elixir Scramble on the first Friday on or after about day 13" });
+    var kvk = start ? firstWeekdayFrom(start, 35, 6) : null;
+    rows.push({ day: kvk || 35, kind: "war", conf: "low",
+      text: "First Kingdom War battles expected on a Saturday between days 35 and 48" });
+    rows.sort(function (a, b) { return a.day - b.day; });
+    rows.forEach(function (r) { r.date = start ? dayDate(start, r.day) : null; });
+    return rows;
+  }
 
   // ---------- VIP, shields, misc ----------
   var vip = [[1,0,"Basic"],[3,1050,"Up to +8% production"],[5,11000,"+13% production, +15% build"],[8,55000,"Expedition battles, +8% march, +30% build"],[11,null,"Universal UR fragments in the Diamond Shop"],[12,550000,"First combat stats: +4% hero HP/ATK/DEF"],[20,50000000,"+13% hero stats, +50% build and training"]];
@@ -257,7 +311,7 @@
     roleWeight: roleWeight, factionBonus: factionBonus,
     troopTier: troopTier, tierFor: tierFor,
     duel: duel, heroRoad: heroRoad, undeadSiege: undeadSiege, expeditionAt: expeditionAt,
-    serverDays: serverDays, vip: vip, shields: shields, lure: lure,
+    serverDays: serverDays, serverCalendar: serverCalendar, dayDate: dayDate, vip: vip, shields: shields, lure: lure,
     serverOffset: serverOffset, setServerOffset: setServerOffset, serverNow: serverNow,
     nextReset: nextReset, msToReset: msToReset, duelIdx: duelIdx, hms: hms,
     startTick: startTick, stopTicks: stopTicks, track: track,

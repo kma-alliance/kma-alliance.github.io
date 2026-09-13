@@ -79,7 +79,7 @@
   // block of the pages people open daily, then 7 collapsible sections. The section holding the
   // current page opens itself; anything a reader opens or closes is remembered on their device.
   var PINNED = [
-    ["/", "Home", "start"], ["/my-account", "Your account", "tools"], ["/daily-checklist", "Daily checklist", "solo"],
+    ["/", "Home", "start"], ["/my-account", "Your account", "tools"], ["/daily-checklist", "Daily checklist", "solo"], ["/new-server", "Your server's first 60 days", "start"],
     ["/alliance-duel", "Alliance Duel", "event"], ["/events-calendar", "Every event at a glance", "event"],
     ["/gift-codes", "Gift codes", "codes"], ["/tools", "All tools", "tools"]
   ];
@@ -476,6 +476,9 @@
       p.parentNode.insertBefore(f, p); f.appendChild(im);
       if (im.alt) { var c = document.createElement("figcaption"); c.textContent = im.alt; f.appendChild(c); }
       p.remove();
+      // official posters often carry rules in small print: tap to view full size
+      im.classList.add("zoomable"); im.setAttribute("tabindex", "0"); im.setAttribute("role", "button");
+      im.setAttribute("aria-label", (im.alt || "Image") + ". Tap to enlarge");
     });
     // external links open in a new tab
     $$("a[href^='http']", body).forEach(function (a) { a.target = "_blank"; a.rel = "noopener"; });
@@ -496,6 +499,29 @@
     }, { rootMargin: "-70px 0px -70% 0px", threshold: 0 });
     heads.forEach(function (h) { spy.observe(h); });
   }
+
+  // ---------- image lightbox ----------
+  function openLightbox(img) {
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.innerHTML = '<button class="lightbox-close" type="button" aria-label="Close">Close ✕</button><img alt="">' +
+      (img.alt ? '<div class="lightbox-cap"></div>' : "");
+    box.querySelector("img").src = img.currentSrc || img.src;
+    box.querySelector("img").alt = img.alt || "";
+    if (img.alt) box.querySelector(".lightbox-cap").textContent = img.alt;
+    var close = function () { box.remove(); document.removeEventListener("keydown", onKey); };
+    var onKey = function (e) { if (e.key === "Escape") close(); };
+    box.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    document.body.appendChild(box);
+  }
+  document.addEventListener("click", function (e) {
+    var im = e.target.closest && e.target.closest("img.zoomable");
+    if (im) openLightbox(im);
+  });
+  document.addEventListener("keydown", function (e) {
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("img.zoomable")) { e.preventDefault(); openLightbox(e.target); }
+  });
 
   // ---------- routing ----------
   var lastTracked = null;

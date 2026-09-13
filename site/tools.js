@@ -109,7 +109,7 @@
       h += card("Undead Siege", siege ? "Stage " + siege : "not yet", siege ? "by the stage table (a rough guide)" : "table lists stage 1 at 2.4M Power, Sanctuary 13");
       h += card("Hero Road", road ? "Difficulty " + road : "not yet", road < 11 ? "next gate " + big(D.heroRoad[road]) + " Power" : "all gates cleared");
       h += card("Expedition", p.sanctuary >= 16 ? bestExped(p) : "Sanctuary 16", p.sanctuary >= 16 ? "highest " + p.faction + " difficulty your Power clears" : "unlocks the three faction arenas");
-      h += card("Server day", day || "set a date", day ? "era day " + (((day - 1) % 56) + 1) + " of 56" : "used by the timeline tool");
+      h += card("Server day", day || "set a date", day ? "AvA: " + warPhase(day, D.serverCalendar(p.start || null)).ava.big + " · KvK: " + warPhase(day, D.serverCalendar(p.start || null)).kvk.big : "used by the timeline tool");
       h += '</div>';
       if (blockers.length) {
         h += '<blockquote class="warn"><strong>Blocked:</strong> Sanctuary ' + nxt.level + ' needs ' + blockers.map(function (b) { return b[0] + " " + b[1]; }).join(" and ") + '. Fix that before you start the upgrade.</blockquote>';
@@ -199,16 +199,18 @@
             (g2.untracked.length ? ' · also needs ' + esc(g2.untracked.map(function (r) { return r[0] + " " + r[1]; }).join(" and ")) + ', which this page does not track' : '') + '</div>' +
           '<a class="dash-link" href="#/sanctuary-planner">Open the planner</a></div>';
 
-        var upcoming = null;
-        if (day) { for (var i = 0; i < D.serverDays.length; i++) { if (D.serverDays[i][0] > day) { upcoming = D.serverDays[i]; break; } } }
+        var cal = D.serverCalendar(p.start || null), upcoming = null;
+        if (day) { for (var i = 0; i < cal.length; i++) { if (cal[i].day > day) { upcoming = cal[i]; break; } } }
         h += '<div class="dash-card"><div class="cd-label">' + (upcoming ? "Next on your server" : "Server") + '</div>';
         if (upcoming) {
-          h += '<div class="dash-big">In ' + (upcoming[0] - day) + ' day' + (upcoming[0] - day === 1 ? "" : "s") + '</div><div class="dash-todo">' + esc(upcoming[1]) + '</div>' +
-            '<div class="dash-extra">Server day ' + upcoming[0] + ' · you are on ' + day + '</div>';
+          var wp = warPhase(day, cal);
+          h += '<div class="dash-big">In ' + (upcoming.day - day) + ' day' + (upcoming.day - day === 1 ? "" : "s") + '</div><div class="dash-todo">' + esc(upcoming.text) + '</div>' +
+            '<div class="dash-extra">Server day ' + upcoming.day + (upcoming.date ? " (" + esc(fmtDate(upcoming.date)) + ")" : "") + ' · you are on ' + day + '</div>' +
+            '<div class="dash-extra"><b>AvA:</b> ' + esc(wp.ava.big) + ' · <b>KvK:</b> ' + esc(wp.kvk.big) + '</div>';
         } else {
           h += '<div class="dash-big">' + (day ? "Day " + day : "Add your server day") + '</div><div class="dash-todo">' + (day ? "Past every dated unlock." : "Enter your server day on Your account to fill this in.") + '</div>';
         }
-        h += '<a class="dash-link" href="#/server-timeline">Full timeline</a></div>';
+        h += '<a class="dash-link" href="#/new-server">Your first 60 days</a></div>';
       } else {
         h += '<div class="dash-card"><div class="cd-label">Every event</div><div class="dash-big">62 guides</div><div class="dash-todo">One page per event, with what scores, what it costs and what leadership expects.</div><a class="dash-link" href="#/events-calendar">Event index</a></div>';
         h += '<div class="dash-card"><div class="cd-label">Build a squad</div><div class="dash-big">31 heroes</div><div class="dash-todo">Faction bonus, role balance and the bench skill, scored live as you pick.</div><a class="dash-link" href="#/squad-builder">Squad builder</a></div>';
@@ -530,33 +532,68 @@
   };
 
   /* ================= server timeline ================= */
+  // AvA and KvK phase for a given server day, shared by the timeline and the home dashboard.
+  function warPhase(day, cal) {
+    var avaRow = cal.filter(function (r) { return /Alliance Duel week \(AvA\)/.test(r.text); })[0];
+    var avaDay = avaRow ? avaRow.day : 9;
+    var ava, kvk;
+    if (day < avaDay) ava = { big: "Starts day " + avaDay, sub: "first Monday on or after day 8 · same server, no raid day" };
+    else if (day < 29) ava = { big: "Same-server Duels", sub: "no raid day · goes cross-server on day 29" };
+    else ava = { big: "Cross-server Duels", sub: "Saturday raid on the other server" + (day >= 50 ? " · League possible from 7 weeks" : "") };
+    if (day < 27) kvk = { big: "Announced day 29", sub: "in " + (29 - day) + " days · first Royal City Scramble on day 27" };
+    else if (day < 29) kvk = { big: "Announced day 29", sub: "Royal City Scramble first · " + (29 - day) + " days to the announcement" };
+    else if (day < 35) kvk = { big: "Announced", sub: "first battles expected on a Saturday, days 35 to 48" };
+    else kvk = { big: "Weekly cycle", sub: "points Sunday to Friday, battle on Saturday" };
+    return { ava: ava, kvk: kvk };
+  }
+  function fmtDate(d) { return d ? d.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }) : ""; }
+
   T["server-timeline"] = function (el) {
+    var showPast = false;
+    function row(r, day) {
+      var past = day && r.day < day, today = day && r.day === day;
+      var when = day ? (today ? "today" : past ? (day - r.day) + "d ago" : "in " + (r.day - day) + "d") : "";
+      return '<div class="tl tl-' + r.kind + (past ? " past" : "") + (today ? " today" : "") + '">' +
+        '<div class="tl-day">Day ' + r.day + (r.date ? '<span class="tl-date">' + esc(fmtDate(r.date)) + "</span>" : "") +
+          (when ? '<span class="tl-when">' + when + "</span>" : "") +
+          (r.conf !== "high" ? '<span class="tl-conf" title="' + (r.conf === "low" ? "Rough estimate: sources disagree or are thin" : "Good evidence, but check in-game") + '">' + (r.conf === "low" ? "estimate" : "likely") + "</span>" : "") +
+        '</div><div class="tl-what">' + esc(r.text) + "</div></div>";
+    }
     function draw() {
-      var p = getProfile(), day = serverDay(p);
+      var p = getProfile(), day = serverDay(p), cal = D.serverCalendar(p.start || null);
       var h = '<div class="tool"><div class="tool-head"><div class="tool-title">Server timeline</div><div class="tool-sub">' +
-        (day ? "Server " + (p.server ? esc(p.server) : "") + " is on day " + day + "." : "Enter your server day below and this fills in with real dates.") + '</div></div>';
+        (day ? "Server " + (p.server ? esc(p.server) + " " : "") + "is on day " + day + ". Dates below are for your server." :
+          "Enter your server day below and every entry gets a real date for your server.") + "</div></div>";
       if (!day) h += '<div class="fields">' + dayField("tl-day", null) + '</div><div class="tool-actions"><button class="btn primary" id="tl-save">Save server day</button></div>';
-      var era = day ? Math.floor((day - 1) / 56) + 1 : null, eraDay = day ? ((day - 1) % 56) + 1 : null;
       if (day) {
+        var w = warPhase(day, cal);
         h += '<div class="cards3">';
-        h += card("Server day", day, "");
-        h += card("Era", "Era " + era + ", day " + eraDay, (56 - eraDay) + " days to the next era");
-        var toRevival = 130 - day;
-        h += card("Era of Revival", toRevival > 0 ? "in " + toRevival + " days" : "window open", toRevival > 0 ? "servers enter at roughly day 130" : "server is closed to new characters");
+        h += card("Server day", day, p.start ? "day 1 was " + fmtDate(D.dayDate(p.start, 1)) : "");
+        h += card("AvA (Alliance Duel)", w.ava.big, w.ava.sub);
+        h += card("KvK (Kingdom War)", w.kvk.big, w.kvk.sub);
+        h += card("Era of Revival", day < 136 ? "About day 136+" : "Window open", day < 136 ? "in about " + (136 - day) + " days · groups of 32 servers" : "servers enter in groups of 32");
         h += "</div>";
       }
-      h += '<div class="timeline">';
-      D.serverDays.forEach(function (r) {
-        var past = day && day >= r[0];
-        h += '<div class="tl' + (past ? " past" : "") + '"><div class="tl-day">Day ' + r[0] + (day ? '<span class="tl-when">' + (past ? (day - r[0]) + "d ago" : "in " + (r[0] - day) + "d") + "</span>" : "") + '</div><div class="tl-what">' + esc(r[1]) + "</div></div>";
-      });
-      h += "</div></div>";
+      var past = day ? cal.filter(function (r) { return r.day < day; }) : [];
+      var soon = day ? cal.filter(function (r) { return r.day >= day && r.day < day + 14; }) : cal;
+      var later = day ? cal.filter(function (r) { return r.day >= day + 14; }) : [];
+      h += '<div class="tl-legend"><span class="tl-key tl-war">AvA, KvK and war</span><span class="tl-key tl-event">Events</span><span class="tl-key tl-hero">Heroes</span></div>';
+      if (day) {
+        h += '<h4 class="tl-head">Next two weeks</h4><div class="timeline">' + (soon.length ? soon.map(function (r) { return row(r, day); }).join("") : '<div class="tl"><div class="tl-what">Nothing dated in the next two weeks.</div></div>') + "</div>";
+        if (later.length) h += '<h4 class="tl-head">Later</h4><div class="timeline">' + later.map(function (r) { return row(r, day); }).join("") + "</div>";
+        if (past.length) h += '<button type="button" class="btn tl-toggle" id="tl-past">' + (showPast ? "Hide" : "Show") + " the " + past.length + " things already unlocked</button>" +
+          (showPast ? '<div class="timeline">' + past.map(function (r) { return row(r, day); }).join("") + "</div>" : "");
+      } else {
+        h += '<div class="timeline">' + soon.map(function (r) { return row(r, 0); }).join("") + "</div>";
+      }
+      h += "</div>";
       el.innerHTML = h;
       var b = $("#tl-save", el);
       if (b) b.addEventListener("click", function () {
         var st = startFromDay($("#tl-day", el).value); if (!st) return;
         var p2 = getProfile(); p2.start = st; delete p2._set; setProfile(p2); draw();
       });
+      var t = $("#tl-past", el); if (t) t.addEventListener("click", function () { showPast = !showPast; draw(); });
     }
     draw(); onProfile(el, draw);
   };
