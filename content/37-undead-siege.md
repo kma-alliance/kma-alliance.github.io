@@ -26,7 +26,7 @@ The Death Prison appears on the map and sends 20 waves at every participating me
 
 ## Stages
 
-| Stage | Sanctuary | Might needed | Antitoxin per stage |
+| Stage | Sanctuary | Power needed | Antitoxin per stage |
 |---|---|---|---|
 | 1 | 13 to 15 | 2.4M | 16.7M |
 | 2 | 14 to 16 | 3.3M | 20.9M |
@@ -45,10 +45,10 @@ Personal rewards at waves 1, 4, 8, 10, 13, 16 and 20 (speedups, Alliance Coins, 
 
 > **KMA:** Before the run: set your garrison (world map, your Sanctuary, Reinforcement, Garrison, or Walls then Fortifications), stack every squad in it, turn **auto-rally off** so nothing leaves, and reinforce a weaker neighbour.
 
-Officers pick the stage that the **median** member's Might meets, not the top member's, run it right after a Duel raid day when troops are home, and never the day after a merge because new members under 48 hours earn nothing.
+Officers pick the stage that the **median** member's Power meets, not the top member's, run it right after a Duel raid day when troops are home, and never the day after a merge because new members under 48 hours earn nothing.
 
 ## Mistakes
 
 - Buying a shield for it. Wasted.
 - Leaving auto-rally on so your defenders march away mid-wave.
-- Choosing a stage for the leader's Might and watching half the alliance get breached on wave 6.
+- Choosing a stage for the leader's Power and watching half the alliance get breached on wave 6.

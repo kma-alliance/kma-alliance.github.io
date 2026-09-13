@@ -13,7 +13,7 @@ updated: 2026-09-13
 |---|---|
 | Needs | Sanctuary 8 |
 | Spawns | Every 10 minutes, up to 70 on the map, each alive for 4 hours |
-| Levels | 100 to 190, recommended Might 1.4M to 34M |
+| Levels | 100 to 190, recommended Power 1.4M to 34M |
 | First-kill reward | Claimable 3 times a day |
 
 ## Rewards
@@ -26,4 +26,4 @@ Blights that hit a territory do not relocate it and kill fewer soldiers than a p
 
 ## KMA plan
 
-Officers rally the high-level Phantoms; members solo the ones inside their Might. Hold the Raven Fruit for Duel day 1.
+Officers rally the high-level Phantoms; members solo the ones inside their Power. Hold the Raven Fruit for Duel day 1.

@@ -7,6 +7,8 @@ tags: hunt battle, alliance, blights, waves
 updated: 2026-09-13
 ---
 
+> **Unverified name:** **Hunt Battle** appears only on monetised guide blogs, never in a player video or on the publisher's site. **Thief Hunt** is the well-attested event, with many player recordings. If your client only shows Thief Hunt, use [Thief Hunt](#/thief-hunt) instead and tell an officer.
+
 ## At a glance
 
 | | |

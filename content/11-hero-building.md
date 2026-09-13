@@ -15,7 +15,7 @@ updated: 2026-09-12
 
 The [hero investment planner](#/hero-planner) turns this into shards, Antitoxin and weeks for a specific hero.
 
-Hero level cap is 15 until Sanctuary 5, then **5 × Sanctuary level** (Sanctuary 20 = level 100, Sanctuary 30 = level 150). Overflow XP banks, so campaign XP is never wasted.
+Hero level cap is 5 at Sanctuary 1 to 3, 15 at Sanctuary 4, then **5 × Sanctuary level** from Sanctuary 5 up (Sanctuary 20 = level 100, Sanctuary 30 = level 150). Overflow XP banks, so campaign XP is never wasted.
 
 ## Levels (Antitoxin)
 
@@ -28,7 +28,7 @@ Hero level cap is 15 until Sanctuary 5, then **5 × Sanctuary level** (Sanctuary
 | 45 | 137,900 (first big spike) |
 | 60 | 1,550,000 |
 | 90 | 20,800,000 |
-| 150 | 176,000,000 |
+| 150 | not published |
 
 Antitoxin sources: the Antitoxin Workshop (1 at Sanctuary 5, up to 5 at Sanctuary 16, tap to collect), Covert Operations (the biggest source, up to 12 million per top-tier op), Arena (up to 250,000 a day free), Undead Siege, Level Supplies, blight hunting.
 
@@ -61,7 +61,7 @@ Shard sources: recruit pools (Arthur is in every pool's guarantee), Alliance Sho
 
 ## Skills (Skill Badges)
 
-Skill levels run 2 to 22, star-gated as they go up. Level 2 costs 50 badges, level 22 costs 8,900. Fully maxing all skills on a UR or SSR costs **436,700 badges**; on an SR, 170,200. Badges come from Hero Growth Tasks (25,000 per completed track), Hero Road, Trials (42,250 total), Alliance Expedition chests and Surprise Encounter.
+Skill levels run 2 to 40 on a UR or SSR, and 2 to 30 on an SR, star-gated as they go up. Level 2 costs 50 badges, level 30 costs 18,400, level 40 costs 33,400. Taking **one** skill to its cap costs **436,700 badges** on a UR or SSR, and 170,200 on an SR. A hero has four upgradeable skills, so a full build is roughly four times that. Badges come from Hero Growth Tasks (25,000 per completed track), Hero Road, Trials (42,250 total), Alliance Expedition chests and Surprise Encounter.
 
 Per-hero skill order:
 
@@ -97,7 +97,7 @@ Every UR and SSR gets a fifth "support" skill at **level 30 and 8 stars**. For U
 
 ## Leadership (troop capacity)
 
-How many soldiers a hero carries on a march. Maximum 490. Hero level gives 50 to 350 of it, so level is the only lever that really moves troop count. Faction statues (Sanctuary 7, 11, 12) add up to 100. Class techs add 20, a survivor on duty 10, the Age Beacon relic 10, alliance Black Mine control 50.
+How many soldiers a hero carries on a march. Maximum 490. Hero level gives 50 to 350 of it, so level is the only lever that really moves troop count. Faction statues (Sanctuary 7, 11, 12) add up to 100. Class techs add 20, a survivor on duty 10, the Age Beacon relic 10, holding alliance crystal tiles 50.
 
 ## Hall of Honor (late game)
 

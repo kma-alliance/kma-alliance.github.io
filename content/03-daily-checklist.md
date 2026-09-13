@@ -25,7 +25,7 @@ Your ticks are stored in this browser only. They do not reset automatically, so 
 - [ ] **Falcon Quests:** the board refreshes every 6 hours. Half of them cost no energy. Complete them early but **claim** them on a Duel day that scores them (days 1, 3 and 5 score 10,000 each).
 - [ ] **Energy:** spend it on Plague Rat Hordes for recruit tickets, or Blights for Raven Fruit. On Thief Hunt days, hit Gold Thieves for Lion Coins.
 - [ ] **Daily and chapter quests:** 100 activity points opens the chest.
-- [ ] **Alliance:** diamond contribution (all 25 costs 650 diamonds; do what you can afford), donate to alliance tech, join any dig in chat.
+- [ ] **Alliance:** diamond contribution (all 25 costs 650 diamonds; do what you can afford), donate to alliance tech, and answer any alliance call in chat.
 - [ ] **Alliance events with attempts:** Alliance Expedition (3 attempts, save them for the highest open camp), Alliance Boss (any hit gives a pull), Hunt Battle when called.
 - [ ] **Alliance Duel:** spend the matching items for today's phase. See [Alliance Duel](#/alliance-duel).
 - [ ] Repair towers and restock medicine after Rat Swarm waves.
@@ -40,5 +40,4 @@ Your ticks are stored in this browser only. They do not reset automatically, so 
 ## Never
 
 - [ ] Do not open Level Supplies at a low Sanctuary level.
-- [ ] Do not dig alone.
 - [ ] Do not scout, reinforce or attack within 15 minutes of when you need to shield. Any military action locks shielding for 15 minutes (War Frenzy).

@@ -14,14 +14,16 @@ updated: 2026-09-12
 | Sanctuary | Your city and its HQ building. Everything is gated by its level. |
 | Territory | Your plot on the world map. |
 | Doctor | A player. |
-| Might | Power score. |
+| Power | Power score. |
 | Blight | A PvE monster on the world map. Elite and Wandering Blights are rallied. |
 | Clinic, wards | The hospital layer inside the walls. Produces Stars. |
 | Stars | Currency from the Clinic and forest clearing. Gate every Sanctuary level from 3 up. Cannot be sped up. |
 | Antitoxin | Hero XP. |
 | Raven | Your sixth fighter, levelled with Raven Fruit and Essence. |
 | Falcon Tower, Falcon Quests | The world-map building and its daily quest board (refreshes every 6 hours). |
-| Covert Operations, Black Ops | Timed missions that pay hero XP. Sanctuary 9. |
+| Power (also written Might) | Your total score. Most players say Power; some guides and the press write Might or CP. Same number. |
+| Covert Operations ("Covert Ops") | Timed missions that pay hero XP. Unlocked by the Black Ops building at Sanctuary 9. |
+| Black Ops Chest | A reward crate from raiding caravans on other servers. Not a game mode. |
 | Study Scrolls | Currency from Alliance Duel results. Buys the Duel research tree and T10. |
 | Alliance Coins, Alliance Points | Same thing. The Alliance Shop currency. |
 | Lion Coins | Thief Hunt currency. |

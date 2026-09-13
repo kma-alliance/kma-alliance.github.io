@@ -7,6 +7,8 @@ tags: trials, hero growth tasks, omni shards, skill badges
 updated: 2026-09-13
 ---
 
+> **Unverified name:** **Trials** appears on one site only, as a bare index entry, with no player or official corroboration. The better-attested name for the same kind of content is **Hero Growth Tasks**. Confirm before planning around it.
+
 ## Trials
 
 52 challenges that tick off through ordinary progress: 9 Gear Promotion tasks, 24 Exclusive Weapon star tasks (3 per star from 1 to 7) and the rest unspecified. They do not auto-claim.

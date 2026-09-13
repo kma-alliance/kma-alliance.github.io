@@ -9,7 +9,7 @@ updated: 2026-09-13
 
 A wiki tells you that 8 stars costs 475 shards. These work out what *you* need, from where *you* are, and how long it takes at *your* income.
 
-Start with [your account](#/my-account). It takes a minute, it is saved on your device only, and after that every tool and several guides answer in terms of your own Sanctuary, Might and troop tier.
+Start with [your account](#/my-account). It takes a minute, it is saved on your device only, and after that every tool and several guides answer in terms of your own Sanctuary, Power and troop tier.
 
 ## The planners
 
@@ -23,9 +23,11 @@ Start with [your account](#/my-account). It takes a minute, it is saved on your 
 
 ## Quick calculators
 
-### Alliance dig
+### Shared alliance spot (unverified)
 
 <div data-widget="calc-dig"></div>
+
+This one is kept only because the underlying maths is interesting: a mechanic where speed scales with the square of the participants rewards piling on enormously. Whether the game actually has it is [not confirmed](#/alliance-boss-excavation).
 
 ### Troop promotion
 
@@ -41,6 +43,6 @@ Start with [your account](#/my-account). It takes a minute, it is saved on your 
 
 ## Where the numbers come from
 
-Everything draws on one shared data file built from the public wikis. Shard costs, troop tiers, Duel point values, shield prices, Might gates and the Sanctuary anchors are published figures. Antitoxin per level and the Sanctuary rows between the published anchors are interpolated, and the tools label those as estimates rather than pretending to be exact.
+Everything draws on one shared data file built from the public wikis. Shard costs, troop tiers, Duel point values, shield prices, Power gates and the Sanctuary anchors are published figures. Antitoxin per level and the Sanctuary rows between the published anchors are interpolated, and the tools label those as estimates rather than pretending to be exact.
 
 > **KMA:** Found a number that does not match your game? Tell an officer. One correction fixes it everywhere at once, because every guide, chart and calculator reads the same file.

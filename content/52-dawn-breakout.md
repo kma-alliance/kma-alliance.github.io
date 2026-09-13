@@ -7,6 +7,8 @@ tags: dawn breakout, survivor tickets, capped army
 updated: 2026-09-13
 ---
 
+> **Unverified name:** Only one site documents **Dawn Breakout** by that name, and no player video or official page mentions it. The rewards described below may belong to an event your client labels differently. Tell an officer what you actually see and this page gets renamed.
+
 ## At a glance
 
 | | |

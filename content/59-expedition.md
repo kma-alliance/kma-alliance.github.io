@@ -16,7 +16,7 @@ updated: 2026-09-13
 | Refresh | Each arena runs 48 hours and refreshes Sunday, Tuesday and Thursday |
 | Early server | First two weeks: Arthur +50% HP, Marlena +25% ATK |
 
-## Might requirements
+## Power requirements
 
 | Difficulty | Warrior | Ranger | Warlock | Enemy tier | Medals |
 |---|---|---|---|---|---|
@@ -29,7 +29,7 @@ updated: 2026-09-13
 | 50 | 28.0M | 29.4M | 29.1M | T10 | 39,000 |
 | 60 | 46.5M | 48.9M | 48.7M | T10 | 41,600 |
 
-Start Warrior: its early levels need a third of Ranger's Might. The gap closes by difficulty 30.
+Start Warrior: its early levels need a third of Ranger's Power. The gap closes by difficulty 30.
 
 <div data-widget="gate-check" data-gate="expedition"></div>
 

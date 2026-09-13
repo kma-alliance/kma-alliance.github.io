@@ -9,16 +9,20 @@ updated: 2026-09-12
 
 ## How it works
 
-Two alliances are matched for six days, **Monday to Saturday**, one theme per day. Days reset at **00:00 UTC**. Each day is scored separately, so an item spent on the wrong day scores nothing.
+Two alliances are matched for six days, **Monday to Saturday**, one theme per day. Days roll at **00:00 server time**, not midnight UTC and not your midnight. Check the [Timezones](#/time-zones) page for what that is on your clock. Each day is scored separately, so an item spent on the wrong day scores nothing.
 
-| Day | Theme | In-game name |
+| Day | In-game name | What scores |
 |---|---|---|
-| Monday | Raven | Enhance Raven |
-| Tuesday | Construction | Territory Development |
-| Wednesday | Tech | Tech Research |
-| Thursday | Heroes | Hero Growth |
-| Friday | Preparation | War Preparation |
-| Saturday | Raid | Raid Enemy |
+| Monday | Raven | Raven levels, Essence, Epigraphs |
+| Tuesday | Construction | Building upgrades and speedups |
+| Wednesday | Tech | Research and Study Scrolls |
+| Thursday | Hero | Hero levels, stars, skills |
+| Friday | Preparation | Troop training and promotion |
+| Saturday | Raid | Attacking and killing troops |
+
+The day names above are the publisher's own labels. Longer versions like "Territory Development" or "Raid Enemy" come from third-party guide sites, not from the game.
+
+> **Check your client:** the publisher announced a new **League phase** for Alliance Duel. If your Duel screen shows a league or a seventh day, the six-day structure above is out of date. Tell an officer and this page gets updated.
 
 Rewards: daily milestone chests, daily ranking, daily victory, and weekly alliance victory or defeat rewards. The weekly Study Scroll payout is **840 for a win and 420 for a loss**. A Duel win is also worth 30,000 Kingdom Points in Kingdom War, and the MVP gets 6,000.
 
@@ -69,7 +73,7 @@ Prep on Sunday: send gathering squads so tiles finish Monday, pre-complete Falco
 | Run a UR Covert Operation | 75,000 |
 | Recruit a survivor | 1,500 |
 | 1 minute of construction speedup | 50 |
-| +1 Building Might | 10 |
+| +1 Building Power | 10 |
 
 Queue long builds on Monday. Tap the hammer after reset.
 

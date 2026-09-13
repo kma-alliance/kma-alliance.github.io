@@ -1,6 +1,6 @@
 ---
 id: canyon-conquest
-title: Canyon Conquest (Flag War)
+title: Canyon Conquest (Canyon Conquest)
 category: events
 summary: A three-lane league where troops never die. Officers stack two lanes and win two of three.
 tags: canyon conquest, flag war, lanes, glory medals, league
@@ -19,7 +19,7 @@ updated: 2026-09-13
 
 ## How a lane fights
 
-Players in a lane fight in Might order. Each one beats up to two opponents then withdraws. Winning a lane is worth 3 points; take two of three lanes to win the round. Tiebreak is total deployed Might. Arrangements lock when the entry phase starts; if capacity is limited the higher-Might troops deploy first.
+Players in a lane fight in Power order. Each one beats up to two opponents then withdraws. Winning a lane is worth 3 points; take two of three lanes to win the round. Tiebreak is total deployed Power. Arrangements lock when the entry phase starts; if capacity is limited the higher-Power troops deploy first.
 
 ## Leagues
 

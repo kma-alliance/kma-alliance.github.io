@@ -15,7 +15,7 @@ updated: 2026-09-12
 
 ## Garrison
 
-World map → tap your Sanctuary → **Reinforcement → Garrison** → tick the squads to defend. Or Walls → Fortifications. Higher garrison Might means more Undead Siege waves survived and better odds against raids.
+World map → tap your Sanctuary → **Reinforcement → Garrison** → tick the squads to defend. Or Walls → Fortifications. Higher garrison Power means more Undead Siege waves survived and better odds against raids.
 
 Garrison squads should be tank-heavy with sustain. Long fights favour damage reduction over burst. See [Squads and team comps](#/team-comps).
 
@@ -26,7 +26,7 @@ Send squads to an ally's Sanctuary or Alliance Hall. They defend until recalled.
 ## Walls and Watchtower
 
 - **Walls** are a Sanctuary prerequisite from level 4. Keep them within 5 levels of the Sanctuary.
-- **Watchtower** (Sanctuary 8) warns you of incoming marches and raises your **Scope Level**, which hides your troop composition from enemy scouts. Enemy reports show your Hall of Honor Might from Watchtower 13 and details from 14. Upgrade it before living in a contested zone.
+- **Watchtower** (Sanctuary 8) warns you of incoming marches and raises your **Scope Level**, which hides your troop composition from enemy scouts. Enemy reports show your Hall of Honor Power from Watchtower 13 and details from 14. Upgrade it before living in a contested zone.
 
 ## Scouting
 

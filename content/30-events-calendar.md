@@ -29,7 +29,7 @@ Officer-started events (Hunt Battle, Expedition, Cheese Trap, Undead Siege, Pand
 | Hunt Battle | R4/R5 | 20+ members | Once per event period | [Hunt Battle](#/hunt-battle) |
 | Alliance Expedition | R4/R5 | 10+ members at Sanctuary 6 | Event window, 3 attempts | [Alliance Expedition](#/alliance-expedition) |
 | Cheese Trap | R4/R5 | 20 members | From server day 4, two 30-min traps | [Cheese Trap](#/cheese-trap) |
-| Alliance Boss and Digs | Alliance | Level 3 from day 7 | Boss weekly levels; digs any time | [Alliance Boss and Digs](#/alliance-boss-digs) |
+| Alliance Boss and Excavation | Alliance | Level 3 from day 7 | Boss weekly levels; excavations any time | [Alliance Boss and Excavation](#/alliance-boss-excavation) |
 | Undead Siege | R4/R5 after clue hunt | Sanctuary 13+, 48 h in alliance | 48 h cooldown | [Undead Siege](#/undead-siege) |
 | Elixir Scramble | R4/R5 roster | Top-32 alliance, Sanctuary 15 | 30 min at 09:00, 18:00, 23:00 server | [Elixir Scramble](#/elixir-scramble) |
 | Thief Hunt | R4/R5 rallies | – | Event window | [Thief Hunt](#/thief-hunt) |
@@ -58,9 +58,9 @@ Officer-started events (Hunt Battle, Expedition, Cheese Trap, Undead Siege, Pand
 | Dawn Breakout | – | Recurring, 3 runs | [Dawn Breakout](#/dawn-breakout) |
 | Final Dawn | New server, Sanctuary 5 | One-time growth track | [Final Dawn](#/final-dawn) |
 | Quiz | Sanctuary 6 | Sundays | [Sunday Quiz](#/quiz) |
-| Hero Road | Squad Might gates | Permanent ladder | [Hero Road](#/hero-road) |
+| Hero Road | Squad Power gates | Permanent ladder | [Hero Road](#/hero-road) |
 | Trials and Hero Growth Tasks | – | Permanent | [Trials and Growth Tasks](#/trials-growth) |
-| Treasure Maps | Sanctuary 9 | Whenever you have 7 fragments | [Treasure Maps](#/treasure-maps) |
+| Mystic Treasure | Sanctuary 9 | Whenever you have 7 fragments | [Mystic Treasure](#/mystic-treasure) |
 | Arena | Sanctuary 7 to 8 | 5 free fights daily | [Arena](#/arena) |
 | Expedition | Sanctuary 16 | Arenas refresh Sun, Tue, Thu | [Expedition](#/expedition) |
 | Surprise Encounter and Wheels | – | Daily free call and coin | [Surprise Encounter and Wheels](#/surprise-encounter) |

@@ -44,13 +44,13 @@ Faction bonus for the whole squad's HP, ATK and DEF: 3 of one faction +5%, 3 plu
 
 ## UR heroes
 
-Might is the wiki's maximum at full investment. All URs share the same base stats at level 150; the differences are entirely in skills.
+Power is the wiki's maximum at full investment. All URs share the same base stats at level 150; the differences are entirely in skills.
 
-| Hero | Faction | Role | Tier | Max Might | How to get | Why |
+| Hero | Faction | Role | Tier | Max Power | How to get | Why |
 |---|---|---|---|---|---|---|
 | Arthur | Warrior | Tank | S | 1,052,453 | Tavern from day 1, all pools, Alliance Shop | Ult gives allies -32.5% physical damage taken. Self shield of 25% max HP. Passive: allied tanks take -8% damage. The anchor. |
 | Marlena | Warrior | Damage (Energy) | S | ~915,000 | $1 first top-up, banners, events | Ult fires 3 sword winds at 2,819% ATK each, 5 winds at 10 stars. Passive +22% Energy damage. |
-| Shadow | Ranger | Ranged tank | S | 1,075,906 | Paid paths only | Highest Might in the game. Rare enemy DEF shred (-15%), Energy damage reduction. Whale pick. |
+| Shadow | Ranger | Ranged tank | S | 1,075,906 | Paid paths only | Highest Power in the game. Rare enemy DEF shred (-15%), Energy damage reduction. Whale pick. |
 | Daskal | Warrior | Tank | S | 1,057,192 | Daily Offer, server day 29 | Every 5.85 s all allies get a shield worth 570% of their DEF. Scales with DEF. |
 | Louis | Ranger | Tank | S | 1,044,341 | Daily Offer, server day 64 | -26% all damage taken and an undying 1-HP moment once per fight. |
 | Ulfrid (Brian) | Warlock | Tank | S | 1,033,739 | Daily Offer pack, added July 2026 | Berserk reflects 147% of damage taken. Passive -22% damage taken. |
@@ -102,4 +102,4 @@ Durant, William, Robin, Kafa. Bench them the moment an SSR arrives. Never put An
 
 ## Where the numbers come from
 
-The rankings merge seven public tier lists. Sites written before July 2026 only know about 20 heroes. The wiki ranks purely by maximum Might, which favours tanks; opinion sites rank Marlena highest because her damage multiplies. Both are right in their own way. Arthur plus Marlena is the only universal consensus.
+The rankings merge seven public tier lists. Sites written before July 2026 only know about 20 heroes. The wiki ranks purely by maximum Power, which favours tanks; opinion sites rank Marlena highest because her damage multiplies. Both are right in their own way. Arthur plus Marlena is the only universal consensus.

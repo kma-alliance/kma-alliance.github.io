@@ -49,7 +49,7 @@ Sanctuary 6 and 7 are the two big early gates.
 
 ## Days 4 to 7: Sanctuary 8 to 10 and beyond
 
-- [ ] Sanctuary 8 opens Squad 2 and the Watchtower. Sanctuary 9 opens the second research queue (2nd Workbench) and Black Ops (Covert Operations, your biggest source of hero XP).
+- [ ] Sanctuary 8 opens Squad 2 and the Watchtower. Sanctuary 9 opens the second research queue (2nd Workbench) and the Black Ops building, which unlocks Covert Operations, your biggest source of hero XP.
 - [ ] Sanctuary 10 needs Walls 9 and Infirmary 7. It opens the Private Stable (caravans) and **Alliance Duel** eligibility.
 - [ ] Keep **Training Grounds** moving. It is a hard prerequisite at Sanctuary 7, 8, 15, 25 and 30, and it decides your troop tier.
 - [ ] Push the **Smelting Workshop** toward level 25 early. Gearstones are what your hero gear eats.

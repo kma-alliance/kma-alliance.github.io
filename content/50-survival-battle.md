@@ -1,6 +1,6 @@
 ---
 id: survival-battle
-title: Survival Battle (Arms Race)
+title: Survival Battle (Survival Battle)
 category: solo
 summary: Six four-hour rounds a day against players of your size. Line the theme up with the Alliance Duel day so one burn scores twice.
 tags: survival battle, arms race, speedups, brackets
@@ -31,9 +31,9 @@ updated: 2026-09-13
 
 | Theme | Points |
 |---|---|
-| Build | 1-minute speedup +10, +1 Building Might +1 |
+| Build | 1-minute speedup +10, +1 Building Power +1 |
 | Train | 1-minute speedup +10, train one T9 +28 |
-| Research | 1-minute speedup +10, +1 Tech Might +1 |
+| Research | 1-minute speedup +10, +1 Tech Power +1 |
 | Raven | 1 stamina +100, 10 Raven Fruit +1 |
 | Heroes | one recruit +400, 1,950 Antitoxin +1 |
 | Any | diamond pack +30 |

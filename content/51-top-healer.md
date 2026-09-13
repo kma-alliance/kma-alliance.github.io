@@ -20,7 +20,7 @@ updated: 2026-09-13
 | # | Contest | Big action |
 |---|---|---|
 | 1 | Resource Acquisition | Falcon Quest 1,000 |
-| 2 | Territory Development | Recruit survivor 400 |
+| 2 | Construction | Recruit survivor 400 |
 | 3 | Technology Research | Falcon Quest 1,000 |
 | 4 | Hero Recruitment | Recruit hero 400 |
 | 5 | Soldier Training | Nothing big; speedups at 20 per minute |

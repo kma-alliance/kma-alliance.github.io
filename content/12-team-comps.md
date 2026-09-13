@@ -50,7 +50,7 @@ New servers give Arthur +50% HP and Marlena +25% ATK for the first two weeks.
 |---|---|---|
 | Rat Swarm and Rat King | Arthur, Bella or Griffith, Stellar, Marlena, Grenwald or Claire | Monster damage reduction auras plus monster damage buffs. Stellar's heal keeps the line alive across waves. Zoya is the ideal wave clearer if you own her. |
 | Reclamation and long PvE | Arthur, Griffith, Stellar, Bestar, Marlena or Grenwald | Bestar's bleed scales with fight length. |
-| Expedition, Campaign, Hero Road | Your strongest mono-faction, tank-heavy squad | Progress is gated by squad Might, not by one hero. Hero Road gates: 770k, 2.8M, 6.8M, 8.6M, 11.6M, 16.4M, 21.5M, 25.5M, 30M. |
+| Expedition, Campaign, Hero Road | Your strongest mono-faction, tank-heavy squad | Progress is gated by squad Power, not by one hero. Hero Road gates: 770k, 2.8M, 6.8M, 8.6M, 11.6M, 16.4M, 21.5M, 25.5M, 30M. |
 | PvP field, rallies | Arthur, Shadow or Daskal, Marlena, Harper, plus Stellar or a third tank | Burst inside Harper's 5-second ATK window. Counter-pick the defender's dominant faction for the 20% edge. Hastar for crowd control if you have no URs. |
 | Garrison and fortress defense | Arthur, Daskal or Louis or Ulfrid, Billy, plus 1 to 2 sustain or damage | Fortress fights last an hour or more. Sustain and damage reduction beat burst. (Inferred from the survivability model; no source publishes a garrison-specific list.) |
 | Demon King (Wed and Sat) | Counter faction to the boss | Warrior boss: bring Rangers. Ranger boss: bring Warlocks. Warlock boss: bring Warriors. |

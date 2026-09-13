@@ -34,7 +34,6 @@ Use the **search box** (press `/` on a keyboard) to find anything. On a phone, t
 - **Be in the core.** Teleport next to the alliance hive using a Direct Relocate from the Alliance Shop. Members on the edge get farmed and cannot be reinforced.
 - **Honor NAPs.** The Diplomat tracks non-aggression pacts. Do not hit anyone in a NAP alliance, even if they hit you first. Report it instead.
 - **Hit assigned targets only** on Duel day 6 and during Kingdom War. Targets come from the God of War.
-- **Do not dig alone.** Alliance digs scale with the square of the number of diggers: 2 hours solo, 1 second with 100 people. Call it in chat.
 - **Cheese Trap needs 20 people.** When an officer calls it, join with two lineups so one is always marching.
 - **Set a garrison squad** and keep auto-rally set to officer rallies only. Turn auto-rally off before Undead Siege so your defenders stay home.
 
@@ -44,8 +43,8 @@ Use the **search box** (press `/` on a keyboard) to find anything. On a phone, t
 |---|---|---|
 | R5 | viciouslywild | Runs the alliance, appoints titles, declares war. |
 | R4 | Officers | Launch events, lead rallies, accept and kick members, send alliance mail. Up to six seats. |
-| R3 | Veterans | Trusted long-term members. Auto-promoted at 1,000,000 Might by default. |
-| R2 | Members | Auto-promoted from R1 at 500,000 Might by default. |
+| R3 | Veterans | Trusted long-term members. Auto-promoted at 1,000,000 Power by default. |
+| R2 | Members | Auto-promoted from R1 at 500,000 Power by default. |
 | R1 | New recruits | Probation. Auto-kicked after 24 h offline. |
 
 The four honorary titles (God of War, Diplomat, Recruiter, and Inspector or Goddess depending on your game version) go to R4s. The God of War sets rally targets and war plans. The Diplomat handles other alliances. The Recruiter handles applications. The fourth title checks event participation and defense readiness.

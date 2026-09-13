@@ -13,9 +13,9 @@ The Research Lab opens at Sanctuary 7. The 2nd Workbench at Sanctuary 9 gives yo
 
 Trees unlock by Lab level: Development and Economy at 1, Hero at 5, Soldier at 6, Squad trees at 8, **Alliance Duel at 10** (some sites say 15), Full Development and Prosperous Economy at 13, Caravan Transport at 15, Elite Troop at 20, Offensive and Defensive Tactics at 20 to 21, faction Masteries at 30.
 
-## Cheapest Might
+## Cheapest Power
 
-Resources per Might point: Development 794, Economy 2,640, Soldier 12,152, Hero 18,065. Development and Economy sell Might cheapest, which matters for Survival Battle and Alliance Duel "Tech Might" scoring.
+Resources per Power point: Development 794, Economy 2,640, Soldier 12,152, Hero 18,065. Development and Economy sell Power cheapest, which matters for Survival Battle and Alliance Duel "Tech Power" scoring.
 
 Construction Master makes buildings **cheaper** (up to 5%), not faster.
 

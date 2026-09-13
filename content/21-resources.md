@@ -71,7 +71,7 @@ Shields do not work in the Royal City Scramble, on Kingdom War war day, or again
 
 Energy refills 1 per 6 minutes (240 a day), cap 120. Solo targets cost 10, rallies 20. Spend on Plague Rat Hordes (recruit tickets, supply crates) or Blights (Raven Fruit). Gold Thieves on Thief Hunt days.
 
-## Covert Operations (Black Ops, Sanctuary 9)
+## Covert Operations (Sanctuary 9)
 
 Your biggest source of hero XP: around 500k a day at level 1 rising to 15 million at max. 70 ops, the top tier takes 4 hours and can pay 12 million XP plus a UR Omni Shard. Always run the most expensive op you can. Do 5 assists and 5 intercepts a day (10% of the reward each). Auto-dispatch unlocks at VIP 5. Without the Monthly Pass you have one fewer squad, so two fewer dispatches.
 

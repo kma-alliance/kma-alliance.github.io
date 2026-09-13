@@ -2,14 +2,16 @@
 id: hero-road
 title: Hero Road
 category: solo
-summary: A single-squad ladder gated by Might with an alliance boss at the end of each difficulty. It follows your hero upgrades rather than leading them.
+summary: A single-squad ladder gated by Power with an alliance boss at the end of each difficulty. It follows your hero upgrades rather than leading them.
 tags: hero road, boss, skill badges, diamonds
 updated: 2026-09-13
 ---
 
+> **Unverified name:** **Hero Road** appears on one site only, with no player or official corroboration. It may be the same thing as **Hero Growth Tasks**, which is better attested. The milestone values below come from that single source.
+
 ## Gates and rewards
 
-| Difficulty | Squad Might | Boss HP | Skill Badges | Diamonds |
+| Difficulty | Squad Power | Boss HP | Skill Badges | Diamonds |
 |---|---|---|---|---|
 | 1 | 770k | 60,000 | 500 | 100 |
 | 2 | 2.8M | 300,000 | 1,000 | 200 |
@@ -33,4 +35,4 @@ Bosses also drop resources and hero XP. The wiki text says nine difficulties; it
 
 ## Plan
 
-Call helps on the boss, not the stages, and only when allies are online. Do not pay diamonds for helps when a Might bump next week clears it free.
+Call helps on the boss, not the stages, and only when allies are online. Do not pay diamonds for helps when a Power bump next week clears it free.

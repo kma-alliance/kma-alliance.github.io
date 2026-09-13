@@ -7,7 +7,7 @@ tags: covert operations, black ops, falcon quests, falcon tower, hero xp
 updated: 2026-09-13
 ---
 
-## Covert Operations (Black Ops, Sanctuary 9)
+## Covert Operations (Sanctuary 9)
 
 - 70 operations by quality and secrecy. Heroes go out on timers and return hero XP, gearstones, materials and Antitoxin. The main hero XP source in the game: roughly 500k a day at level 1, 15M at max.
 - Top op (quality 5, level 5): needs 3 heroes at level 110+, 2 quality-5 heroes, 1 hero at 4 stars; 4 hours; pays 12,177,000 hero XP and a UR Hero Omni Shard.
@@ -25,4 +25,4 @@ Always run the most expensive op you can, and assist or intercept the most expen
 - Tower level 1 shows 5 quests with 25 storage; level 15 shows 12 with 40 storage and needs 5,000 completed quests. Daily output 24 to 52 quests.
 - Quality-4 chance rises from 18% at Sanctuary 1 to 41% at Sanctuary 35.
 
-They feed Treasure Map fragments, Undead Siege clues, Top Healer (1,000 points) and Alliance Duel days 1, 3 and 5 (10,000 points each on claim). A completed quest with a red dot never expires, so **finish now, claim on the scoring day**. Storage fills in 18 to 30 hours, so never bank more than a day's worth.
+They feed Mystic Treasure fragments, Undead Siege clues, Top Healer (1,000 points) and Alliance Duel days 1, 3 and 5 (10,000 points each on claim). A completed quest with a red dot never expires, so **finish now, claim on the scoring day**. Storage fills in 18 to 30 hours, so never bank more than a day's worth.

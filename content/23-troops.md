@@ -36,9 +36,9 @@ Training capacity per batch: 33 at level 1, 573 at level 30. Training Grounds 30
 
 <div data-widget="promotion-trick"></div>
 
-Max **one** Training Ground to your Sanctuary cap. Keep the other three at level 10, pumping T4. Each level-10 ground produces about 455 T4 in 10.5 hours. Then **promote** those T4 to your top tier on the maxed ground.
+You can hold **three** Training Grounds. Max **one** to your Sanctuary cap and keep the other two at level 10, pumping T4. A level-10 ground trains 371 troops a batch before any capacity research or VIP bonus. Then **promote** those T4 to your top tier on the maxed ground.
 
-Example: 712 T4 promoted to T9 takes about 16.5 hours, versus 33 hours to train them from scratch. Roughly six to seven hours saved per cycle.
+Promoting is faster than training the top tier from scratch, and it is the standard way alliances build a T9 or T10 army. The exact hours depend on your training-speed research and VIP level, so time one batch yourself and use your own number.
 
 The wiki says the game has up to 3 Training Grounds; every guide describes four. The fourth is almost certainly a paid queue slot. Use as many as you have.
 

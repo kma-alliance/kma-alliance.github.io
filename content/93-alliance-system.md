@@ -15,8 +15,8 @@ updated: 2026-09-12
 |---|---|---|
 | R5 | 1 | Leader. Banner, code, language, transfer, disband, the four titles. |
 | R4 | 6 (Alliance Gift 10 adds 2) | Launch events, lead rallies with the bonus, accept and kick below them, promote R1 to R3, alliance mail (needs Alliance Gift 5), declare war. |
-| R3 | – | Auto-promoted from R2 at 1,000,000 Might. Auto-kicked after 96 h offline. |
-| R2 | – | Auto-promoted from R1 at 500,000 Might. Auto-kicked after 48 h. |
+| R3 | – | Auto-promoted from R2 at 1,000,000 Power. Auto-kicked after 96 h offline. |
+| R2 | – | Auto-promoted from R1 at 500,000 Power. Auto-kicked after 48 h. |
 | R1 | – | New members. Auto-kicked after 24 h. |
 
 Member cap: 50 at alliance level 1, +5 per level, 100 at level 10. R4 and R5 are never auto-kicked. Leaders can change the auto-promote and auto-kick thresholds.
@@ -64,7 +64,7 @@ Currency: Alliance Coins. Refreshes weekly, reported on Mondays.
 
 ## Territory
 
-Alliance territory is the area around member Sanctuaries. Being inside it gives production, march speed and defensive bonuses. Teleport into the core, not the edge. Alliance Black Mine control adds up to 50 leadership per hero.
+Alliance territory is the area around member Sanctuaries. Being inside it gives production, march speed and defensive bonuses. Teleport into the core, not the edge. Holding alliance crystal tiles adds up to 50 leadership per hero.
 
 ## Etiquette that every 4X alliance expects
 
@@ -74,5 +74,5 @@ Alliance territory is the area around member Sanctuaries. Being inside it gives 
 - Shield when offline in war weeks. Never leave troops outside during war day.
 - Save items for the matching Duel day. Do not tap the hammer early.
 - Honor NAPs. Hit assigned targets only.
-- Call digs. Bring two lineups to rally events.
+- Call excavations. Bring two lineups to rally events.
 - Tell an officer before going away so you are not auto-kicked.

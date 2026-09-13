@@ -7,9 +7,11 @@ tags: exploration, explorer dungeon, recruit tickets, antitoxin, idle
 updated: 2026-09-13
 ---
 
+> **Unverified name:** **Explorer Dungeon** appears on one site only, as a bare index entry. The better-attested feature is the **Exploration Chain**, 153 steps paying recruit tickets, which is what this page mostly describes.
+
 ## Exploration Chain
 
-One-time, 153 steps around the city, about two thirds of them fights ("Banish the Plague" ×95), gated by recommended Might.
+One-time, 153 steps around the city, about two thirds of them fights ("Banish the Plague" ×95), gated by recommended Power.
 
 Totals: 6.9M hero XP, 1.33M herbs, 999k timber, 979k grain, 850 Resource Supplies, 700 gearstones, **145 Recruit Tickets** (first at step 4, 29 ticket steps), 85 Celia and 70 Claire shards, 70 Tempered Steel. Push it whenever your squad clears the next step.
 

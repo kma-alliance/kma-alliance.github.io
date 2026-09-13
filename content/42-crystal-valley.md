@@ -1,13 +1,13 @@
 ---
 id: crystal-valley
-title: Crystal Cluster Valley (Black Mine)
+title: Crystal Cluster Valley
 category: events
 summary: Thirty minutes of gathering and seizing on an instanced map with provided troops. Instant mines at fixed minutes, Sacred Cave at 23.
 tags: crystal cluster valley, black mine, purified crystal, plague rats
 updated: 2026-09-13
 ---
 
-Some menus and the wiki call this the **Black Mine**. It is the same event.
+Players usually shorten this to **Crystal Valley**. The tiles you mine inside it are crystal resource tiles, levels 1 to 3.
 
 ## At a glance
 
