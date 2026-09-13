@@ -27,6 +27,10 @@ updated: 2026-09-13
 
 Kingdom War (players say KvK, some say SvS) is the event where your server stops fighting itself. The official patch notes of 26 March 2026 added it as an event where players "complete Quests to earn Points and help their Kingdom achieve victory". What decides it is **turnout**: points come from ordinary events that every member plays, and the stage that follows is won by the kingdom that shows up together.
 
+![Kingdom War. Official poster, 25 March 2026. Tap to enlarge.](img/official/kingdom-war.jpg)
+
+The official announcement of 25 March 2026 sums it up: alliances complete quests to earn **Kingdom Points**, the points build up day by day, and the top kingdom wins **Honor** rewards. Kingdoms that opened around the same time are matched together.
+
 ## On a new server: the road to your first KvK
 
 A new server does not start in Kingdom War. It grows into it, and the build-up is where wars are won.

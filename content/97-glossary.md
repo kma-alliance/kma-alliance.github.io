@@ -31,7 +31,7 @@ updated: 2026-09-12
 | Recruit Ticket | Summons heroes. The main hero pull, with a guaranteed UR shard reward every 50 summons. A separate **Survivor Recruit Ticket** recruits survivors. |
 | Wishing Wheel | A side prize wheel, not the main hero pull. There is a hero wheel and a Raven wheel, and one free spin coin arrives daily. |
 | Gearstone | The material hero gear is crafted and upgraded with. The item name is singular. |
-| Mystic Treasure | A limited pirate-themed event with daily Buried Treasure runs and a treasure store. Several players say "Mythic Treasure". A separate fragment-based "Treasure Maps" system in datamined data is not confirmed in-game. |
+| Mythic Treasure | A limited pirate-themed event with daily Buried Treasure runs and a treasure store; the official name since the posts of 5 August 2026. Some players say "Mystic Treasure". A separate fragment-based "Treasure Maps" system in datamined data is not confirmed in-game. |
 | Alliance Excavation | Treasure digging on the alliance map, which runs faster when members help. Player videos show a Treasure Digger tab on the Black Ops screen. Not the same thing as Alliance Expedition, which is a separate event. |
 | Alliance Caravan | The alliance-wide caravan run, separate from your four personal caravans. |
 | City expansion track | The numbered plots around your Sanctuary you clear to expand the city. 153 steps, 145 Recruit Tickets. One site calls it the Exploration Chain, which is not a game label. |

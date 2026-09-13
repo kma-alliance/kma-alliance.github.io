@@ -17,6 +17,8 @@ The [hero investment planner](#/hero-planner) turns this into shards, Antitoxin 
 
 Hero level cap is 5 at Sanctuary 1 to 3, 15 at Sanctuary 4, then **5 × Sanctuary level** from Sanctuary 5 up (Sanctuary 20 = level 100, Sanctuary 30 = level 150). Overflow XP banks, so campaign XP is never wasted.
 
+![Hero build sharing. Official poster. Tap to enlarge.](img/official/hero-build-sharing.jpg)
+
 ## Levels (Antitoxin)
 
 <div data-widget="antitoxin-curve"></div>

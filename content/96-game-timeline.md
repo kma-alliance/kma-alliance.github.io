@@ -17,14 +17,24 @@ updated: 2026-09-12
 |---|---|
 | Dec 2025 | Servers 1 to 8 open |
 | ~28 Feb 2026 | Global launch. Top 100 free in 42 countries |
-| 24 Mar 2026 | Kingdom War announced as the first cross-server kingdom event (guide sites called it Kingdom Clash) |
+| 24 to 26 Mar 2026 | **Kingdom War** announced (poster 25 March) and added in the maintenance of 26 March, 07:00 to 08:30 UTC. The first cross-server kingdom event (guide sites called it Kingdom Clash) |
 | 3 to 9 Apr 2026 | Easter event: UR Omni Shard, Greenery territory skin, egg hunt |
-| 2 Jul 2026 | **Era of Revival** announced |
+| 21 May 2026 | **Canyon Conquest** added: 15 members at Sanctuary 15+, three squads each |
+| 11 Jun 2026 | **Alliance Duel League** announced for kingdoms online more than 7 weeks |
+| 25 Jun 2026 | **Era of Revival** starts on Kingdoms 1 to 32 |
+| 2 Jul 2026 | Brian renamed **Ulfrid**. Bandit Hunt leader cap now rises only from your own alliance's kills |
+| 9 Jul 2026 | **Undead Siege** added, open 2 weeks after a server launches |
 | 10 Jul 2026 | Claire (SSR) can be converted to UR |
-| 13 Jul 2026 | Era of Revival live on Kingdoms 33 to 64, rolling to servers at roughly 130+ days old. Hero Awakening (Marlena and Annie first), Exclusive Weapons, Lord Specialty and Skills, Lord Resistance (a stat that only protects up to the enemy's own value; see [Era](#/era)), Revival Expedition League (16 kingdoms, replaces Kingdom War), city and hero skins gain stats. Servers in the Era close to new characters |
-| Jul 2026 | New UR **Ulfrid (Brian)**, Warlock tank with 147% damage reflect |
-| Aug 2026 | Qixi code, LADOG26 |
+| 13 Jul 2026 | Era of Revival live on Kingdoms 33 to 64, rolling to servers at roughly 130+ days old. Hero Awakening (Marlena and Annie first), Exclusive Weapons, Lord Specialty and Skills, Lord Resistance (a stat that only protects up to the enemy's own value; see [Era](#/era)), Revival Expedition League (16 kingdoms; guide sites say it replaces Kingdom War, see [its guide](#/kingdom-clash)), city and hero skins gain stats. Servers in the Era close to new characters |
+| 30 Jul 2026 | Hunt Battle, Hell Doctor, Triangular Arena, Chief's Coin Chest from Lv.80 Thief Leaders, Elixir Scramble reminder mail, unified Event Schedule |
+| 10 to 17 Aug 2026 | **Mythic Treasure** pirate event, servers open 14+ days |
+| 13 Aug 2026 | Revival Expedition League cut from 56 to 55 days |
+| 19 Aug 2026 | Qixi gift code LAQIXI26. Raid Buffs for the Saturday raid of the Cross-Server Alliance Duel |
+| 21 Aug 2026 | **Supreme Duel** previewed: Era day 58, 27 days, 16 warzones, Sanctuary 20+ |
 | 11 and 14 Aug 2026 | Updates announced in-game; contents not recoverable from public sources |
+| 2 to 4 Sep 2026 | Pandemic Experience Difficulties 10 and 11. Lv.25 Alliance Gift adds a caravan passenger |
+| 7 Sep 2026 | Developer Log Vol.7: server merges and transfers expected later this year |
+| 9 Sep 2026 | **Gear Upgrade** event every Saturday and Sunday |
 | Sep 2026 | Guide sites call the current meta "Season 4" |
 
 ## Server-day unlocks

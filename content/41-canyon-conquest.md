@@ -25,6 +25,8 @@ updated: 2026-09-13
 
 Canyon Conquest is the easiest alliance event to get right and the easiest to throw away. Nothing you own is at risk: soldiers do not die and your marches stay free. What decides it is **where each member's Power is placed**, and that is a job for officers, not for luck.
 
+![Canyon Conquest. Official poster, 21 May 2026. Tap to enlarge.](img/official/canyon-conquest.jpg)
+
 ## How a round is won
 
 Every alliance in the round splits its fighters across three lanes: Left, Mid and Right. The official update notes say **each player may dispatch three squads**, and each squad goes into a lane. Each lane is fought on its own, and the round is decided by how many lanes you take.

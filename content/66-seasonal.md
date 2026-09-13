@@ -49,6 +49,8 @@ Every seasonal event so far has been built from the same parts. Once you know th
 
 Easter Celebration quests, an Easter Egg Hunt with its own exchange, an Art Market with efficiency buffs, and a login and pack track. Rewards included a UR Hero Omni Shard, Raven Essence, Tempered Steel, the Easter Egg Warrior decoration and the **Greenery** city skin. Gift code LAEGG26. Missed eggs and quests could not be recovered.
 
+![Easter gift code poster, April 2026. The code has likely expired. Tap to enlarge.](img/official/seasonal-easter.jpg)
+
 ### Fantasy Realm (7 days)
 
 The most detailed example, and a good model for the next one.
@@ -80,11 +82,13 @@ The most detailed example, and a good model for the next one.
 
 A pirate-themed event with six tabs and three currencies. A player walkthrough lists a Mythic Treasure Store, Daily Missions, Pirate's Game, Pirate Market (the exchange), Grand Feast (a leaderboard that rewards top spenders), Deep Sea's Gift, and a Buried Treasure puzzle. One of its currencies is Pirate Anchors, and the creator warns they are easy to waste on the wrong things.
 
-> **Unverified name:** One creator calls this event "Pirate's Mythic Treasure". That is close to [Mystic Treasure](#/mystic-treasure), the treasure-map feature, and players also use "Buried Treasure" when talking about Mystic Treasure. Whether they are linked is not confirmed. Check the event title in-game.
+> **Note:** the official posts of 5 August 2026 name this event **Mythic Treasure**. It has its own guide: [Mythic Treasure](#/mystic-treasure).
 
 ### Qixi (August 2026)
 
-Only the gift code LAQIXI26 is documented. No anniversary event has been seen yet.
+Only the gift code LAQIXI26, posted on 19 August 2026, is documented. No anniversary event has been seen yet.
+
+![Qixi gift code poster, August 2026. The code has likely expired. Tap to enlarge.](img/official/seasonal-qixi.jpg)
 
 ## What the skins are worth
 
@@ -133,4 +137,4 @@ If the event rewards production or healing, **expand warehouses and wards first*
 
 **Where are the gift codes?** On the [Gift codes](#/gift-codes) page, including LAEGG26 and LAQIXI26.
 
-Related: [Gift codes](#/gift-codes) · [Mystic Treasure](#/mystic-treasure) · [Game timeline](#/game-timeline) · [Spending and VIP](#/spending-vip)
+Related: [Gift codes](#/gift-codes) · [Mythic Treasure](#/mystic-treasure) · [Game timeline](#/game-timeline) · [Spending and VIP](#/spending-vip)

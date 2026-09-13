@@ -1,13 +1,13 @@
 ---
 id: mystic-treasure
-title: Mystic Treasure
+title: Mythic Treasure
 category: solo
 summary: A limited pirate-themed event with seven tabs and three currencies. Hit the 300 Sea Fish cap daily, feed the Grand Feast, play your 5 Buried Treasure runs, and spend Anchor Coins in the market before gambling them.
-tags: Mystic Treasure, Mythic Treasure, pirate event, Buried Treasure, Anchor Coins, Sea Fish, Grand Feast, Pirate Market, limited event
+tags: Mythic Treasure, Mystic Treasure, Pirate's Mythic Treasure, pirate event, Buried Treasure, Anchor Coins, Sea Fish, Grand Feast, Pirate Market, limited event
 updated: 2026-09-13
 ---
 
-> **Unverified name:** players write this event both ways. One creator titles his videos **Mystic Treasure**; his own descriptions and a second creator's full guide say **Mythic Treasure** (or Pirate's Mythic Treasure). Check the banner in your client and tell an officer which one it shows.
+
 
 ```kma-event
 {
@@ -16,16 +16,21 @@ updated: 2026-09-13
   "art": "img/shots/screenshot-ruins.jpg",
   "headline": "A week of pirate mini-games. The free value is in **Sea Fish, Buried Treasure and the Pirate Market**, not the slot machine.",
   "facts": [
-    ["When", "Limited time; last seen mid-August 2026, about a week"],
+    ["When", "Limited time; last run from 10 August 2026 for 7 days"],
     ["Format", "7 tabs, 3 currencies: Anchor Coins, Sea Fish, Pirate Gold"],
-    ["Who", "Solo, plus one server-wide Grand Feast ranking"],
+    ["Who", "Servers open 14+ days · solo, plus a server-wide Grand Feast ranking"],
     ["Cost", "Free daily parts; paid offers are optional"]
   ],
   "rewards": ["Hero Omni Shards", "Speedups", "Raven Essence", "Diamonds", "Sanctuary skin", "Hero XP", "Skill Badges"]
 }
 ```
 
-Mystic Treasure looks overwhelming the first time you open it: a pass, a slot machine, a shop, a server ranking, a fishing task and a card puzzle. It is simpler than it looks. What decides your haul is **doing the capped daily parts every day** and not wasting Anchor Coins on luck when the market sells guaranteed rewards.
+Mythic Treasure looks overwhelming the first time you open it: a pass, a slot machine, a shop, a server ranking, a fishing task and a card puzzle. It is simpler than it looks. What decides your haul is **doing the capped daily parts every day** and not wasting Anchor Coins on luck when the market sells guaranteed rewards.
+
+
+![Mythic Treasure. Official preview poster, 5 August 2026. Tap to enlarge.](img/official/mythic-treasure.jpg)
+
+> **Note:** the official previews of 5 August 2026 name the event **Mythic Treasure** (some players say Mythic Treasure). It started on 10 August 2026, ran for 7 days, and was open to servers at least 14 days old. **Anchor Coins** buy the **Phantom** sanctuary skin, the **Raging Tides** territory effect and a Mythic Treasure nameplate.
 
 ## How it works
 
@@ -94,6 +99,9 @@ This is the puzzle most players struggle with. The board is different every run.
 ```
 
 A tip from a creator who plays it daily: take cards from the **four tall stacks** first, then the centre, then the corners. Only park a spare card in the bar when at least three slots stay free. **Tap slowly**: fast tapping caused a bug where cards stuck in place.
+
+
+![The Phantom skin, Raging Tides effect and nameplate. Official preview poster, 5 August 2026. Tap to enlarge.](img/official/mythic-treasure-2.jpg)
 
 ## Rewards
 

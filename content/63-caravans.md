@@ -103,6 +103,8 @@ The Other tab lists caravans from other servers. You get **4 raids a day**. Raid
 }
 ```
 
+> **Note:** from 4 September 2026, alliances with the **Lv.25 Alliance Gift** privilege carry **1 extra passenger** on each regular wagon (official update notes, 2 September 2026). Leveling the Alliance Gift is how the alliance fits more riders.
+
 > **Unverified:** who defends is unclear. Datamined data says only the coachman's squads guard the caravan. A player video has a "Guard Setup" chapter and a guide blog says the coachman appoints 3 guards; the same blog describes 1 lead wagon and 4 regular wagons instead of 6 carriages. Look at the Trade tab when the next caravan opens.
 
 ## Rewards and scoring

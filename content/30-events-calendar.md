@@ -104,7 +104,8 @@ Use this page to answer one question fast: **what is on today, and do I qualify?
 | Arena | Sanctuary 7 | 5 free fights daily | [Arena](#/arena) |
 | Expedition | Sanctuary 16 | Arenas refresh Sun, Tue, Thu | [Expedition](#/expedition) |
 | Abyss Boss and Weekend Boss | – | Abyss per boss cycle; Weekend Boss at weekends | [Abyss and Weekend Boss](#/abyss-boss) |
-| Mystic Treasure | – | Limited pirate event, about a week | [Mystic Treasure](#/mystic-treasure) |
+| Mythic Treasure | Servers open 14+ days | Limited pirate event, 7 days | [Mythic Treasure](#/mystic-treasure) |
+| Gear Upgrade | – | Every Saturday and Sunday (new in September 2026) | – |
 | Seasonal events | – | Holiday windows of about 7 days | [Seasonal Events](#/seasonal) |
 | Dawn Breakout (name unverified) | – | Schedule unknown; 3 runs of 5 levels | [Dawn Breakout](#/dawn-breakout) |
 | Final Dawn (name unverified) | New server, Sanctuary 5 | First weeks of a server | [Final Dawn](#/final-dawn) |

@@ -7,6 +7,8 @@ tags: heroes, tier list, arthur, marlena, UR, SSR
 updated: 2026-09-12
 ---
 
+![Heroes from the official Hero Story Contest post. Tap to enlarge.](img/official/heroes-lineup.jpg)
+
 ## The short version
 
 1. **Arthur** first. Every player, every budget. He is the most farmable UR (in every recruit pool's guarantee and the Alliance Shop) and simulations show a squad drops from 100 to 64 effectiveness without him.

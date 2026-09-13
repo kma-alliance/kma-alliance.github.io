@@ -65,7 +65,9 @@ You are paid for the number of monsters you defeat, and beating a boss-level mon
 
 Player videos show a **30-monster counter** per difficulty, and difficulty 9 asks for roughly **30M squad Power** solo. Later monsters show up three at a time, and their real battle strength is higher than the Power number they display.
 
-> **Unverified:** guide sites describe **9 difficulties**. Players streaming in September 2026 report that **difficulties 10 and 11** were added, paying awakening shards, and one expects difficulty 10 to have only 10 monsters instead of 30. Check your own difficulty list.
+> **Note:** the official posts of 26 August and 7 September 2026 confirm that **Difficulties 10 and 11** were added from 2 September 2026. Older guide sites still describe 9.
+
+> **Unverified:** players streaming in September 2026 say the new difficulties pay awakening shards, and one expects difficulty 10 to have only 10 monsters instead of 30. Check your own difficulty list.
 
 ### Alliance challenge
 

@@ -190,6 +190,8 @@ Promotion scores as training the new tier, so a stockpile of cheap low-tier troo
 
 ### Day 6: Raid (Saturday)
 
+> **Note:** since the official update notes of 19 August 2026, the Saturday Raid Phase of the **Cross-Server Alliance Duel** gives Raid Buffs: more Infirmary capacity, and faster, cheaper healing. Heal during the raid instead of waiting for Sunday.
+
 ```kma-bars
 {
   "title": "Day 6: best point sources",

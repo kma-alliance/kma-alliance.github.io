@@ -53,7 +53,7 @@ The game has several arenas. The lowest opens almost at once; the higher ones ne
 
 Two more rules matter. In the lowest arena, only a player in the **top 10** can challenge from the rank table, and the target must be ranked **50 or better**. Everyone else fights the opponents the arena offers.
 
-> **Note:** **Triangular Arena** is confirmed by the official update notes of 30 July 2026.
+> **Note:** **Triangular Arena** is confirmed by the official update notes of 30 July 2026. Servers in the Era of Revival also get **Supreme Duel**, a 1v1 tournament across 16 warzones from Era day 58. See [Era of Revival](#/era).
 
 > **Unverified name:** Player videos name a **Rookie Arena** (a "5/5 challenges" run, which matches the lowest arena), a **Triangular Arena**, an **Arena of Fate** (shown paying Fame Medals and UR shards) and an **Apex Arena**. The battle and refresh numbers above come from datamined client files, which do not use those names. Which name belongs to which row is not confirmed; check the arena list in-game.
 

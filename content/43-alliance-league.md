@@ -24,6 +24,9 @@ updated: 2026-09-13
 
 The League is not a separate event you play. It is a ladder built on [Alliance Duel](#/alliance-duel), announced on the official Facebook page on 11 June 2026. You play the same six Duel days. What changes is who you are grouped with and what a good week is worth, because weekly results **move the alliance between divisions**, and the division decides the payout.
 
+
+![Alliance Duel League. Official poster, 11 June 2026. Tap to enlarge.](img/official/alliance-duel-league.jpg)
+
 ## How it works
 
 ```kma-steps
