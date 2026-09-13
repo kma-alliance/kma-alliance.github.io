@@ -186,7 +186,7 @@ Put shards into the heroes you were going to build anyway. A new hero you unlock
 }
 ```
 
-Promotion scores as training the new tier, so a stockpile of cheap low-tier troops is a day 5 point bank. The [Troops](#/troops) page recommends promoting **one tier at a time** so each step scores. Friday is also the hardest day to clear, because speedups went on days 2 and 3, so hold some back.
+Promotion scores as training the new tier, so a stockpile of cheap low-tier troops is a day 5 point bank. Whether promoting **one tier at a time** scores each step is not settled; the [Troops](#/troops) page shows how to test it with a small batch. Friday is also the hardest day to clear, because speedups went on days 2 and 3, so hold some back.
 
 ### Day 6: Raid (Saturday)
 

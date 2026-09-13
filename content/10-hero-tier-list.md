@@ -62,7 +62,7 @@ Power is the wiki's maximum at full investment. All URs share the same base stat
 | Harper | Warrior | Support | A | 920,570 | Hero pass, server day 22; Tavern from day 31 | Ult gives all allies +26% ATK for 5 s. Passive: all Warriors +16.5% ATK. Best buffer for a Warrior team. |
 | Bell | Ranger | Support | A | 920,570 | Server day 71 | +49% ATK to your two best hitters, 450% ATK heal. The Ranger-team Harper. |
 | Nicole | Warlock | Support | A | 920,570 | Server day 99 | Heals two lowest allies, Warlocks +13.5% attack speed. |
-| Zoya | Warrior (verify) | Damage (Energy AoE) | A | ~915,000 | Server day 57 | 3 to 5 daggers on random targets, enemies take +20% Energy damage. Ideal wave clearer. Faction is disputed between sources. |
+| Zoya | Warrior | Damage (Energy AoE) | A | ~915,000 | Server day 57 | 3 to 5 daggers on random targets, enemies take +20% Energy damage. Ideal wave clearer. Datamined hero data lists her as Warrior; one guide site says Ranger. |
 | Annie | Warlock | Damage (Burn) | A | ~915,000 | Hero Pass day 15, later Daily Offer | Burn damage that gets +900% against burning targets at 6 stars. |
 | Cynthia | Ranger | Damage (Crit) | A | ~915,000 | Hero wheel on server day 8 (free daily spins), Tavern from about day 66 | +22% crit passive. In 4 Hero Growth tracks, so her shards pay back badges unusually well. |
 | Red Lady | Ranger | Damage | A | ~915,000 | Server day 36 | 3,792% ATK to two targets with a 35% stun. |
