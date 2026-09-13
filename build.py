@@ -165,7 +165,11 @@ def main():
             codes = json.load(open(codes_path, encoding="utf-8"))
         except Exception as e:
             print(f"warning: could not read codes.json: {e}")
-    data = {"site": site["site"], "categories": site["categories"],
+    quiz = json.load(open(os.path.join(CONTENT, "quiz.json"), encoding="utf-8")) if os.path.exists(os.path.join(CONTENT, "quiz.json")) else {}
+    for i, item in enumerate(quiz.get("questions", []), 1):
+        if not (isinstance(item, dict) and item.get("q", "").strip() and item.get("a", "").strip()):
+            sys.exit(f"build failed:\n  content/quiz.json question {i} needs non-empty q and a")
+    data = {"site": site["site"], "categories": site["categories"], "quiz": quiz,
             "notices": site.get("notices", []), "week": site.get("week", []), "codes": codes, "guides": guides}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
