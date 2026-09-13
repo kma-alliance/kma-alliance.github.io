@@ -22,9 +22,9 @@ updated: 2026-09-13
 }
 ```
 
-Search the answer below while the 30-second timer runs.
+## All 81 quiz answers
 
-## Answer finder
+Every question in the Quiz of Wisdom pool is listed below with its correct answer. Each question has a 30-second timer, so type two or three words from your question to jump straight to it, or tap a category to browse.
 
 <div data-widget="quiz-search"></div>
 
