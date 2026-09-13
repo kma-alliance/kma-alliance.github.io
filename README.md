@@ -45,6 +45,7 @@ Copy any `.md` file, give it a new `id:` and filename. Files are ordered by file
 ## Building locally
 
 ```
+python3 scripts/fetch_assets.py   # downloads hero, building and screenshot artwork into site/img/
 python3 build.py
 python3 -m http.server 8765 --directory site
 ```
@@ -55,5 +56,7 @@ Then open http://localhost:8765. `build.py` bundles `content/` into `site/conten
 
 - `content/` — the guides (edit these)
 - `site/` — the published site (`index.html`, `styles.css`, `app.js`, generated `content/guides.js`)
+- `scripts/fetch_assets.py` + `scripts/assets.json` — game artwork downloaded at build time (not committed)
+- `scripts/scan_codes.py` — gift-code scanner
 - `build.py` — bundler
 - `.github/workflows/pages.yml` — deploys `site/` to GitHub Pages on every push to `main`

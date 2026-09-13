@@ -1,0 +1,24 @@
+{
+  "_note": "Game artwork is copyright 37GAMES / Cloudwalker. Pulled from the official site and wiki-last-asylum.com for alliance use. Run scripts/fetch_assets.py to download into site/img/.",
+  "official": "https://www.last-asylum.com/assets/images/",
+  "wiki": "https://wiki-last-asylum.com/api/media/file/",
+  "shots": ["hero-official-bg.jpg", "screenshot-city.jpg", "screenshot-production.jpg", "screenshot-rat-king.jpg", "screenshot-ruins.jpg", "screenshot-town-rebuild.jpg", "screenshot-hero-team.jpg"],
+  "art": ["annie", "arthur", "bell", "billy", "brian", "cynthia", "daskal", "harper", "jester", "louis", "marlena", "red-lady", "shadow", "zoya"],
+  "cards": {
+    "arthur": "pic-card4-09", "marlena": "pic-card4-10", "shadow": "pic-card4-19", "daskal": "pic-card4-24", "louis": "pic-card4-28", "ulfrid": "pic-card4-26",
+    "billy": "pic-card4-30", "harper": "pic-card4-23", "bell": "pic-card4-29", "nicole": "pic-card4-31", "zoya": "pic-card4-27", "annie": "pic-card4-21",
+    "cynthia": "pic-card4-20", "red-lady": "pic-card4-25", "joker": "pic-card4-22",
+    "bella": "pic-card4-05", "griffith": "pic-card4-12", "grenwald": "pic-card4-18", "stellar": "pic-card4-13", "claire": "pic-card4-04", "bestar": "pic-card4-17",
+    "hastar": "pic-card4-16", "lucius": "pic-card4-07", "kesso": "pic-card4-06", "sivir": "pic-card4-08", "celia": "pic-card4-03", "ash": "pic-card4-14",
+    "durant": "pic-card4-01", "william": "pic-card4-02", "robin": "pic-card4-11", "kafa": "pic-card4-15"
+  },
+  "buildings": {
+    "sanctuary": "1001", "farm": "1016", "lumberyard": "1017", "herb-garden": "1019", "residence": "5021", "temple": "5053", "hall-of-honor": "5054",
+    "soldiers-rest": "5055", "granary": "5023", "lumber-depot": "5024", "herb-storage": "5025", "builders-hut": "5031", "walls": "1002", "gear-workshop": "1008",
+    "explorers-camp": "5002", "tavern": "5008", "squad-1": "5013", "alliance-hall": "1010", "antitoxin-workshop": "1027", "squad-4": "5016",
+    "epigraph-workshop": "5035", "smelting-workshop": "5042", "weaving-workshop": "5043", "falcon-tower": "1006", "training-grounds": "1020", "barracks": "5006",
+    "scout-squad": "5033", "nomad-trader": "5040", "infirmary": "1004", "research-lab": "1007", "arena": "5010", "raven-nest": "5036", "warrior-statue": "5044",
+    "squad-2": "5014", "curio-hall": "5039", "watchtower": "5049", "black-ops": "5029", "monument": "5038", "2nd-workbench": "5047", "lord-statue": "5056",
+    "warlock-statue": "5045", "private-stable": "5051", "alliance-stable": "5052", "ranger-statue": "5046", "raven-workshop": "5034", "squad-3": "5015"
+  }
+}
