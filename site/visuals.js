@@ -265,7 +265,7 @@
       ["1", "Level", "Antitoxin. Cap = 5 x Sanctuary level. Fastest power, drives troop count."],
       ["2", "Stars", "Shards. 475 to 8★, 975 to 10★. Unlocks skill effects at each milestone."],
       ["3", "Skills", "Badges. Main damage or team-DR skill first, passive second, utility last."],
-      ["4", "Gear", "Gearstones. DPS: sword, gloves. Tanks: armor, boots. Push Smelting to 25."]
+      ["4", "Gear", "Gearstone. DPS: sword, gloves. Tanks: armor, boots. Push Smelting to 25."]
     ];
     var h = '<div class="flow">' + steps.map(function (s) { return '<div class="flow-step"><div class="flow-n">' + s[0] + '</div><div class="flow-t">' + s[1] + '</div><div class="flow-d">' + esc(s[2]) + '</div></div>'; }).join('<div class="flow-arrow">→</div>') + '</div>';
     h += '<div class="flow-note"><b>Milestone:</b> level 30 + 8 stars unlocks the fifth skill, which works from the bench (+20% ATK/HP/DEF to the squad).</div>';
@@ -282,9 +282,9 @@
     var d = pts.map(function (p, i) { return (i ? "L" : "M") + X(p[0]) + " " + Y(p[1]); }).join(" ");
     s += '<path d="' + d + ' L' + X(30) + ' ' + base + ' L' + X(3) + ' ' + base + 'Z" fill="var(--accent)" opacity="0.12"/><path d="' + d + '" fill="none" stroke="var(--accent)" stroke-width="2.5"/>';
     pts.forEach(function (p) { s += '<circle cx="' + X(p[0]) + '" cy="' + Y(p[1]) + '" r="5" fill="var(--accent)" stroke="var(--bg)" stroke-width="2"><title>Sanctuary ' + p[0] + ': ' + p[1] + ' Stars</title></circle>' + text(X(p[0]), Y(p[1]) - 10, String(p[1]), { anchor: "middle", size: 11, mono: true, fill: "var(--text-soft)" }) + text(X(p[0]), base + 18, "S" + p[0], { anchor: "middle", size: 11, mono: true, fill: "var(--muted)" }); });
-    s += text(padL, 14, "Stars required per Sanctuary level (cumulative Clinic progress)", { size: 11, weight: 700, fill: "var(--muted)" });
+    s += text(padL, 14, "Stars required per Sanctuary level (a running total, never spent)", { size: 11, weight: 700, fill: "var(--muted)" });
     s += "</svg>";
-    el.innerHTML = fig(s, "Stars needed to upgrade the Sanctuary. The curve is steepest early, which is why the Clinic and forest have to start on day one.", "Line chart of Stars required by Sanctuary level");
+    el.innerHTML = fig(s, "Stars needed to upgrade the Sanctuary. The curve is steepest early, which is why the wards and forest have to start on day one.", "Line chart of Stars required by Sanctuary level");
   };
 
   /* ---------- 15. KvK week (HTML) ---------- */

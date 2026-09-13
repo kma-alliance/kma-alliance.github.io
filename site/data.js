@@ -25,7 +25,7 @@
     ["soldiers-rest","Soldier's Rest",1,"Fallen troops return"],["residence","Residence",1,"Survivor panel"],["hall-of-honor","Hall of Honor",1,"Max level 1, open from the start"],["temple","Temple",1,"Monument"],
     ["granary","Granary",3,"Protected grain"],["lumber-depot","Lumber Depot",3,"Protected timber"],["herb-storage","Herb Storage",3,"Protected herbs"],["builders-hut","Builder's Hut",3,"Free speedup time"],
     ["walls","Walls",4,"City DEF, prerequisite"],["gear-workshop","Gear Workshop",4,"Craft hero gear"],["explorers-camp","Explorer's Camp",4,"Hero XP, idle window"],["tavern","Tavern",4,"Free recruits"],
-    ["squad-1","Squad 1",4,"Rally squad"],["alliance-hall","Alliance Hall",5,"Helps per queue"],["antitoxin-workshop","Antitoxin Workshop",5,"Hero XP, up to 5"],["smelting-workshop","Smelting Workshop",5,"Gearstones, push to 25"],
+    ["squad-1","Squad 1",4,"Rally squad"],["alliance-hall","Alliance Hall",5,"Helps per queue"],["antitoxin-workshop","Antitoxin Workshop",5,"Hero XP, up to 5"],["smelting-workshop","Smelting Workshop",5,"Gearstone, push to 25"],
     ["weaving-workshop","Weaving Workshop",5,"Cloth"],["epigraph-workshop","Epigraph Workshop",5,"Raven epigraphs"],["falcon-tower","Falcon Tower",6,"World map, quests"],["training-grounds","Training Grounds",6,"Troop tier, up to 3"],
     ["barracks","Barracks",6,"Troop capacity"],["scout-squad","Scout Squad",6,"Scout speed"],["nomad-trader","Nomad Trader",6,"Exchange"],["infirmary","Infirmary",7,"Heals wounded, up to 3"],
     ["research-lab","Research Lab",7,"Research; one below Sanctuary"],["arena","Arena",7,"5 free fights a day"],["raven-nest","Raven Nest",7,"Sixth fighter"],["warrior-statue","Warrior Statue",7,"Warrior stats, leadership"],
@@ -77,7 +77,7 @@
   // Published anchors; everything else is log-interpolated and flagged as an estimate.
   var sancRes = { 2: 32, 3: 983, 4: 2598, 5: 19730, 6: 92710, 7: 235800, 8: 395600, 9: 605800, 10: 748700, 15: 6474000, 20: 60030000, 25: 277900000, 30: 1356000000 };
   var sancHerb = { 9: 208700, 10: 232900, 15: 2290000, 20: 18410000, 25: 97530000, 30: 441300000 };
-  // Cumulative Clinic-star thresholds (a gate, never a spend). Whole pool is 326.
+  // Cumulative Star thresholds (a gate, never a spend). Whole pool is 326.
   var sancStars = { 3: 17, 4: 19, 5: 28, 6: 47, 7: 61, 8: 80, 9: 96, 10: 112, 15: 201, 20: 247, 25: 292, 30: 326 };
   // Base build time in seconds, before any construction-speed buff.
   var sancSecs = { 3: 3, 4: 300, 5: 658, 6: 2063, 7: 5440, 8: 10895, 9: 15410, 10: 20123, 15: 80105, 20: 430820, 25: 1911955, 30: 8866423 };
@@ -92,7 +92,7 @@
     6: "World map, Training Grounds, Falcon Tower", 7: "Research Lab, Arena, Raven, first free shield, Survival Battle",
     8: "Squad 2, Watchtower, Demon King, Wandering Phantom", 9: "Second research queue, Covert Operations",
     10: "Alliance Duel, caravans, Canyon Conquest", 11: "Warlock Statue, stables", 12: "Ranger Statue",
-    13: "Undead Siege stage 1 range starts", 15: "Elixir Scramble, Royal City, Temple Battle, Crystal Valley, Raven Workshop",
+    13: "Undead Siege stage 1 range starts", 15: "Elixir Scramble, Royal City, Crystal Valley, Raven Workshop",
     16: "Expedition", 20: "Squad 3, T7 troops", 24: "T8 troops", 27: "T9 troops", 30: "T10 troops, hero level 150"
   };
 

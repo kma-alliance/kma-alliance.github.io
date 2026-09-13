@@ -512,6 +512,10 @@
       window.scrollTo(0, 0);
       return;
     }
+    // Guides renamed after fact-checks keep working at their old addresses.
+    var MOVED = { "alliance-boss-digs": "alliance-boss-excavation", "treasure-maps": "mystic-treasure",
+      "hunt-battle": "blight-event", "temple-battle": "court-posts" };
+    if (!guideById[parts[0]] && MOVED[parts[0]]) { location.replace("#/" + MOVED[parts[0]] + (parts[1] ? "/" + parts[1] : "")); return; }
     var g = guideById[parts[0]];
     if (!g) { content.innerHTML = render404(); $("#tocRail").innerHTML = ""; setActive(null); document.title = "Not found — " + K.site.name; return; }
     content.innerHTML = renderGuide(g);
