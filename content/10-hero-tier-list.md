@@ -18,6 +18,14 @@ updated: 2026-09-12
 
 A fully invested A-tier hero beats a half-built S-tier hero in every mode. Do not spread shards.
 
+## The roster
+
+Every hero in the game with the tier from the tables below. Tap a card to jump to its table.
+
+<div data-widget="hero-gallery"></div>
+
+<div data-widget="hero-art"></div>
+
 ## Factions and the counter triangle
 
 Heroes belong to one of three factions. The counter is a flat 20% damage swing.

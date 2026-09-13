@@ -16,6 +16,10 @@ updated: 2026-09-12
 
 Stars gate every Sanctuary level from 3 upward (17 Stars for level 3, 112 for level 10, 326 for level 30) and **cannot be sped up**. That is why you start the Clinic and the forest on day one, even though the 4X side looks more exciting.
 
+![Inside the walls: the Clinic and production layer. Official screenshot.](img/shots/screenshot-production.jpg)
+
+![Clearing plague ruins around the Sanctuary for Stars and plots. Official screenshot.](img/shots/screenshot-ruins.jpg)
+
 ## Day 1
 
 - [ ] Follow the tutorial to Sanctuary 4. This unlocks the Alliance, Campaign, Bag, Mail and VIP menus.
