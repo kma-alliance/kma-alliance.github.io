@@ -9,11 +9,15 @@ updated: 2026-09-12
 
 ## Order of operations
 
+<div data-widget="hero-path"></div>
+
 **Level → stars → key skills → gear.** Level is the fastest power gain and it drives troop capacity. Keep your main five near the Sanctuary cap. Shards only go into long-term heroes.
 
 Hero level cap is 15 until Sanctuary 5, then **5 × Sanctuary level** (Sanctuary 20 = level 100, Sanctuary 30 = level 150). Overflow XP banks, so campaign XP is never wasted.
 
 ## Levels (Antitoxin)
+
+<div data-widget="antitoxin-curve"></div>
 
 | Level | Antitoxin for that level |
 |---|---|
@@ -46,6 +50,8 @@ Stars move in 0.2 steps up to 10.0. Unlocking a hero costs 10 shards.
 | 9.2 to 10.0 | 60 | 300 |
 
 Totals: **475 shards to reach 8 stars**, **975 to reach 10**. Eight stars matters because that is where the support skill unlocks (with level 30).
+
+<div data-widget="shard-curve"></div>
 
 Star milestones add skill effects: auto attack at 1, 5 and 10 stars; ultimate at 2, 6 and 10; active at 3, 7 and 10; passive at 4, 9 and 10.
 

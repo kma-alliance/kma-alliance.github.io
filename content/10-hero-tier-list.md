@@ -30,6 +30,8 @@ Heroes belong to one of three factions. The counter is a flat 20% damage swing.
 
 Faction bonus for the whole squad's HP, ATK and DEF: 3 of one faction +5%, 3 plus 2 of another +10%, 4 of one +15%, 5 of one +20%.
 
+<div data-widget="faction-triangle"></div>
+
 ## UR heroes
 
 Might is the wiki's maximum at full investment. All URs share the same base stats at level 150; the differences are entirely in skills.

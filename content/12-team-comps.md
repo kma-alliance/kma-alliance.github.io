@@ -9,6 +9,8 @@ updated: 2026-09-12
 
 ## Squad shape
 
+<div data-widget="squad-shape"></div>
+
 Five heroes: 2 in the front row, 3 in the back. Tanks front, support middle, damage back.
 
 Two schools of thought:
