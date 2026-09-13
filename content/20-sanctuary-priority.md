@@ -13,6 +13,8 @@ Rush the **Sanctuary** because it gates hero level caps, buildings and troop tie
 
 The generic "production first, storage second, Sanctuary third" advice you will see on content sites is a 4X template. Experienced players on this game put the Sanctuary, Lab and Training Grounds first and treat resource buildings as visible-score padding.
 
+The [Sanctuary planner](#/sanctuary-planner) totals the bill from your level to any target and flags the prerequisites that will block you.
+
 ## Sanctuary level table
 
 <div data-widget="sanctuary-roadmap"></div>
