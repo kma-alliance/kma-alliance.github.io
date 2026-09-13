@@ -60,7 +60,7 @@
   var DAY_HINT = "Open the Monument building (unlocks at Sanctuary 9) and look for your server's age in days. Not sure? Ask an officer. Close is fine.";
   function dayField(id, day) {
     return fld("Server day", '<input id="' + id + '" type="number" inputmode="numeric" min="1" max="5000" placeholder="e.g. 84" value="' + (day || "") + '">' +
-      '<span class="hint">' + DAY_HINT + (day ? " Counts up by itself each day." : "") + "</span>");
+      '<span class="hint hint-block">' + DAY_HINT + (day ? " It counts up by itself each day." : "") + "</span>", "fld-wide");
   }
   function onProfile(el, fn) {
     var h = function () { if (document.body.contains(el)) fn(); else document.removeEventListener("kma:profile", h); };
@@ -73,7 +73,7 @@
       var h = '<div class="tool">';
       h += '<div class="tool-head"><div class="tool-title">Your account</div><div class="tool-sub">Saved in this browser only. Nothing is uploaded, and officers cannot see it. Every tool and several guides use these numbers.</div></div>';
       h += '<div class="fields">';
-      h += fld("Server number", '<input id="pf-server" type="text" inputmode="numeric" placeholder="e.g. 218" value="' + esc(p.server) + '">');
+      h += fld("Server number", '<input id="pf-server" type="text" inputmode="numeric" placeholder="e.g. 218" value="' + esc(p.server) + '">', "fld-wide");
       h += dayField("pf-day", day);
       h += fld("Sanctuary level", '<input id="pf-sanctuary" type="number" min="1" max="30" value="' + p.sanctuary + '">');
       h += fld("Training Grounds", '<input id="pf-tg" type="number" min="1" max="30" value="' + p.tg + '"><span class="hint">troops: ' + D.tierFor(p.tg) + '</span>');
@@ -122,7 +122,7 @@
     draw();
   };
 
-  function fld(label, input) { return '<label class="fld"><span>' + esc(label) + '</span><span class="fin">' + input + '</span></label>'; }
+  function fld(label, input, cls) { return '<label class="fld' + (cls ? " " + cls : "") + '"><span>' + esc(label) + '</span><span class="fin">' + input + '</span></label>'; }
   function sel(id, opts, cur) {
     return '<select id="' + id + '">' + opts.map(function (o) {
       var v = o instanceof Array ? o[0] : o, t = o instanceof Array ? o[1] : o;
