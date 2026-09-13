@@ -23,6 +23,12 @@
     return m + "m";
   }
 
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function hm(d) { return pad(d.getHours()) + ":" + pad(d.getMinutes()); }
+  var DUEL_DAYS = D.DUEL_DAYS;
+  var tick = null;
+  function startTick(fn) { if (tick) clearInterval(tick); tick = setInterval(fn, 1000); }
+
   /* ================= profile ================= */
   var PKEY = "kma-profile";
   var DEF = { server: "", start: "", sanctuary: 10, tg: 10, lab: 7, might: 1000000, vip: 1, faction: "Warrior" };
@@ -58,7 +64,7 @@
       h += fld("Sanctuary level", '<input id="pf-sanctuary" type="number" min="1" max="30" value="' + p.sanctuary + '">');
       h += fld("Training Grounds", '<input id="pf-tg" type="number" min="1" max="30" value="' + p.tg + '"><span class="hint">troops: ' + D.tierFor(p.tg) + '</span>');
       h += fld("Research Lab", '<input id="pf-lab" type="number" min="0" max="30" value="' + p.lab + '">');
-      h += fld("Squad 1 Might", '<input id="pf-might" type="number" min="0" step="10000" value="' + p.might + '">');
+      h += fld("Squad 1 Power", '<input id="pf-might" type="number" min="0" step="10000" value="' + p.might + '">');
       h += fld("VIP level", '<input id="pf-vip" type="number" min="1" max="20" value="' + p.vip + '">');
       h += fld("Main faction", sel("pf-faction", ["Warrior", "Ranger", "Warlock"], p.faction));
       h += '</div>';
@@ -78,19 +84,15 @@
     }
     function derived(p, day) {
       var s = D.sanctuary(p.sanctuary), nxt = D.sanctuary(Math.min(30, p.sanctuary + 1));
-      var blockers = nxt.prereq.filter(function (r) {
-        if (r[0] === "Research Lab") return p.lab < r[1];
-        if (r[0] === "Training Grounds") return p.tg < r[1];
-        return false;
-      });
+      var g = gates(p, p.sanctuary + 1), blockers = g.blocking;
       var siege = 0; D.undeadSiege.forEach(function (r) { if (p.might >= r[3] && p.sanctuary >= r[1]) siege = r[0]; });
       var road = 0; D.heroRoad.forEach(function (m, i) { if (p.might >= m) road = i + 1; });
       var h = '<div class="cards3">';
-      h += card("Hero level cap", s.heroCap, "5 × Sanctuary " + p.sanctuary);
+      h += card("Hero level cap", s.heroCap, p.sanctuary >= 5 ? "5 × Sanctuary " + p.sanctuary : "flat until Sanctuary 5, then 5 × level");
       h += card("Troop tier", D.tierFor(p.tg), "Training Grounds " + p.tg + (p.tg < 20 ? " · T7 at 20" : p.tg < 30 ? " · T10 at 30" : " · maxed"));
-      h += card("Undead Siege", siege ? "Stage " + siege : "not yet", siege ? "your Might clears stage " + siege : "stage 1 needs 2.4M Might and Sanctuary 13");
-      h += card("Hero Road", road ? "Difficulty " + road : "not yet", road < 11 ? "next gate " + big(D.heroRoad[road]) + " Might" : "all gates cleared");
-      h += card("Expedition", p.sanctuary >= 16 ? bestExped(p) : "Sanctuary 16", p.sanctuary >= 16 ? "highest " + p.faction + " difficulty your Might clears" : "unlocks the three faction arenas");
+      h += card("Undead Siege", siege ? "Stage " + siege : "not yet", siege ? "your Power clears stage " + siege : "stage 1 needs 2.4M Power and Sanctuary 13");
+      h += card("Hero Road", road ? "Difficulty " + road : "not yet", road < 11 ? "next gate " + big(D.heroRoad[road]) + " Power" : "all gates cleared");
+      h += card("Expedition", p.sanctuary >= 16 ? bestExped(p) : "Sanctuary 16", p.sanctuary >= 16 ? "highest " + p.faction + " difficulty your Power clears" : "unlocks the three faction arenas");
       h += card("Server day", day || "set a date", day ? "era day " + (((day - 1) % 56) + 1) + " of 56" : "used by the timeline tool");
       h += '</div>';
       if (blockers.length) {
@@ -117,24 +119,94 @@
     return '<div class="mcard"><div class="cd-label">' + esc(label) + '</div><div class="mval">' + esc(String(value)) + '</div><div class="msub">' + esc(sub || "") + "</div></div>";
   }
 
-  /* home strip */
-  T["profile-strip"] = function (el) {
+  // The profile tracks Research Lab and Training Grounds only. Every other prerequisite
+  // still gates the upgrade, so surface it as "check yourself" instead of silently dropping it.
+  function gates(p, lv) {
+    var pre = D.sanctuary(Math.min(30, lv)).prereq, blocking = [], untracked = [];
+    pre.forEach(function (r) {
+      if (r[0] === "Research Lab") { if (p.lab < r[1]) blocking.push(r); }
+      else if (r[0] === "Training Grounds") { if (p.tg < r[1]) blocking.push(r); }
+      else untracked.push(r);
+    });
+    return { blocking: blocking, untracked: untracked };
+  }
+
+  /* home dashboard */
+  T["dashboard"] = function (el) {
+    var DUEL_TODO = (window.KMA && window.KMA.week) || [];
     function draw() {
-      var p = getProfile();
+      var p = getProfile(), day = serverDay(p);
+      var now = new Date(), idx = D.duelIdx(now);
+      var ms = D.msToReset(now);
+      var dayName = idx < 6 ? "Duel day " + (idx + 1) + ": " + DUEL_DAYS[idx] : DUEL_DAYS[6];
+      var todo = (DUEL_TODO[idx] || {}).todo || "";
+      var h = '<section class="dash' + (p._set ? "" : " dash-new") + '">';
+
       if (!p._set) {
-        el.innerHTML = '<div class="strip-cta"><div><div class="cd-label">Personalise this handbook</div><div class="cta-t">Tell it your Sanctuary level once</div><div class="cta-d">Every calculator, gate check and timeline then works from your own numbers. Saved on your device only.</div></div><a class="btn primary" href="#/my-account">Set up your account</a></div>';
-        return;
+        h += '<div class="dash-cta">';
+        h += '<div class="dash-cta-txt"><div class="cd-label">Start here</div>';
+        h += '<div class="dash-cta-h">Set up your account</div>';
+        h += '<p>One minute, saved on this device only. Then every calculator, gate check and timeline on this site answers with <em>your</em> numbers instead of generic ones.</p>';
+        h += '<ul class="dash-cta-list"><li>What your next Sanctuary level costs, and which building is blocking it</li><li>Which Undead Siege stage, Hero Road difficulty and Expedition level your Power actually clears</li><li>Your real server day, era day, and what unlocks next</li></ul>';
+        h += '<a class="btn primary big" href="#/my-account">Set up your account</a> <a class="btn" href="#/tools">See the tools first</a>';
+        h += '</div></div>';
+      } else {
+        var nxt = D.sanctuary(Math.min(30, p.sanctuary + 1));
+        var blockers = gates(p, p.sanctuary + 1).blocking;
+        h += '<div class="dash-you"><div class="dash-id">';
+        h += '<span class="cd-label">Your account</span>';
+        h += '<div class="dash-chips">';
+        h += chip("Sanctuary", "S" + p.sanctuary);
+        h += chip("Troops", D.tierFor(p.tg));
+        h += chip("Power", big(p.might));
+        h += chip("VIP", p.vip);
+        if (p.server) h += chip("Server", p.server);
+        if (day) h += chip("Day", day);
+        h += '</div><a class="dash-edit" href="#/my-account">Edit</a></div></div>';
       }
-      var day = serverDay(p), nxt = D.sanctuary(Math.min(30, p.sanctuary + 1));
-      var blockers = nxt.prereq.filter(function (r) { return (r[0] === "Research Lab" && p.lab < r[1]) || (r[0] === "Training Grounds" && p.tg < r[1]); });
-      var h = '<div class="strip-you"><div class="cd-label">Your account' + (p.server ? " · server " + esc(p.server) : "") + (day ? " · day " + day : "") + '</div><div class="you-row">';
-      h += '<span><b>S' + p.sanctuary + '</b> Sanctuary</span><span><b>' + D.tierFor(p.tg) + '</b> troops</span><span><b>' + big(p.might) + '</b> Might</span><span><b>VIP ' + p.vip + '</b></span>';
-      h += '<a href="#/my-account">edit</a></div>';
-      h += '<div class="you-next">' + (blockers.length
-        ? '<span class="chip chip-expired">blocked</span> Sanctuary ' + nxt.level + " needs " + blockers.map(function (b) { return b[0] + " " + b[1]; }).join(" and ")
-        : '<span class="chip chip-active">clear</span> Sanctuary ' + nxt.level + " costs " + big(nxt.resource) + " grain and timber each, " + num(nxt.stars) + " Stars total") + '</div></div>';
+
+      h += '<div class="dash-grid">';
+      h += '<div class="dash-card dash-today"><div class="cd-label">Today</div><div class="dash-big">' + esc(dayName) + '</div>' +
+        '<div class="dash-timer">resets in <b class="mono" id="dashTimer">' + D.hms(ms) + '</b> at <b class="mono">' + hm(D.nextReset(now)) + '</b> your time · now <b class="mono" id="dashLocal">' + hm(now) + '</b></div>' +
+        (todo ? '<div class="dash-todo">' + esc(todo) + '</div>' : '') +
+        ((idx === 2 || idx === 5) ? '<div class="dash-extra">Demon King is up today. Three attacks minimum for the daily rewards.</div>' : '') +
+        '</div>';
+
+      if (p._set) {
+        var nxt2 = D.sanctuary(Math.min(30, p.sanctuary + 1));
+        var g2 = gates(p, p.sanctuary + 1), blk = g2.blocking;
+        h += '<div class="dash-card"><div class="cd-label">Next Sanctuary</div><div class="dash-big">Level ' + nxt2.level + '</div>' +
+          (blk.length
+            ? '<div class="dash-todo"><span class="chip chip-expired">blocked</span> needs ' + esc(blk.map(function (b) { return b[0] + " " + b[1]; }).join(" and ")) + '</div>'
+            : '<div class="dash-todo"><span class="chip chip-active">clear</span> ' + big(nxt2.resource) + ' grain and timber each' + (nxt2.herbs ? ", " + big(nxt2.herbs) + " herbs" : "") + '</div>') +
+          '<div class="dash-extra">' + num(nxt2.stars) + ' Stars total (a running count, never spent) · hero cap ' + nxt2.heroCap +
+            (g2.untracked.length ? ' · also needs ' + esc(g2.untracked.map(function (r) { return r[0] + " " + r[1]; }).join(" and ")) + ', which this page does not track' : '') + '</div>' +
+          '<a class="dash-link" href="#/sanctuary-planner">Open the planner</a></div>';
+
+        var upcoming = null;
+        if (day) { for (var i = 0; i < D.serverDays.length; i++) { if (D.serverDays[i][0] > day) { upcoming = D.serverDays[i]; break; } } }
+        h += '<div class="dash-card"><div class="cd-label">' + (upcoming ? "Next on your server" : "Server") + '</div>';
+        if (upcoming) {
+          h += '<div class="dash-big">In ' + (upcoming[0] - day) + ' day' + (upcoming[0] - day === 1 ? "" : "s") + '</div><div class="dash-todo">' + esc(upcoming[1]) + '</div>' +
+            '<div class="dash-extra">Server day ' + upcoming[0] + ' · you are on ' + day + '</div>';
+        } else {
+          h += '<div class="dash-big">' + (day ? "Day " + day : "Set a date") + '</div><div class="dash-todo">' + (day ? "Past every dated unlock." : "Add your server start date to fill this in.") + '</div>';
+        }
+        h += '<a class="dash-link" href="#/server-timeline">Full timeline</a></div>';
+      } else {
+        h += '<div class="dash-card"><div class="cd-label">Every event</div><div class="dash-big">62 guides</div><div class="dash-todo">One page per event, with what scores, what it costs and what leadership expects.</div><a class="dash-link" href="#/events-calendar">Event index</a></div>';
+        h += '<div class="dash-card"><div class="cd-label">Build a squad</div><div class="dash-big">31 heroes</div><div class="dash-todo">Faction bonus, role balance and the bench skill, scored live as you pick.</div><a class="dash-link" href="#/squad-builder">Squad builder</a></div>';
+      }
+      h += '</div></section>';
       el.innerHTML = h;
+      startTick(function () {
+        var t = $("#dashTimer"); if (!t) return;
+        var n2 = new Date();
+        t.textContent = D.hms(D.msToReset(n2));
+        var l = $("#dashLocal"); if (l) l.textContent = hm(n2);
+      });
     }
+    function chip(label, val) { return '<span class="dchip"><em>' + esc(label) + '</em><b>' + esc(String(val)) + '</b></span>'; }
     draw(); onProfile(el, draw);
   };
 
@@ -268,7 +340,7 @@
     var st = { hero: "arthur", s0: 2, s1: 8, l0: 30, l1: 80, shardsWeek: 20, antiDay: 3000000 };
     function draw() {
       var shards = D.shardsBetween(st.s0, st.s1);
-      var anti = D.antitoxinBetween(st.l0, st.l1);
+      var antiR = D.antitoxinBetween(st.l0, st.l1), anti = antiR.total;
       var weeks = st.shardsWeek > 0 ? shards / st.shardsWeek : 0;
       var days = st.antiDay > 0 ? anti / st.antiDay : 0;
       var h = '<div class="tool"><div class="tool-head"><div class="tool-title">Hero investment planner</div><div class="tool-sub">What it costs to get one hero from where they are to where you want them, and roughly how long that takes at your income.</div></div>';
@@ -284,7 +356,9 @@
       h += '<div class="cards3">';
       h += card("Shards needed", num(shards), st.s0 + "★ to " + st.s1 + "★");
       h += card("At your rate", weeks ? (weeks < 1 ? "under a week" : Math.ceil(weeks) + " weeks") : "set a rate", weeks ? "about " + Math.ceil(weeks * 7) + " days" : "");
-      h += card("Antitoxin needed", big(anti), "level " + st.l0 + " to " + st.l1);
+      h += card("Antitoxin needed", big(anti) + (antiR.partial ? "+" : ""), antiR.partial
+        ? "level " + st.l0 + " to " + antiR.upTo + "; costs above " + antiR.upTo + " are not published"
+        : "level " + st.l0 + " to " + st.l1);
       h += card("At your rate", days ? (days < 1 ? "under a day" : Math.ceil(days) + " days") : "set a rate", "");
       h += '</div>';
       var milestones = [];
@@ -470,10 +544,10 @@
     var n = 10;
     function draw() {
       var secs = 7200 / (n * n);
-      el.innerHTML = '<div class="tool mini"><div class="tool-title">Alliance dig</div>' +
-        '<div class="fields">' + fld("Diggers", '<input id="cd-n" type="number" min="1" max="100" value="' + n + '">') + '</div>' +
+      el.innerHTML = '<div class="tool mini"><div class="tool-title">Shared alliance spot</div>' +
+        '<div class="fields">' + fld("People helping", '<input id="cd-n" type="number" min="1" max="100" value="' + n + '">') + '</div>' +
         '<div class="cards3">' + card("Finish time", secs < 1 ? "about 1 second" : (secs < 60 ? Math.round(secs) + " seconds" : dur(secs)), "alone it is 2 hours") +
-        card("Versus one digger", (7200 / secs).toFixed(0) + "× faster", "speed scales with the square of the diggers") + "</div></div>";
+        card("Versus one member", (7200 / secs).toFixed(0) + "× faster", "speed scales with the square of the members") + "</div></div>";
       $("#cd-n", el).addEventListener("change", function () { n = Math.max(1, Math.min(100, +this.value || 1)); draw(); });
     }
     draw();
@@ -512,23 +586,23 @@
   T["gate-check"] = function (el) {
     function draw() {
       var p = getProfile();
-      if (!p._set) { el.innerHTML = '<div class="note note-info">Set your Might on the <a href="#/my-account">account page</a> and this becomes a personal check.</div>'; return; }
+      if (!p._set) { el.innerHTML = '<div class="note note-info">Set your Power on the <a href="#/my-account">account page</a> and this becomes a personal check.</div>'; return; }
       var kind = el.getAttribute("data-gate");
       var h = "";
       if (kind === "siege") {
         var stage = 0; D.undeadSiege.forEach(function (r) { if (p.might >= r[3] && p.sanctuary >= r[1]) stage = r[0]; });
         var nxt = D.undeadSiege[stage] || null;
-        h = stage ? "Your " + big(p.might) + " Might and Sanctuary " + p.sanctuary + " clear **stage " + stage + "**." : "You do not meet stage 1 yet (2.4M Might, Sanctuary 13).";
-        if (nxt) h += " Stage " + nxt[0] + " needs " + big(nxt[3]) + " Might and Sanctuary " + nxt[1] + ".";
+        h = stage ? "Your " + big(p.might) + " Power and Sanctuary " + p.sanctuary + " clear **stage " + stage + "**." : "You do not meet stage 1 yet (2.4M Power, Sanctuary 13).";
+        if (nxt) h += " Stage " + nxt[0] + " needs " + big(nxt[3]) + " Power and Sanctuary " + nxt[1] + ".";
       } else if (kind === "heroroad") {
         var d = 0; D.heroRoad.forEach(function (m, i) { if (p.might >= m) d = i + 1; });
-        h = d ? "Your squad clears **difficulty " + d + "**." : "Difficulty 1 needs 770k squad Might.";
+        h = d ? "Your squad clears **difficulty " + d + "**." : "Difficulty 1 needs 770k squad Power.";
         if (d < 11) h += " Difficulty " + (d + 1) + " needs " + big(D.heroRoad[d]) + ".";
       } else if (kind === "expedition") {
         if (p.sanctuary < 16) h = "Expedition unlocks at Sanctuary 16; you are at " + p.sanctuary + ".";
         else {
           var best = 0; for (var i = 1; i <= 60; i++) if (p.might >= D.expeditionAt(p.faction, i).might) best = i;
-          h = best ? "In the " + p.faction + " arena your " + big(p.might) + " Might clears up to **difficulty " + best + "** (" + num(D.expeditionAt(p.faction, best).medals) + " medals)." : "Difficulty 1 in the " + p.faction + " arena needs " + big(D.expeditionAt(p.faction, 1).might) + " Might.";
+          h = best ? "In the " + p.faction + " arena your " + big(p.might) + " Power clears up to **difficulty " + best + "** (" + num(D.expeditionAt(p.faction, best).medals) + " medals)." : "Difficulty 1 in the " + p.faction + " arena needs " + big(D.expeditionAt(p.faction, 1).might) + " Power.";
         }
       }
       el.innerHTML = '<div class="note note-good">' + h.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>") + "</div>";

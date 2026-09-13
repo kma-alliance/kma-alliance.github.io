@@ -21,11 +21,11 @@
 
   // [slug, name, sanctuaryLevel, note]
   var buildings = [
-    ["sanctuary","Sanctuary",1,"HQ. Gates everything."],["farm","Farm",1,"Grain, up to 4"],["lumberyard","Lumberyard",1,"Timber, up to 4"],["herb-garden","Herb Garden",2,"Herbs, up to 4"],
-    ["soldiers-rest","Soldier's Rest",1,"Fallen troops return"],["residence","Residence",1,"Survivor panel"],["hall-of-honor","Hall of Honor",15,"Late-game shard sink"],["temple","Temple",1,"Monument"],
+    ["sanctuary","Sanctuary",1,"HQ. Gates everything."],["farm","Farm",1,"Grain, up to 4"],["lumberyard","Lumberyard",1,"Timber, up to 4"],["herb-garden","Herb Garden",1,"Herbs; 2nd at Sanctuary 2, 4th at 19"],
+    ["soldiers-rest","Soldier's Rest",1,"Fallen troops return"],["residence","Residence",1,"Survivor panel"],["hall-of-honor","Hall of Honor",1,"Max level 1, open from the start"],["temple","Temple",1,"Monument"],
     ["granary","Granary",3,"Protected grain"],["lumber-depot","Lumber Depot",3,"Protected timber"],["herb-storage","Herb Storage",3,"Protected herbs"],["builders-hut","Builder's Hut",3,"Free speedup time"],
     ["walls","Walls",4,"City DEF, prerequisite"],["gear-workshop","Gear Workshop",4,"Craft hero gear"],["explorers-camp","Explorer's Camp",4,"Hero XP, idle window"],["tavern","Tavern",4,"Free recruits"],
-    ["squad-1","Squad 1",4,"Rally squad"],["alliance-hall","Alliance Hall",6,"Helps per queue"],["antitoxin-workshop","Antitoxin Workshop",5,"Hero XP, up to 5"],["smelting-workshop","Smelting Workshop",5,"Gearstones, push to 25"],
+    ["squad-1","Squad 1",4,"Rally squad"],["alliance-hall","Alliance Hall",5,"Helps per queue"],["antitoxin-workshop","Antitoxin Workshop",5,"Hero XP, up to 5"],["smelting-workshop","Smelting Workshop",5,"Gearstones, push to 25"],
     ["weaving-workshop","Weaving Workshop",5,"Cloth"],["epigraph-workshop","Epigraph Workshop",5,"Raven epigraphs"],["falcon-tower","Falcon Tower",6,"World map, quests"],["training-grounds","Training Grounds",6,"Troop tier, up to 3"],
     ["barracks","Barracks",6,"Troop capacity"],["scout-squad","Scout Squad",6,"Scout speed"],["nomad-trader","Nomad Trader",6,"Exchange"],["infirmary","Infirmary",7,"Heals wounded, up to 3"],
     ["research-lab","Research Lab",7,"Research; one below Sanctuary"],["arena","Arena",7,"5 free fights a day"],["raven-nest","Raven Nest",7,"Sixth fighter"],["warrior-statue","Warrior Statue",7,"Warrior stats, leadership"],
@@ -35,24 +35,57 @@
     ["squad-3","Squad 3",20,"Third squad"],["squad-4","Squad 4",5,"Premium pass squad"]
   ];
 
+
+  // Official Alliance Duel day names.
+  var DUEL_DAYS = ["Raven", "Construction", "Tech", "Hero", "Preparation", "Raid", "Sunday (no Duel day)"];
+
+  // ---------- Server clock ----------
+  // The daily reset (and the Alliance Duel day roll) happens at 00:00 SERVER time, not 00:00 UTC.
+  // Server time defaults to UTC-2; a player can correct it on the Timezones page and it is
+  // remembered on their device. Every countdown on the site reads through here.
+  var DEFAULT_SERVER_OFFSET = -2;
+  function serverOffset() {
+    try { var v = parseFloat(localStorage.getItem("kma-server-offset")); if (!isNaN(v)) return v; } catch (e) {}
+    return DEFAULT_SERVER_OFFSET;
+  }
+  function setServerOffset(h) { try { localStorage.setItem("kma-server-offset", String(h)); } catch (e) {} }
+  // A Date whose getUTC* fields read as the server wall clock.
+  function serverNow(now) { return new Date((now || new Date()).getTime() + serverOffset() * 3600000); }
+  // The real instant of the next 00:00 server time.
+  function nextReset(now) {
+    now = now || new Date();
+    var s = serverNow(now);
+    return new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth(), s.getUTCDate() + 1) - serverOffset() * 3600000);
+  }
+  function msToReset(now) { now = now || new Date(); return nextReset(now) - now; }
+  // Alliance Duel day index, Monday = 0, on the server calendar.
+  function duelIdx(now) { return (serverNow(now).getUTCDay() + 6) % 7; }
+  function hms(ms) {
+    if (ms < 0) ms = 0;
+    var p = function (n) { return (n < 10 ? "0" : "") + n; };
+    return p(Math.floor(ms / 36e5)) + ":" + p(Math.floor(ms % 36e5 / 6e4)) + ":" + p(Math.floor(ms % 6e4 / 1e3));
+  }
+
   // ---------- Sanctuary upgrade table ----------
   // Published anchors; everything else is log-interpolated and flagged as an estimate.
-  var sancRes = { 2: 32, 3: 983, 4: 2598, 5: 19700, 6: 92700, 7: 236000, 8: 396000, 9: 606000, 10: 749000, 15: 6400000, 20: 57000000, 25: 260000000, 30: 1300000000 };
-  var sancHerb = { 9: 209000, 10: 233000, 15: 2300000, 20: 17500000, 25: 91200000, 30: 415000000 };
+  var sancRes = { 2: 32, 3: 983, 4: 2598, 5: 19730, 6: 92710, 7: 235800, 8: 395600, 9: 605800, 10: 748700, 15: 6474000, 20: 60030000, 25: 277900000, 30: 1356000000 };
+  var sancHerb = { 9: 208700, 10: 232900, 15: 2290000, 20: 18410000, 25: 97530000, 30: 441300000 };
+  // Cumulative Clinic-star thresholds (a gate, never a spend). Whole pool is 326.
   var sancStars = { 3: 17, 4: 19, 5: 28, 6: 47, 7: 61, 8: 80, 9: 96, 10: 112, 15: 201, 20: 247, 25: 292, 30: 326 };
-  var sancSecs = { 3: 3, 4: 300, 5: 658, 6: 2063, 7: 5400, 8: 10380, 9: 14700, 10: 20100, 15: 73500, 20: 301260, 25: 1229580, 30: 4146780 };
+  // Base build time in seconds, before any construction-speed buff.
+  var sancSecs = { 3: 3, 4: 300, 5: 658, 6: 2063, 7: 5440, 8: 10895, 9: 15410, 10: 20123, 15: 80105, 20: 430820, 25: 1911955, 30: 8866423 };
   var sancPrereq = {
     5: [["Walls", 3]], 6: [["Walls", 5]], 7: [["Training Grounds", 4], ["Alliance Hall", 3]], 8: [["Training Grounds", 6], ["Alliance Hall", 5]],
-    9: [["Walls", 8], ["Alliance Hall", 7]], 10: [["Walls", 9], ["Infirmary", 7]], 11: [["Research Lab", 7]],
-    15: [["Research Lab", 14], ["Training Grounds", 14]], 20: [["Research Lab", 19], ["Alliance Hall", 18]],
-    25: [["Research Lab", 24], ["Training Grounds", 24]], 30: [["Research Lab", 29], ["Training Grounds", 29]]
+    9: [["Walls", 8], ["Alliance Hall", 7]], 10: [["Walls", 9], ["Infirmary", 7]], 11: [["Research Lab", 7], ["Training Grounds", 10]],
+    15: [["Research Lab", 14], ["Training Grounds", 14], ["Herb Garden", 7]], 20: [["Research Lab", 19], ["Alliance Hall", 18], ["Farm", 10]],
+    25: [["Research Lab", 24], ["Training Grounds", 24], ["Herb Storage", 10]], 30: [["Research Lab", 29], ["Training Grounds", 29], ["Antitoxin Workshop", 15]]
   };
   var sancUnlocks = {
-    3: "Builder's Hut, storage buildings", 4: "Alliance, Campaign, VIP, Walls, Squad 1", 5: "Antitoxin and Smelting Workshops",
-    6: "World map, Training Grounds, Alliance Hall", 7: "Research Lab, Arena, Raven, first free shield, Survival Battle",
+    3: "Builder's Hut, storage buildings", 4: "Alliance, Campaign, VIP, Walls, Squad 1", 5: "Alliance Hall, Antitoxin and Smelting Workshops",
+    6: "World map, Training Grounds, Falcon Tower", 7: "Research Lab, Arena, Raven, first free shield, Survival Battle",
     8: "Squad 2, Watchtower, Demon King, Wandering Phantom", 9: "Second research queue, Covert Operations",
     10: "Alliance Duel, caravans, Canyon Conquest", 11: "Warlock Statue, stables", 12: "Ranger Statue",
-    13: "Undead Siege stage 1 range starts", 15: "Elixir Scramble, Royal City, Temple Battle, Crystal Valley, Hall of Honor",
+    13: "Undead Siege stage 1 range starts", 15: "Elixir Scramble, Royal City, Temple Battle, Crystal Valley, Raven Workshop",
     16: "Expedition", 20: "Squad 3, T7 troops", 24: "T8 troops", 27: "T9 troops", 30: "T10 troops, hero level 150"
   };
 
@@ -65,14 +98,24 @@
     var a = Math.log(Math.max(1, table[lo])), b = Math.log(Math.max(1, table[hi]));
     return { v: Math.round(Math.exp(a + (b - a) * (lv - lo) / (hi - lo))), est: true };
   }
+  function linInterp(table, lv) {
+    var keys = Object.keys(table).map(Number).sort(function (a, b) { return a - b; });
+    if (table[lv] !== undefined) return { v: table[lv], est: false };
+    var lo = null, hi = null;
+    keys.forEach(function (k) { if (k < lv) lo = k; if (hi === null && k > lv) hi = k; });
+    if (lo === null) return { v: 0, est: false };
+    if (hi === null) return { v: table[lo], est: true };
+    return { v: Math.round(table[lo] + (table[hi] - table[lo]) * (lv - lo) / (hi - lo)), est: true };
+  }
   function sanctuary(lv) {
     var res = logInterp(sancRes, lv), herb = lv < 9 ? { v: 0, est: false } : logInterp(sancHerb, lv);
-    var st = logInterp(sancStars, lv), sec = logInterp(sancSecs, lv);
+    var st = linInterp(sancStars, lv), sec = logInterp(sancSecs, lv);
     var pre = sancPrereq[lv];
     if (!pre && lv >= 10) pre = [["Research Lab", lv - 1], ["Training Grounds", lv - 1]];
     return {
       level: lv, resource: res.v, herbs: herb.v, stars: st.v, seconds: sec.v,
-      est: res.est || st.est, prereq: pre || [], prereqEst: !sancPrereq[lv] && lv >= 10,
+      est: res.est || herb.est || sec.est, starsEst: st.est, starsCumulative: true,
+      prereq: pre || [], prereqEst: !sancPrereq[lv] && lv >= 10,
       heroCap: lv <= 3 ? 5 : (lv === 4 ? 15 : lv * 5), unlocks: sancUnlocks[lv] || ""
     };
   }
@@ -87,9 +130,11 @@
     }
     return n;
   }
-  var antiAnchors = [[2,100],[10,1500],[11,2100],[30,19900],[44,47900],[45,137900],[60,1550000],[90,20800000],[91,21700000],[148,168000000],[150,176000000]];
+  var antiAnchors = [[2,100],[10,1500],[11,2100],[30,19900],[44,47900],[45,137900],[60,1550000],[90,20800000],[91,21700000],[148,168000000]];
+  var ANTI_LAST = 148; // nothing above this is published
   function antitoxinAt(lv) {
     if (lv <= 1) return 0;
+    if (lv > ANTI_LAST) return null;   // Lv149-150 costs are not published anywhere
     for (var i = 0; i < antiAnchors.length; i++) if (antiAnchors[i][0] === lv) return antiAnchors[i][1];
     var lo = antiAnchors[0], hi = antiAnchors[antiAnchors.length - 1];
     for (var j = 0; j < antiAnchors.length - 1; j++) {
@@ -98,7 +143,11 @@
     var a = Math.log(lo[1]), b = Math.log(hi[1]);
     return Math.round(Math.exp(a + (b - a) * (lv - lo[0]) / (hi[0] - lo[0])));
   }
-  function antitoxinBetween(from, to) { var t = 0; for (var l = from + 1; l <= to; l++) t += antitoxinAt(l); return t; }
+  function antitoxinBetween(from, to) {
+    var t = 0, partial = false;
+    for (var l = from + 1; l <= to; l++) { var a = antitoxinAt(l); if (a === null) { partial = true; break; } t += a; }
+    return partial ? { total: t, partial: true, upTo: ANTI_LAST } : { total: t, partial: false, upTo: to };
+  }
 
   // ---------- Squad model ----------
   // Transparent heuristic, not the game's formula. Weights per role.
@@ -177,7 +226,7 @@
   ];
 
   // ---------- VIP, shields, misc ----------
-  var vip = [[1,0,"Basic"],[3,1050,"Up to +8% production"],[5,11000,"Auto-dispatch covert ops, +13% production, +15% build"],[8,55000,"Expedition battles, +8% march, +30% build"],[11,0,"Universal UR fragments in the Diamond Shop"],[12,550000,"First combat stats: +4% hero HP/ATK/DEF"],[20,50000000,"+13% hero stats, +50% build and training"]];
+  var vip = [[1,0,"Basic"],[3,1050,"Up to +8% production"],[5,11000,"Auto-dispatch covert ops, +13% production, +15% build"],[8,55000,"Expedition battles, +8% march, +30% build"],[11,null,"Universal UR fragments in the Diamond Shop"],[12,550000,"First combat stats: +4% hero HP/ATK/DEF"],[20,50000000,"+13% hero stats, +50% build and training"]];
   var shields = [[8,7500,1500],[12,9900,2500],[24,19800,5000],[72,null,12000]];
   var lure = [[15,3],[20,7],[25,12],[30,18],[35,25]];
 
@@ -189,6 +238,9 @@
     roleWeight: roleWeight, factionBonus: factionBonus,
     troopTier: troopTier, tierFor: tierFor,
     duel: duel, heroRoad: heroRoad, undeadSiege: undeadSiege, expeditionAt: expeditionAt,
-    serverDays: serverDays, vip: vip, shields: shields, lure: lure
+    serverDays: serverDays, vip: vip, shields: shields, lure: lure,
+    serverOffset: serverOffset, setServerOffset: setServerOffset, serverNow: serverNow,
+    nextReset: nextReset, msToReset: msToReset, duelIdx: duelIdx, hms: hms,
+    DUEL_DAYS: DUEL_DAYS, ANTI_LAST: ANTI_LAST
   };
 })();

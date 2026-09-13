@@ -191,7 +191,7 @@
     var X = function (m) { return x0 + m / 30 * (x1 - x0); };
     var s = svgOpen(W, H);
     var band = function (a, b, col, label) { s += '<rect x="' + X(a) + '" y="' + (y - 22) + '" width="' + (X(b) - X(a)) + '" height="44" fill="' + col + '" opacity="0.18"/>' + text((X(a) + X(b)) / 2, y + 5, label, { anchor: "middle", size: 12, weight: 700 }); };
-    band(0, 10, "var(--blue)", "Take Platform + own Workshop, contest theirs"); band(10, 13, "var(--accent)", "Castle!"); band(13, 30, "var(--green)", "Hold the Castle, rotate wounded, camps for low Might");
+    band(0, 10, "var(--blue)", "Take Platform + own Workshop, contest theirs"); band(10, 13, "var(--accent)", "Castle!"); band(13, 30, "var(--green)", "Hold the Castle, rotate wounded, camps for low Power");
     s += '<line x1="' + x0 + '" y1="' + y + '" x2="' + x1 + '" y2="' + y + '" stroke="var(--line-strong)" stroke-width="2"/>';
     for (var m = 0; m <= 30; m += 5) { s += '<line x1="' + X(m) + '" y1="' + (y + 22) + '" x2="' + X(m) + '" y2="' + (y + 30) + '" stroke="var(--line-strong)"/>' + text(X(m), y + 46, m + " min", { anchor: "middle", size: 11, mono: true, fill: "var(--muted)" }); }
     var mark = function (m, lab, sub, up) { var ty = up ? y - 62 : y + 82; s += '<line x1="' + X(m) + '" y1="' + (up ? y - 24 : y + 24) + '" x2="' + X(m) + '" y2="' + (up ? y - 44 : y + 64) + '" stroke="var(--accent)" stroke-width="2"/><circle cx="' + X(m) + '" cy="' + (up ? y - 44 : y + 64) + '" r="4" fill="var(--accent)"/>'; s += text(X(m), ty - (up ? 6 : -4), lab, { anchor: "middle", size: 12, weight: 700 }); s += text(X(m), ty + (up ? 9 : 19), sub, { anchor: "middle", size: 11, fill: "var(--text-soft)" }); };
@@ -229,11 +229,11 @@
     titles.forEach(function (t, i) { var x = 120 + i * 125; s += '<rect x="' + x + '" y="76" width="110" height="34" rx="6" fill="var(--surface-2)" stroke="var(--line-strong)"/>' + text(x + 55, 97, t, { anchor: "middle", size: 11.5, weight: 700 }); });
     s += text(W / 2, 128, "four honorary posts held by R4s, +5% rally damage", { anchor: "middle", size: 11, fill: "var(--muted)" });
     row(140, 380, "R4  Officers (6 seats)", "launch events, lead rallies, accept and kick, alliance mail", "var(--blue)", "+2.5% rally");
-    row(206, 480, "R3  Veterans", "auto-promoted at 1,000,000 Might", "var(--green)", "kick after 96 h offline");
-    row(272, 560, "R2  Members", "auto-promoted at 500,000 Might", "var(--green)", "kick after 48 h");
+    row(206, 480, "R3  Veterans", "auto-promoted at 1,000,000 Power", "var(--green)", "kick after 96 h offline");
+    row(272, 560, "R2  Members", "auto-promoted at 500,000 Power", "var(--green)", "kick after 48 h");
     row(338, 640, "R1  Recruits", "", "var(--muted)", "kick after 24 h");
     s = s.replace('<svg', '<svg'); // no-op keeps structure
-    el.innerHTML = fig(s.replace('viewBox="0 0 720 360"', 'viewBox="0 0 720 400"') + "</svg>", "How KMA is organised: one leader, four titled officers among the six R4s, then members promoted by Might and removed by inactivity.", "Alliance rank pyramid");
+    el.innerHTML = fig(s.replace('viewBox="0 0 720 360"', 'viewBox="0 0 720 400"') + "</svg>", "How KMA is organised: one leader, four titled officers among the six R4s, then members promoted by Power and removed by inactivity.", "Alliance rank pyramid");
   };
 
   /* ---------- 11. Shield cost per hour ---------- */
@@ -298,7 +298,7 @@
 
   /* ---------- 16. Research order (HTML flow) ---------- */
   V["research-order"] = function (el) {
-    var steps = [["Development", "cheapest Might, build + research speed"], ["Duel tree", "Super 100 → Best 450 → Arena Expert 3,800 scrolls"], ["Economy", "gathering branch first"], ["Hero", "your Squad 1 faction"], ["Soldiers", "Load Training first"], ["Squad 1", "same buffs as Squad 2/3, far cheaper"], ["Elite Troop", "only the node for the next tier"], ["Later", "Squads 2 and 3, Tactics, Caravan"]];
+    var steps = [["Development", "cheapest Power, build + research speed"], ["Duel tree", "Super 100 → Best 450 → Arena Expert 3,800 scrolls"], ["Economy", "gathering branch first"], ["Hero", "your Squad 1 faction"], ["Soldiers", "Load Training first"], ["Squad 1", "same buffs as Squad 2/3, far cheaper"], ["Elite Troop", "only the node for the next tier"], ["Later", "Squads 2 and 3, Tactics, Caravan"]];
     el.innerHTML = '<div class="flow flow-wrap">' + steps.map(function (s, i) { return '<div class="flow-step' + (i === 1 ? ' flow-hl' : '') + '"><div class="flow-n">' + (i + 1) + '</div><div class="flow-t">' + esc(s[0]) + '</div><div class="flow-d">' + esc(s[1]) + '</div></div>'; }).join('<div class="flow-arrow">→</div>') + '</div>';
   };
 
