@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Bundle content/*.md + content/site.json into site/content/guides.js,
-and produce artifact/index.html (a body-only copy for claude.ai Artifacts).
+"""Bundle content/*.md + content/site.json into site/content/guides.js.
 
 Usage:  python3 build.py
 Guide files need a front-matter block:
@@ -132,14 +131,6 @@ def main():
     html = re.sub(r'(src|href)="((?!https?:|//)[^"]+\.(?:js|css))(?:\?[^"]*)?"', stamp, html)
     open(index_path, "w", encoding="utf-8").write(html)
 
-    # Artifact variant: strip the document wrapper (the Artifact host adds its own).
-    head = re.search(r"<head>(.*?)</head>", html, re.S).group(1)
-    body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
-    head = re.sub(r"<meta[^>]*>\s*", "", head)  # host supplies charset/viewport
-    art = os.path.join(ROOT, "artifact")
-    os.makedirs(art, exist_ok=True)
-    open(os.path.join(art, "index.html"), "w", encoding="utf-8").write(head.strip() + "\n" + body.strip() + "\n")
-    print("wrote artifact/index.html")
 
 if __name__ == "__main__":
     main()

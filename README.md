@@ -95,7 +95,7 @@ python3 build.py
 python3 -m http.server 8765 --directory site
 ```
 
-Then open http://localhost:8765. `build.py` bundles `content/` into `site/content/guides.js` (generated, not committed) and writes `artifact/index.html` (a copy for claude.ai Artifacts).
+Then open http://localhost:8765. `build.py` bundles `content/` into `site/content/guides.js` (generated, not committed).
 
 `build.py` refuses to build on three mistakes that are invisible in a browser:
 
