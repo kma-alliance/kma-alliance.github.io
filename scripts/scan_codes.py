@@ -89,8 +89,15 @@ def main():
         for c in a: active_by.setdefault(c, set()).add(name)
         for c in x - a: expired_by.setdefault(c, set()).add(name)
         print(f"  active {sorted(a)} expired {sorted(x - a)}")
+    # A code is only demoted on the evidence of a healthy scan. With most trackers
+    # unreachable, absence proves nothing, so hold every previous status instead.
+    QUORUM = max(2, len(SOURCES) // 2)
     if not checked:
         print("no source reachable; leaving codes.json untouched"); return
+    trustworthy = len(checked) >= QUORUM
+    if not trustworthy:
+        print(f"only {len(checked)}/{len(SOURCES)} sources answered (need {QUORUM});"
+              " recording what was found but not demoting anything")
     # Normalise case variants (LAiOSLA vs LAIOSLA): keep the most common spelling.
     codes = {}
     for c in set(active_by) | set(expired_by) | set(prev):
@@ -107,15 +114,40 @@ def main():
         last_active = today if act else old.get("last_active", old.get("first_seen", today))
         if act and not exp: status = "active"
         elif act and exp: status = "disputed"
+        elif not trustworthy and old.get("status"): status = old["status"]
         else:
-            days = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(last_active)).days
+            try:
+                days = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(last_active)).days
+            except ValueError:
+                days = 0
             status = "expired" if (exp or days > 21) else "unconfirmed"
         out.append({"code": code, "status": status, "first_seen": first, "last_active": last_active,
                     "active_sources": sorted(act), "expired_sources": sorted(exp),
                     "rewards": old.get("rewards", "")})
     order = {"active": 0, "disputed": 1, "unconfirmed": 2, "expired": 3}
-    out.sort(key=lambda c: (order[c["status"]], c["first_seen"] and -int(c["first_seen"].replace("-", "")), c["code"]))
-    data = {"scanned": now, "sources_checked": checked, "sources_total": len(SOURCES), "codes": out}
+    def seen_key(c):
+        try:
+            return -int(c["first_seen"].replace("-", ""))
+        except (ValueError, AttributeError):
+            return 0
+    out.sort(key=lambda c: (order[c["status"]], seen_key(c), c["code"]))
+
+    # Codes accumulate forever otherwise. Keep long-dead ones out of the payload that
+    # ships to every visitor, but never drop anything still active or contested.
+    def stale(c):
+        if c["status"] != "expired":
+            return False
+        try:
+            return (datetime.date.fromisoformat(today)
+                    - datetime.date.fromisoformat(c["last_active"])).days > 180
+        except ValueError:
+            return False
+    dropped = [c["code"] for c in out if stale(c)]
+    out = [c for c in out if not stale(c)]
+    if dropped:
+        print(f"  pruned {len(dropped)} codes dead over 180 days: {', '.join(sorted(dropped))}")
+    data = {"scanned": now, "sources_checked": checked, "sources_total": len(SOURCES),
+            "confident": trustworthy, "codes": out}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(f"wrote {OUT}: {sum(c['status']=='active' for c in out)} active, {len(out)} total, {len(checked)}/{len(SOURCES)} sources")
