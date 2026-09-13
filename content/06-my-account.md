@@ -24,7 +24,7 @@ This is stored in your browser's local storage on this device. It never leaves y
 | Field | Where it is in-game |
 |---|---|
 | Server number | Your profile, next to your name, like #218 |
-| Server start date | Ask an officer, or work back from the server age shown in the kingdom list. Close enough is fine |
+| Server day | Open the **Monument** building (unlocks at Sanctuary 9) and look for your server's age in days. Type that number in. It counts up by itself after that. If you cannot find it, ask an officer; close is fine |
 | Sanctuary level | The number on your main building |
 | Training Grounds | Tap the building. It sets your troop tier |
 | Research Lab | Tap the building. It is a hard prerequisite from Sanctuary 10 up |
