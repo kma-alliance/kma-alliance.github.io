@@ -26,8 +26,7 @@
   function pad(n) { return (n < 10 ? "0" : "") + n; }
   function hm(d) { return pad(d.getHours()) + ":" + pad(d.getMinutes()); }
   var DUEL_DAYS = D.DUEL_DAYS;
-  var tick = null;
-  function startTick(fn) { if (tick) clearInterval(tick); tick = setInterval(fn, 1000); }
+  var startTick = D.startTick;
 
   /* ================= profile ================= */
   var PKEY = "kma-profile";

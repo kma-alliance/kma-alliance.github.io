@@ -106,6 +106,9 @@
     var list = CODES.codes.filter(function (c) { return full ? c.status !== "expired" : c.status === "active"; });
     var h = '<div class="codes-panel">';
     h += '<div class="codes-meta">Scanned <b>' + esc(CODES.scanned) + '</b> across ' + CODES.sources_checked.length + ' of ' + CODES.sources_total + ' trackers. Codes are auto-collected; tap copy, redeem in-game, and tell an officer if one fails.</div>';
+    if (CODES.confident === false) {
+      h += '<div class="codes-warn">Most trackers were unreachable on the last scan, so these statuses are carried over from the previous run rather than freshly confirmed.</div>';
+    }
     if (!list.length) { h += '<p class="section-sub">No working codes reported right now.</p></div>'; return h; }
     h += '<div class="table-wrap"><table class="codes-table"><thead><tr><th>Code</th><th>Status</th><th>Trackers</th>' + (full ? '<th>First seen</th><th>Last active</th>' : '') + '</tr></thead><tbody>';
     list.forEach(function (c) {
@@ -153,8 +156,7 @@
       '<div><div class="cd-label">Your local time</div><div class="cd-big mono" id="cdLocal">' + hm(now) + '</div>' +
       '<div class="cd-note">reset lands at <b class="mono">' + resetAtLocal() + '</b> for you</div></div></div>';
   }
-  var tick = null;
-  function startTick(fn) { if (tick) clearInterval(tick); tick = setInterval(fn, 1000); }
+  var startTick = DT.startTick, stopTicks = DT.stopTicks;
 
   // ---------- widgets embedded in guides via <div data-widget="..."> ----------
   var WIDGETS = {
@@ -365,11 +367,11 @@
     // checklists: "- [ ] text" — persist per guide in localStorage
     var key = "kma-check-" + g.id, state = {};
     try { state = JSON.parse(localStorage.getItem(key) || "{}"); } catch (e) {}
-    $$("li", body).forEach(function (li) {
+    $$("li", body).forEach(function (li, liIdx) {
       var cb = li.querySelector('input[type="checkbox"]');
       if (!cb || cb.parentNode !== li) return;
       li.classList.add("task"); cb.disabled = false;
-      var id = slug(li.textContent).slice(0, 60);
+      var id = liIdx + "-" + slug(li.textContent).slice(0, 60);
       if (state[id]) cb.checked = true;
       cb.addEventListener("change", function () {
         state[id] = cb.checked; try { localStorage.setItem(key, JSON.stringify(state)); } catch (e) {}
@@ -419,6 +421,7 @@
     var hash = location.hash.replace(/^#/, "") || "/";
     var parts = hash.split("/").filter(Boolean);
     var content = $("#content");
+    stopTicks();
     document.body.classList.remove("nav-open");
     closeSearch();
     if (!parts.length) {
@@ -431,7 +434,7 @@
       return;
     }
     var g = guideById[parts[0]];
-    if (!g) { content.innerHTML = render404(); $("#tocRail").innerHTML = ""; setActive(null); return; }
+    if (!g) { content.innerHTML = render404(); $("#tocRail").innerHTML = ""; setActive(null); document.title = "Not found — " + K.site.name; return; }
     content.innerHTML = renderGuide(g);
     decorate(content, g);
     hydrateWidgets(content);

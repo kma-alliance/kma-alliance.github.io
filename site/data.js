@@ -66,6 +66,13 @@
     return p(Math.floor(ms / 36e5)) + ":" + p(Math.floor(ms % 36e5 / 6e4)) + ":" + p(Math.floor(ms % 6e4 / 1e3));
   }
 
+  // One shared registry of 1-second timers. Widgets from different files used to each
+  // keep their own single interval handle and silently cancel one another; the router
+  // clears them all before each render so none outlive the node they update.
+  var ticks = [];
+  function startTick(fn) { ticks.push(setInterval(fn, 1000)); try { fn(); } catch (e) {} }
+  function stopTicks() { ticks.forEach(clearInterval); ticks = []; }
+
   // ---------- Sanctuary upgrade table ----------
   // Published anchors; everything else is log-interpolated and flagged as an estimate.
   var sancRes = { 2: 32, 3: 983, 4: 2598, 5: 19730, 6: 92710, 7: 235800, 8: 395600, 9: 605800, 10: 748700, 15: 6474000, 20: 60030000, 25: 277900000, 30: 1356000000 };
@@ -241,6 +248,7 @@
     serverDays: serverDays, vip: vip, shields: shields, lure: lure,
     serverOffset: serverOffset, setServerOffset: setServerOffset, serverNow: serverNow,
     nextReset: nextReset, msToReset: msToReset, duelIdx: duelIdx, hms: hms,
+    startTick: startTick, stopTicks: stopTicks,
     DUEL_DAYS: DUEL_DAYS, ANTI_LAST: ANTI_LAST
   };
 })();

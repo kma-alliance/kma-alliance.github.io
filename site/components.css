@@ -144,3 +144,6 @@ tr.row-warn td { background: var(--red-soft) !important; }
 .cd-note { font-size: .78rem; color: var(--muted); margin-top: .25rem; letter-spacing: .01em; }
 .cd-note b { color: var(--text); font-variant-numeric: tabular-nums; }
 .tz-clock.tz-primary { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+
+.codes-warn { margin: .5rem 0 .75rem; padding: .55rem .7rem; border-left: 3px solid var(--accent);
+  background: var(--accent-soft); border-radius: 0 4px 4px 0; font-size: .86rem; color: var(--text-soft); }
