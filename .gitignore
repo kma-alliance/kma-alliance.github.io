@@ -1,3 +1,4 @@
 site/content/guides.js
-site/img/
+site/img/*
+!site/img/official/
 __pycache__/
