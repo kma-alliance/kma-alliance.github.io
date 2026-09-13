@@ -308,6 +308,7 @@
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest(".copy-btn[data-copy]"); if (!b) return;
+    DT.track("code-copied", "Gift code copied", true);
     var txt = b.getAttribute("data-copy");
     var done = function () { b.textContent = "copied"; setTimeout(function () { b.textContent = "copy"; }, 1200); };
     if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, done); else done();
@@ -399,6 +400,7 @@
   function decorate(container, g) {
     var body = $(".body", container);
     if (!body) return;
+    if (window.KMA_BLOCKS) window.KMA_BLOCKS.hydrate(body);
     var used = {};
     var heads = $$("h2, h3", body);
     heads.forEach(function (el) {
@@ -496,6 +498,7 @@
   }
 
   // ---------- routing ----------
+  var lastTracked = null;
   function route() {
     var hash = location.hash.replace(/^#/, "") || "/";
     var parts = hash.split("/").filter(Boolean);
@@ -509,6 +512,7 @@
       $("#tocRail").innerHTML = "";
       setActive("/");
       document.title = K.site.name + " — " + (K.site.game || "");
+      DT.track("/", "Home");
       window.scrollTo(0, 0);
       return;
     }
@@ -524,6 +528,7 @@
     setupSpy();
     setActive("/" + g.id);
     document.title = g.title + " — " + K.site.name;
+    if (lastTracked !== g.id) { lastTracked = g.id; DT.track("/" + g.id, g.title); }
     if (parts[1]) {
       var el = document.getElementById(parts[1]);
       if (el) { el.scrollIntoView(); return; }

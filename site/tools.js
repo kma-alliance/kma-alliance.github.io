@@ -71,7 +71,7 @@
     function draw() {
       var p = getProfile(), day = serverDay(p);
       var h = '<div class="tool">';
-      h += '<div class="tool-head"><div class="tool-title">Your account</div><div class="tool-sub">Saved in this browser only. Nothing is uploaded, and officers cannot see it. Every tool and several guides use these numbers.</div></div>';
+      h += '<div class="tool-head"><div class="tool-title">Your account</div><div class="tool-sub">Your numbers stay in this browser. Nothing you type here is uploaded, and officers cannot see it. Every tool and several guides use these numbers.</div></div>';
       h += '<div class="fields">';
       h += fld("Server number", '<input id="pf-server" type="text" inputmode="numeric" placeholder="e.g. 218" value="' + esc(p.server) + '">', "fld-wide");
       h += dayField("pf-day", day);
@@ -87,6 +87,8 @@
       h += derived(p, day);
       el.innerHTML = h;
       $("#pf-save", el).addEventListener("click", function () {
+        var firstTime = !getProfile()._set;
+        D.track(firstTime ? "account-setup" : "account-update", firstTime ? "Account set up" : "Account updated", true);
         setProfile({
           server: $("#pf-server", el).value.trim(), start: startFromDay($("#pf-day", el).value),
           sanctuary: +$("#pf-sanctuary", el).value || 1, tg: +$("#pf-tg", el).value || 1, lab: +$("#pf-lab", el).value || 0,

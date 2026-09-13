@@ -73,6 +73,18 @@
   function startTick(fn) { ticks.push(setInterval(fn, 1000)); try { fn(); } catch (e) {} }
   function stopTicks() { ticks.forEach(clearInterval); ticks = []; }
 
+  // Anonymous visit counting (GoatCounter, no cookies). Guides change without a page load,
+  // so every guide opened is counted by hand. count.js loads async, so early calls wait for it.
+  // Only paths and event names are sent: never profile numbers, names or codes.
+  function track(path, title, isEvent) {
+    var tries = 0;
+    (function go() {
+      var gc = window.goatcounter;
+      if (gc && typeof gc.count === "function") { try { gc.count({ path: path, title: title || path, event: !!isEvent }); } catch (e) {} return; }
+      if (++tries < 25) setTimeout(go, 400);
+    })();
+  }
+
   // ---------- Sanctuary upgrade table ----------
   // Published anchors; everything else is log-interpolated and flagged as an estimate.
   var sancRes = { 2: 32, 3: 983, 4: 2598, 5: 19730, 6: 92710, 7: 235800, 8: 395600, 9: 605800, 10: 748700, 15: 6474000, 20: 60030000, 25: 277900000, 30: 1356000000 };
@@ -248,7 +260,7 @@
     serverDays: serverDays, vip: vip, shields: shields, lure: lure,
     serverOffset: serverOffset, setServerOffset: setServerOffset, serverNow: serverNow,
     nextReset: nextReset, msToReset: msToReset, duelIdx: duelIdx, hms: hms,
-    startTick: startTick, stopTicks: stopTicks,
+    startTick: startTick, stopTicks: stopTicks, track: track,
     DUEL_DAYS: DUEL_DAYS, ANTI_LAST: ANTI_LAST
   };
 })();
