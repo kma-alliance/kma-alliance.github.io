@@ -1,0 +1,63 @@
+name: Scan codes and deploy handbook
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"   # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    name: Scan gift-code trackers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Run scanner
+        run: python3 scripts/scan_codes.py
+      - name: Commit codes.json if it changed
+        run: |
+          if git diff --quiet -- site/content/codes.json; then
+            echo "no change"
+          else
+            git config user.name "kma-code-scanner"
+            git config user.email "actions@users.noreply.github.com"
+            git add site/content/codes.json
+            git commit -m "codes: scheduled scan $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  deploy:
+    name: Build and deploy
+    needs: scan
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download game artwork listed in scripts/assets.json
+        run: python3 scripts/fetch_assets.py
+      - name: Rebuild guides.js from content/
+        run: python3 build.py
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
