@@ -41,6 +41,16 @@ def main():
         jobs.append((m["wiki"] + pic + ".webp", os.path.join(IMG, "cards", slug + ".webp")))
     for slug, pic in m["buildings"].items():
         jobs.append((m["wiki"] + pic + ".webp", os.path.join(IMG, "buildings", slug + ".webp")))
+    # 486x828 hero portraits, one per roster slug
+    for slug, pic in m.get("portraits", {}).items():
+        jobs.append((m["wiki"] + pic + ".webp", os.path.join(IMG, "portraits", slug + ".webp")))
+    # 144x144 skill icons, kept under their wiki id so the per-hero lists can reference them
+    sk = m.get("skills", {})
+    for pic in sk.get("shared", []) + [p for lst in sk.get("by_hero", {}).values() for p in lst]:
+        jobs.append((m["wiki"] + pic + ".webp", os.path.join(IMG, "skills", pic + ".webp")))
+    # absolute URLs from other hosts; the key is the path under site/img/
+    for rel, url in m.get("extra", {}).items():
+        jobs.append((url, os.path.join(IMG, *rel.split("/"))))
     counts = {}
     for url, dest in jobs:
         r = get(url, dest); counts[r] = counts.get(r, 0) + 1

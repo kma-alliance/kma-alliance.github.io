@@ -1,24 +1,350 @@
 {
-  "_note": "Game artwork is copyright 37GAMES / Cloudwalker. Pulled from the official site and wiki-last-asylum.com for alliance use. Run scripts/fetch_assets.py to download into site/img/.",
-  "official": "https://www.last-asylum.com/assets/images/",
-  "wiki": "https://wiki-last-asylum.com/api/media/file/",
-  "shots": ["hero-official-bg.jpg", "screenshot-city.jpg", "screenshot-production.jpg", "screenshot-rat-king.jpg", "screenshot-ruins.jpg", "screenshot-town-rebuild.jpg", "screenshot-hero-team.jpg"],
-  "art": ["annie", "arthur", "bell", "billy", "brian", "cynthia", "daskal", "harper", "jester", "louis", "marlena", "red-lady", "shadow", "zoya"],
-  "cards": {
-    "arthur": "pic-card4-09", "marlena": "pic-card4-10", "shadow": "pic-card4-19", "daskal": "pic-card4-24", "louis": "pic-card4-28", "ulfrid": "pic-card4-26",
-    "billy": "pic-card4-30", "harper": "pic-card4-23", "bell": "pic-card4-29", "nicole": "pic-card4-31", "zoya": "pic-card4-27", "annie": "pic-card4-21",
-    "cynthia": "pic-card4-20", "red-lady": "pic-card4-25", "joker": "pic-card4-22",
-    "bella": "pic-card4-05", "griffith": "pic-card4-12", "grenwald": "pic-card4-18", "stellar": "pic-card4-13", "claire": "pic-card4-04", "bestar": "pic-card4-17",
-    "hastar": "pic-card4-16", "lucius": "pic-card4-07", "kesso": "pic-card4-06", "sivir": "pic-card4-08", "celia": "pic-card4-03", "ash": "pic-card4-14",
-    "durant": "pic-card4-01", "william": "pic-card4-02", "robin": "pic-card4-11", "kafa": "pic-card4-15"
-  },
-  "buildings": {
-    "sanctuary": "1001", "farm": "1016", "lumberyard": "1017", "herb-garden": "1019", "residence": "5021", "temple": "5053", "hall-of-honor": "5054",
-    "soldiers-rest": "5055", "granary": "5023", "lumber-depot": "5024", "herb-storage": "5025", "builders-hut": "5031", "walls": "1002", "gear-workshop": "1008",
-    "explorers-camp": "5002", "tavern": "5008", "squad-1": "5013", "alliance-hall": "1010", "antitoxin-workshop": "1027", "squad-4": "5016",
-    "epigraph-workshop": "5035", "smelting-workshop": "5042", "weaving-workshop": "5043", "falcon-tower": "1006", "training-grounds": "1020", "barracks": "5006",
-    "scout-squad": "5033", "nomad-trader": "5040", "infirmary": "1004", "research-lab": "1007", "arena": "5010", "raven-nest": "5036", "warrior-statue": "5044",
-    "squad-2": "5014", "curio-hall": "5039", "watchtower": "5049", "black-ops": "5029", "monument": "5038", "2nd-workbench": "5047", "lord-statue": "5056",
-    "warlock-statue": "5045", "private-stable": "5051", "alliance-stable": "5052", "ranger-statue": "5046", "raven-workshop": "5034", "squad-3": "5015"
+ "_note": "Game artwork is copyright its publisher (37GAMES brand). Pulled from last-asylum.com, wiki-last-asylum.com, lastasylumplague.com and the App Store listing for alliance use. Run scripts/fetch_assets.py to download into site/img/.",
+ "official": "https://www.last-asylum.com/assets/images/",
+ "wiki": "https://wiki-last-asylum.com/api/media/file/",
+ "shots": [
+  "hero-official-bg.jpg",
+  "screenshot-city.jpg",
+  "screenshot-production.jpg",
+  "screenshot-rat-king.jpg",
+  "screenshot-ruins.jpg",
+  "screenshot-town-rebuild.jpg",
+  "screenshot-hero-team.jpg"
+ ],
+ "art": [
+  "annie",
+  "arthur",
+  "bell",
+  "billy",
+  "brian",
+  "cynthia",
+  "daskal",
+  "harper",
+  "jester",
+  "louis",
+  "marlena",
+  "red-lady",
+  "shadow",
+  "zoya"
+ ],
+ "cards": {
+  "arthur": "pic-card4-09",
+  "marlena": "pic-card4-10",
+  "shadow": "pic-card4-19",
+  "daskal": "pic-card4-24",
+  "louis": "pic-card4-28",
+  "ulfrid": "pic-card4-26",
+  "billy": "pic-card4-30",
+  "harper": "pic-card4-23",
+  "bell": "pic-card4-29",
+  "nicole": "pic-card4-31",
+  "zoya": "pic-card4-27",
+  "annie": "pic-card4-21",
+  "cynthia": "pic-card4-20",
+  "red-lady": "pic-card4-25",
+  "joker": "pic-card4-22",
+  "bella": "pic-card4-05",
+  "griffith": "pic-card4-12",
+  "grenwald": "pic-card4-18",
+  "stellar": "pic-card4-13",
+  "claire": "pic-card4-04",
+  "bestar": "pic-card4-17",
+  "hastar": "pic-card4-16",
+  "lucius": "pic-card4-07",
+  "kesso": "pic-card4-06",
+  "sivir": "pic-card4-08",
+  "celia": "pic-card4-03",
+  "ash": "pic-card4-14",
+  "durant": "pic-card4-01",
+  "william": "pic-card4-02",
+  "robin": "pic-card4-11",
+  "kafa": "pic-card4-15"
+ },
+ "buildings": {
+  "sanctuary": "1001",
+  "farm": "1016",
+  "lumberyard": "1017",
+  "herb-garden": "1019",
+  "residence": "5021",
+  "temple": "5053",
+  "hall-of-honor": "5054",
+  "soldiers-rest": "5055",
+  "granary": "5023",
+  "lumber-depot": "5024",
+  "herb-storage": "5025",
+  "builders-hut": "5031",
+  "walls": "1002",
+  "gear-workshop": "1008",
+  "explorers-camp": "5002",
+  "tavern": "5008",
+  "squad-1": "5013",
+  "alliance-hall": "1010",
+  "antitoxin-workshop": "1027",
+  "squad-4": "5016",
+  "epigraph-workshop": "5035",
+  "smelting-workshop": "5042",
+  "weaving-workshop": "5043",
+  "falcon-tower": "1006",
+  "training-grounds": "1020",
+  "barracks": "5006",
+  "scout-squad": "5033",
+  "nomad-trader": "5040",
+  "infirmary": "1004",
+  "research-lab": "1007",
+  "arena": "5010",
+  "raven-nest": "5036",
+  "warrior-statue": "5044",
+  "squad-2": "5014",
+  "curio-hall": "5039",
+  "watchtower": "5049",
+  "black-ops": "5029",
+  "monument": "5038",
+  "2nd-workbench": "5047",
+  "lord-statue": "5056",
+  "warlock-statue": "5045",
+  "private-stable": "5051",
+  "alliance-stable": "5052",
+  "ranger-statue": "5046",
+  "raven-workshop": "5034",
+  "squad-3": "5015"
+ },
+ "portraits": {
+  "annie": "pic-card2-21-hd",
+  "arthur": "pic-card2-09-hd",
+  "ash": "pic-card2-14-hd",
+  "bell": "pic-card2-29-hd",
+  "bella": "pic-card2-05-hd",
+  "bestar": "pic-card2-17-hd",
+  "billy": "pic-card2-30-hd",
+  "celia": "pic-card2-03-hd",
+  "claire": "pic-card2-04-hd",
+  "cynthia": "pic-card2-20-hd",
+  "daskal": "pic-card2-24-hd",
+  "durant": "pic-card2-01-hd",
+  "grenwald": "pic-card2-18-hd",
+  "griffith": "pic-card2-12-hd",
+  "harper": "pic-card2-23-hd",
+  "hastar": "pic-card2-16-hd",
+  "joker": "pic-card2-22-hd",
+  "kafa": "pic-card2-15-hd",
+  "kesso": "pic-card2-06-hd",
+  "louis": "pic-card2-28-hd",
+  "lucius": "pic-card2-07-hd",
+  "marlena": "pic-card2-10-hd",
+  "nicole": "pic-card2-31-hd",
+  "red-lady": "pic-card2-25-hd",
+  "robin": "pic-card2-11-hd",
+  "shadow": "pic-card2-19-hd",
+  "sivir": "pic-card2-08-hd",
+  "stellar": "pic-card2-13-hd",
+  "ulfrid": "pic-card2-26-hd",
+  "william": "pic-card2-02-hd",
+  "zoya": "pic-card2-27-hd"
+ },
+ "skills": {
+  "shared": [
+   "skill-00-1",
+   "skill-00-2",
+   "skill-00-3"
+  ],
+  "by_hero": {
+   "annie": [
+    "skill-21-1",
+    "skill-21-2",
+    "skill-21-3",
+    "skill-21-4"
+   ],
+   "arthur": [
+    "skill-9-1",
+    "skill-9-2",
+    "skill-9-3",
+    "skill-9-4"
+   ],
+   "ash": [
+    "skill-14-1",
+    "skill-14-2",
+    "skill-14-3",
+    "skill-14-4"
+   ],
+   "bell": [
+    "skill-29-1",
+    "skill-29-2",
+    "skill-29-3",
+    "skill-29-4"
+   ],
+   "bella": [
+    "skill-5-1",
+    "skill-5-2",
+    "skill-5-3",
+    "skill-5-4"
+   ],
+   "bestar": [
+    "skill-17-1",
+    "skill-17-2",
+    "skill-17-3",
+    "skill-17-4"
+   ],
+   "billy": [
+    "skill-30-1",
+    "skill-30-2",
+    "skill-30-3",
+    "skill-30-4"
+   ],
+   "celia": [
+    "skill-3-1",
+    "skill-3-2",
+    "skill-3-3",
+    "skill-3-4"
+   ],
+   "claire": [
+    "skill-4-1",
+    "skill-4-2",
+    "skill-4-3",
+    "skill-4-4"
+   ],
+   "claire-advanced": [
+    "skill-4-1-js",
+    "skill-4-2-js",
+    "skill-4-3-js",
+    "skill-4-4-js"
+   ],
+   "cynthia": [
+    "skill-20-1",
+    "skill-20-2",
+    "skill-20-3",
+    "skill-20-4"
+   ],
+   "daskal": [
+    "skill-24-1",
+    "skill-24-2",
+    "skill-24-3",
+    "skill-24-4"
+   ],
+   "durant": [
+    "skill-1-1",
+    "skill-1-2",
+    "skill-1-3"
+   ],
+   "grenwald": [
+    "skill-18-1",
+    "skill-18-2",
+    "skill-18-3",
+    "skill-18-4"
+   ],
+   "griffith": [
+    "skill-12-1",
+    "skill-12-2",
+    "skill-12-3",
+    "skill-12-4"
+   ],
+   "harper": [
+    "skill-23-1",
+    "skill-23-2",
+    "skill-23-3",
+    "skill-23-4"
+   ],
+   "hastar": [
+    "skill-16-1",
+    "skill-16-2",
+    "skill-16-3",
+    "skill-16-4"
+   ],
+   "joker": [
+    "skill-22-1",
+    "skill-22-2",
+    "skill-22-3",
+    "skill-22-4"
+   ],
+   "kafa": [
+    "skill-15-1",
+    "skill-15-2",
+    "skill-15-3"
+   ],
+   "kesso": [
+    "skill-6-1",
+    "skill-6-2",
+    "skill-6-3",
+    "skill-6-4"
+   ],
+   "louis": [
+    "skill-28-1",
+    "skill-28-2",
+    "skill-28-3",
+    "skill-28-4"
+   ],
+   "lucius": [
+    "skill-7-1",
+    "skill-7-2",
+    "skill-7-3",
+    "skill-7-4"
+   ],
+   "marlena": [
+    "skill-10-1",
+    "skill-10-2",
+    "skill-10-3",
+    "skill-10-4"
+   ],
+   "nicole": [
+    "skill-31-1",
+    "skill-31-2",
+    "skill-31-3",
+    "skill-31-4"
+   ],
+   "red-lady": [
+    "skill-25-1",
+    "skill-25-2",
+    "skill-25-3",
+    "skill-25-4"
+   ],
+   "robin": [
+    "skill-11-1",
+    "skill-11-2",
+    "skill-11-3"
+   ],
+   "shadow": [
+    "skill-19-1",
+    "skill-19-2",
+    "skill-19-3",
+    "skill-19-4"
+   ],
+   "sivir": [
+    "skill-8-1",
+    "skill-8-2",
+    "skill-8-3",
+    "skill-8-4"
+   ],
+   "stellar": [
+    "skill-13-1",
+    "skill-13-2",
+    "skill-13-3",
+    "skill-13-4"
+   ],
+   "ulfrid": [
+    "skill-26-1",
+    "skill-26-2",
+    "skill-26-3",
+    "skill-26-4"
+   ],
+   "william": [
+    "skill-2-1",
+    "skill-2-2",
+    "skill-2-3"
+   ],
+   "zoya": [
+    "skill-27-1",
+    "skill-27-2",
+    "skill-27-3",
+    "skill-27-4"
+   ]
   }
+ },
+ "extra": {
+  "heroes/nicole.webp": "https://lastasylumplague.com/wp-content/uploads/2026/04/nicole-full-image.webp",
+  "icons/raven-essence.webp": "https://lastasylumplague.com/wp-content/uploads/2026/05/raven-essence-last-asylum-plague.webp",
+  "store/gather-resources.jpg": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cf/57/ad/cf57ad16-a0ad-33bd-b07e-e1632ad13903/2.jpg/1400x647bb.jpg",
+  "store/slay-rats.jpg": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0a/7c/55/0a7c5585-3639-9ffb-9702-97b695a5ed9d/1.jpg/1400x647bb.jpg",
+  "store/survive-the-plague.jpg": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/d5/3a/63d53a04-2023-7cd3-0682-4eff02cef652/5.jpg/1400x647bb.jpg",
+  "store/treat-patients.jpg": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/42/ff/57/42ff5774-ad0f-59d6-3b42-26bee800cce0/3.jpg/1400x647bb.jpg",
+  "store/upgrade-facilities.jpg": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/92/06/12/92061218-8145-dbc1-7c42-dc6df7441cd3/4.jpg/1400x647bb.jpg"
+ }
 }
