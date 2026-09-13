@@ -6,33 +6,125 @@
     "heroTitle": "Everything a KissMyAzz doctor needs to know.",
     "heroText": "The [KMA] KissMyAzz alliance handbook for Last Asylum: Plague. Heroes, sanctuary builds, alliance events, rallies, shields, codes. Written for phones, searchable, and dated so you know what is current.",
     "heroActions": [
-      { "label": "New to KMA? Start here", "href": "#/start-here" },
-      { "label": "Working gift codes", "href": "#/gift-codes" },
-      { "label": "Alliance Duel days", "href": "#/alliance-duel" }
+      {
+        "label": "New to KMA? Start here",
+        "href": "#/start-here"
+      },
+      {
+        "label": "Working gift codes",
+        "href": "#/gift-codes"
+      },
+      {
+        "label": "Alliance Duel days",
+        "href": "#/alliance-duel"
+      }
     ],
     "updated": "2026-09-12",
     "footer": "[KMA] KissMyAzz is a player alliance in Last Asylum: Plague led by viciouslywild (R5). Numbers come from public wikis and guides (mainly wiki-last-asylum.com, lastasylumplague.com, lastasylumguide.com) checked on the date shown on each guide. The game patches weekly, so verify anything that matters in-game and tell an officer if something is wrong. Not affiliated with 37GAMES or Cloudwalker."
   },
   "categories": [
-    { "id": "start",    "title": "Start here",         "icon": "start",    "blurb": "Alliance rules, your first week, and the daily routine." },
-    { "id": "heroes",   "title": "Heroes",             "icon": "hero",     "blurb": "Who to build, how to build them, and what to put in a squad." },
-    { "id": "city",     "title": "Sanctuary & economy","icon": "city",     "blurb": "Buildings, resources, research, and troops." },
-    { "id": "events",   "title": "Alliance events",    "icon": "event",    "blurb": "How each event scores and what leadership expects from you." },
-    { "id": "combat",   "title": "Combat & defense",   "icon": "combat",   "blurb": "Rallies, garrisons, shields, and the Rat Swarm." },
-    { "id": "alliance", "title": "Alliance system",    "icon": "alliance", "blurb": "Ranks, titles, help, tech, and the shop." },
-    { "id": "codes",    "title": "Codes & spending",   "icon": "codes",    "blurb": "Working gift codes, VIP, and what is actually worth buying." },
-    { "id": "ref",      "title": "Reference",          "icon": "ref",      "blurb": "Game timeline, glossary, and links." }
+    {
+      "id": "start",
+      "title": "Start here",
+      "icon": "start",
+      "blurb": "Alliance rules, your first week, and the daily routine."
+    },
+    {
+      "id": "heroes",
+      "title": "Heroes",
+      "icon": "hero",
+      "blurb": "Who to build, how to build them, and what to put in a squad."
+    },
+    {
+      "id": "city",
+      "title": "Sanctuary & economy",
+      "icon": "city",
+      "blurb": "Buildings, resources, research, and troops."
+    },
+    {
+      "id": "events",
+      "title": "Alliance events",
+      "icon": "event",
+      "blurb": "Events an officer starts or the whole alliance fights together."
+    },
+    {
+      "id": "kingdom",
+      "title": "Kingdom & server events",
+      "icon": "crown",
+      "blurb": "Server-wide fights: Kingdom War, Royal City, the throne, Demon King."
+    },
+    {
+      "id": "solo",
+      "title": "Solo events & modes",
+      "icon": "solo",
+      "blurb": "Everything you run on your own: daily systems, weekly contests, passes."
+    },
+    {
+      "id": "combat",
+      "title": "Combat & defense",
+      "icon": "combat",
+      "blurb": "Rallies, garrisons, shields, and the Rat Swarm."
+    },
+    {
+      "id": "alliance",
+      "title": "Alliance system",
+      "icon": "alliance",
+      "blurb": "Ranks, titles, help, tech, and the shop."
+    },
+    {
+      "id": "codes",
+      "title": "Codes & spending",
+      "icon": "codes",
+      "blurb": "Working gift codes, VIP, and what is actually worth buying."
+    },
+    {
+      "id": "ref",
+      "title": "Reference",
+      "icon": "ref",
+      "blurb": "Game timeline, glossary, and links."
+    }
   ],
   "notices": [
-    { "date": "2026-09-12", "text": "Welcome to the [KMA] KissMyAzz handbook. Questions go to viciouslywild (R5) or any R4 in alliance chat. Officers: edit the notices in content/site.json and rebuild to change this list." }
+    {
+      "date": "2026-09-12",
+      "text": "Welcome to the [KMA] KissMyAzz handbook. Questions go to viciouslywild (R5) or any R4 in alliance chat. Officers: edit the notices in content/site.json and rebuild to change this list."
+    }
   ],
   "week": [
-    { "day": "Monday",    "event": "Duel day 1: Raven",       "todo": "Claim saved Falcon Quests, use Raven Essence, spend stamina." },
-    { "day": "Tuesday",   "event": "Duel day 2: Territory",   "todo": "Dispatch caravans and covert ops, burn construction speedups." },
-    { "day": "Wednesday", "event": "Duel day 3: Tech",        "todo": "Research speedups, Study Scrolls and Raven chests. Demon King: 3+ attacks." },
-    { "day": "Thursday",  "event": "Duel day 4: Heroes",      "todo": "Use hero shards, recruit tickets, skill badges." },
-    { "day": "Friday",    "event": "Duel day 5: Preparation", "todo": "All speedups score. Train and promote troops." },
-    { "day": "Saturday",  "event": "Duel day 6: Raid",        "todo": "Fighters hit God of War targets. Others shield. Demon King: 3+ attacks. KvK war day." },
-    { "day": "Sunday",    "event": "Reset day",               "todo": "Quiz, Expedition attempts, alliance digs. Bank Falcon Quests for Monday." }
+    {
+      "day": "Monday",
+      "event": "Duel day 1: Raven",
+      "todo": "Claim saved Falcon Quests, use Raven Essence, spend stamina."
+    },
+    {
+      "day": "Tuesday",
+      "event": "Duel day 2: Territory",
+      "todo": "Dispatch caravans and covert ops, burn construction speedups."
+    },
+    {
+      "day": "Wednesday",
+      "event": "Duel day 3: Tech",
+      "todo": "Research speedups, Study Scrolls and Raven chests. Demon King: 3+ attacks."
+    },
+    {
+      "day": "Thursday",
+      "event": "Duel day 4: Heroes",
+      "todo": "Use hero shards, recruit tickets, skill badges."
+    },
+    {
+      "day": "Friday",
+      "event": "Duel day 5: Preparation",
+      "todo": "All speedups score. Train and promote troops."
+    },
+    {
+      "day": "Saturday",
+      "event": "Duel day 6: Raid",
+      "todo": "Fighters hit God of War targets. Others shield. Demon King: 3+ attacks. KvK war day."
+    },
+    {
+      "day": "Sunday",
+      "event": "Reset day",
+      "todo": "Quiz, Expedition attempts, alliance digs. Bank Falcon Quests for Monday."
+    }
   ]
 }
