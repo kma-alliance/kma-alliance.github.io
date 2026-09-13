@@ -228,12 +228,12 @@
   function renderHome() {
     var s = K.site;
     var h = '<div class="article">';
-    h += '<section class="hero"><div class="kicker">' + esc(s.game || "") + "</div>";
+    h += '<section class="hero has-banner"><img class="banner" src="img/shots/hero-official-bg.jpg" alt="" onerror="this.parentNode.classList.remove(\'has-banner\');this.remove()"><div class="hero-inner"><div class="kicker">' + esc(s.game || "") + "</div>";
     h += "<h1>" + esc(s.heroTitle || s.name) + "</h1>";
     h += "<p>" + esc(s.heroText || "") + "</p>";
     h += '<div class="hero-actions">' + (s.heroActions || []).map(function (a, i) {
       return '<a class="btn' + (i === 0 ? " primary" : "") + '" href="' + esc(a.href) + '">' + esc(a.label) + "</a>";
-    }).join("") + "</div></section>";
+    }).join("") + "</div></div></section>";
 
     var stale = K.guides.filter(function (g) { return daysSince(g.updated) > 45; }).length;
     h += '<div class="stat-row"><span><b>' + K.guides.length + "</b> guides</span><span><b>" + K.categories.length + "</b> sections</span>";
@@ -377,6 +377,14 @@
         c.parentNode.insertBefore(b, c.nextSibling);
       });
     }
+    // standalone images become captioned figures
+    $$("p > img:only-child", body).forEach(function (im) {
+      var p = im.parentNode, f = document.createElement("figure"); f.className = "shot";
+      im.loading = "lazy"; im.onerror = function () { f.style.display = "none"; };
+      p.parentNode.insertBefore(f, p); f.appendChild(im);
+      if (im.alt) { var c = document.createElement("figcaption"); c.textContent = im.alt; f.appendChild(c); }
+      p.remove();
+    });
     // external links open in a new tab
     $$("a[href^='http']", body).forEach(function (a) { a.target = "_blank"; a.rel = "noopener"; });
   }

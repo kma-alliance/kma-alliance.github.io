@@ -43,6 +43,8 @@ Reaching Sanctuary 17 costs roughly 250 million resources and 425 hours of singl
 
 ## Buildings that matter
 
+<div data-widget="building-grid"></div>
+
 | Building | Unlocks | Count | Why it matters |
 |---|---|---|---|
 | Research Lab | Sanctuary 7 | 1 | Research speed. Must be one below Sanctuary from level 10 up. Level 30 costs 1.3B grain and 89 days. |

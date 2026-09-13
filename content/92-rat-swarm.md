@@ -13,6 +13,8 @@ Waves of infected rats run **fixed paths** to your Sanctuary. You place and upgr
 
 This is a solo mode, not an alliance event. The alliance "rat" events are Cheese Trap and Crystal Valley's Plague Rats.
 
+![The Rat King boss wave. Official screenshot.](img/shots/screenshot-rat-king.jpg)
+
 ## Choke points beat coverage
 
 <div data-widget="rat-swarm-layout"></div>
