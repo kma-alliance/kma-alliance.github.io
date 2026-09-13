@@ -14,7 +14,7 @@ updated: 2026-09-12
 ---
 Markdown body follows. Files are ordered by filename, so prefix with numbers.
 """
-import json, os, re, sys, glob, datetime
+import json, os, re, sys, glob, datetime, hashlib
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CONTENT = os.path.join(ROOT, "content")
@@ -72,8 +72,22 @@ def main():
         f.write("window.KMA = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
     print(f"wrote {OUT}: {len(guides)} guides, site updated {data['site']['updated']}")
 
+    # cache-bust local asset URLs with a short content hash so browsers and the
+    # Pages CDN never serve a stale module after a deploy.
+    index_path = os.path.join(SITE, "index.html")
+    html = open(index_path, encoding="utf-8").read()
+    def stamp(m):
+        attr, url = m.group(1), m.group(2)
+        base = url.split("?")[0]
+        f = os.path.join(SITE, base)
+        if not os.path.exists(f):
+            return m.group(0)
+        h = hashlib.sha1(open(f, "rb").read()).hexdigest()[:8]
+        return f'{attr}="{base}?v={h}"'
+    html = re.sub(r'(src|href)="((?!https?:|//)[^"]+\.(?:js|css))(?:\?[^"]*)?"', stamp, html)
+    open(index_path, "w", encoding="utf-8").write(html)
+
     # Artifact variant: strip the document wrapper (the Artifact host adds its own).
-    html = open(os.path.join(SITE, "index.html"), encoding="utf-8").read()
     head = re.search(r"<head>(.*?)</head>", html, re.S).group(1)
     body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
     head = re.sub(r"<meta[^>]*>\s*", "", head)  # host supplies charset/viewport
