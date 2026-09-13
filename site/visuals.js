@@ -59,7 +59,7 @@
       { n: 5, d: "Fri", t: "Preparation", spend: ["Training boosts", "Promote one tier at a time", "Any speedup", "Claim Falcon Quests"], big: "110 per T10 trained" },
       { n: 6, d: "Sat", t: "Raid", spend: ["Hit assigned targets", "Healing speedups", "Leftover speedups", "Shield if not fighting"], big: "5x kills vs matched alliance" }
     ];
-    var h = '<div class="poster"><div class="poster-head"><div class="poster-title">Alliance Duel week</div><div class="poster-sub">Save all week. Spend on the day. Reset 00:00 UTC.</div></div><div class="poster-grid">';
+    var h = '<div class="poster"><div class="poster-head"><div class="poster-title">Alliance Duel week</div><div class="poster-sub">Save all week. Spend on the day. Days roll at 00:00 server time (UTC-2).</div></div><div class="poster-grid">';
     days.forEach(function (d) {
       h += '<div class="pd"><div class="pd-top"><span class="pd-num">' + d.n + '</span><span class="pd-day">' + d.d + '</span></div><div class="pd-theme">' + esc(d.t) + '</div><ul>' + d.spend.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul><div class="pd-big">' + esc(d.big) + '</div></div>';
     });
@@ -195,7 +195,7 @@
     s += '<line x1="' + x0 + '" y1="' + y + '" x2="' + x1 + '" y2="' + y + '" stroke="var(--line-strong)" stroke-width="2"/>';
     for (var m = 0; m <= 30; m += 5) { s += '<line x1="' + X(m) + '" y1="' + (y + 22) + '" x2="' + X(m) + '" y2="' + (y + 30) + '" stroke="var(--line-strong)"/>' + text(X(m), y + 46, m + " min", { anchor: "middle", size: 11, mono: true, fill: "var(--muted)" }); }
     var mark = function (m, lab, sub, up) { var ty = up ? y - 62 : y + 82; s += '<line x1="' + X(m) + '" y1="' + (up ? y - 24 : y + 24) + '" x2="' + X(m) + '" y2="' + (up ? y - 44 : y + 64) + '" stroke="var(--accent)" stroke-width="2"/><circle cx="' + X(m) + '" cy="' + (up ? y - 44 : y + 64) + '" r="4" fill="var(--accent)"/>'; s += text(X(m), ty - (up ? 6 : -4), lab, { anchor: "middle", size: 12, weight: 700 }); s += text(X(m), ty + (up ? 9 : 19), sub, { anchor: "middle", size: 11, fill: "var(--text-soft)" }); };
-    mark(1, "Workshops open", "50/s each, Platform +10%", true); mark(10, "Elixir Castle opens", "80/s, Relics +15%, Altar -15%", true); mark(13, "Herb camps", "5/s, spare squads", false); mark(24, "Medkits spawn", "bonus points late", false); mark(0, "Spawn", "5 min early", false);
+    mark(1, "Workshops open", "50/s each, Platform +10%", true); mark(10, "Elixir Castle opens", "80/s, Relics +15%, Altar -15%", true); mark(13, "Herb camps", "5/s, spare squads", false); mark(24, "Medkits", "drop when a holder is knocked out", false); mark(0, "Spawn", "5 min early", false);
     s += "</svg>";
     el.innerHTML = fig(s, "The 30-minute Elixir Scramble: an early lead from the Workshops and Observation Platform, everything onto the Castle at minute 10, then hold.", "Elixir Scramble timeline");
   };

@@ -245,7 +245,7 @@
   ];
 
   // ---------- VIP, shields, misc ----------
-  var vip = [[1,0,"Basic"],[3,1050,"Up to +8% production"],[5,11000,"Auto-dispatch covert ops, +13% production, +15% build"],[8,55000,"Expedition battles, +8% march, +30% build"],[11,null,"Universal UR fragments in the Diamond Shop"],[12,550000,"First combat stats: +4% hero HP/ATK/DEF"],[20,50000000,"+13% hero stats, +50% build and training"]];
+  var vip = [[1,0,"Basic"],[3,1050,"Up to +8% production"],[5,11000,"+13% production, +15% build"],[8,55000,"Expedition battles, +8% march, +30% build"],[11,null,"Universal UR fragments in the Diamond Shop"],[12,550000,"First combat stats: +4% hero HP/ATK/DEF"],[20,50000000,"+13% hero stats, +50% build and training"]];
   var shields = [[8,7500,1500],[12,9900,2500],[24,19800,5000],[72,null,12000]];
   var lure = [[15,3],[20,7],[25,12],[30,18],[35,25]];
 

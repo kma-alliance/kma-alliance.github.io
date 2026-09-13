@@ -106,7 +106,7 @@
       var h = '<div class="cards3">';
       h += card("Hero level cap", s.heroCap, p.sanctuary >= 5 ? "5 × Sanctuary " + p.sanctuary : "flat until Sanctuary 5, then 5 × level");
       h += card("Troop tier", D.tierFor(p.tg), "Training Grounds " + p.tg + (p.tg < 20 ? " · T7 at 20" : p.tg < 30 ? " · T10 at 30" : " · maxed"));
-      h += card("Undead Siege", siege ? "Stage " + siege : "not yet", siege ? "your Power clears stage " + siege : "stage 1 needs 2.4M Power and Sanctuary 13");
+      h += card("Undead Siege", siege ? "Stage " + siege : "not yet", siege ? "by the stage table (a rough guide)" : "table lists stage 1 at 2.4M Power, Sanctuary 13");
       h += card("Hero Road", road ? "Difficulty " + road : "not yet", road < 11 ? "next gate " + big(D.heroRoad[road]) + " Power" : "all gates cleared");
       h += card("Expedition", p.sanctuary >= 16 ? bestExped(p) : "Sanctuary 16", p.sanctuary >= 16 ? "highest " + p.faction + " difficulty your Power clears" : "unlocks the three faction arenas");
       h += card("Server day", day || "set a date", day ? "era day " + (((day - 1) % 56) + 1) + " of 56" : "used by the timeline tool");
@@ -561,6 +561,55 @@
     draw(); onProfile(el, draw);
   };
 
+
+  /* ================= Quiz of Wisdom answer finder ================= */
+  T["quiz-search"] = function (el) {
+    var Q = (window.KMA && window.KMA.quiz) || { questions: [] }, items = Q.questions || [];
+    var cats = ["All"]; items.forEach(function (x) { if (cats.indexOf(x.cat) < 0) cats.push(x.cat); });
+    var state = { text: "", cat: "All" };
+    var norm = function (s) { return String(s).toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim(); };
+    items.forEach(function (x) { x._n = norm(x.q + " " + x.a); });
+    function mark(txt, words) {
+      var out = esc(txt);
+      words.filter(function (w) { return w.length > 1; }).forEach(function (w) {
+        out = out.replace(new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>");
+      });
+      return out;
+    }
+    el.innerHTML =
+      '<div class="tool quiz">' +
+        '<div class="quiz-bar">' +
+          '<label class="sr-only" for="qz-in">Search quiz questions</label>' +
+          '<input id="qz-in" type="search" placeholder="Type 2 or 3 words from the question" autocomplete="off" autocapitalize="off" spellcheck="false">' +
+          '<span class="quiz-count" id="qz-count"></span>' +
+        '</div>' +
+        '<div class="quiz-cats" id="qz-cats">' + cats.map(function (c) { return '<button type="button" class="quiz-cat' + (c === "All" ? " on" : "") + '" data-cat="' + esc(c) + '">' + esc(c) + "</button>"; }).join("") + "</div>" +
+        '<ol class="quiz-list" id="qz-list"></ol>' +
+        '<p class="bk-note">' + esc(items.length) + " questions from the game's own data (client " + esc((Q.source || "").replace(/^.*client version ([0-9.]+).*$/, "$1")) + "). " +
+          "Each run asks 15 of them. If a question reads a little differently in your game, search a key word instead of the whole sentence.</p>" +
+      "</div>";
+    var input = $("#qz-in", el), list = $("#qz-list", el), count = $("#qz-count", el);
+    function draw() {
+      var words = norm(state.text).split(" ").filter(Boolean);
+      var hits = items.filter(function (x) {
+        if (state.cat !== "All" && x.cat !== state.cat) return false;
+        return words.every(function (w) { return x._n.indexOf(w) >= 0; });
+      });
+      count.textContent = hits.length + " of " + items.length;
+      list.innerHTML = hits.length ? hits.map(function (x) {
+        return '<li class="quiz-row"><span class="quiz-q">' + mark(x.q, words) + '</span><span class="quiz-a"><span class="quiz-a-label">Answer</span>' + mark(x.a, words) + "</span></li>";
+      }).join("") : '<li class="quiz-empty">No question matches. Try fewer words, or one unusual word from the question.</li>';
+    }
+    input.addEventListener("input", function () { state.text = input.value; draw(); });
+    $("#qz-cats", el).addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest(".quiz-cat"); if (!b) return;
+      state.cat = b.getAttribute("data-cat");
+      $$(".quiz-cat", el).forEach(function (x) { x.classList.toggle("on", x === b); });
+      draw();
+    });
+    draw();
+  };
+
   /* ================= quick calculators ================= */
   T["calc-dig"] = function (el) {
     var n = 10;
@@ -614,8 +663,9 @@
       if (kind === "siege") {
         var stage = 0; D.undeadSiege.forEach(function (r) { if (p.might >= r[3] && p.sanctuary >= r[1]) stage = r[0]; });
         var nxt = D.undeadSiege[stage] || null;
-        h = stage ? "Your " + big(p.might) + " Power and Sanctuary " + p.sanctuary + " clear **stage " + stage + "**." : "You do not meet stage 1 yet (2.4M Power, Sanctuary 13).";
-        if (nxt) h += " Stage " + nxt[0] + " needs " + big(nxt[3]) + " Power and Sanctuary " + nxt[1] + ".";
+        h = stage ? "By the stage table, your " + big(p.might) + " Power and Sanctuary " + p.sanctuary + " reach **stage " + stage + "**." : "You are below the stage 1 line in the table (2.4M Power, Sanctuary 13).";
+        if (nxt) h += " Stage " + nxt[0] + " is listed at " + big(nxt[3]) + " Power and Sanctuary " + nxt[1] + ".";
+        h += " Sources disagree on whether that Power figure is what you need or the enemy's strength, so treat this as a rough guide.";
       } else if (kind === "heroroad") {
         var d = 0; D.heroRoad.forEach(function (m, i) { if (p.might >= m) d = i + 1; });
         h = d ? "Your squad clears **difficulty " + d + "**." : "Difficulty 1 needs 770k squad Power.";

@@ -186,7 +186,7 @@
       s += shape + ' fill="' + k.fill + '" stroke="' + k.stroke + '" stroke-width="2.2"/>';
       if (n.short) s += '<text x="' + n.x + '" y="' + (n.y + 4) + '" text-anchor="middle" class="bk-map-short" fill="' + k.stroke + '">' + esc(n.short) + "</text>";
       if (n.label) s += '<text x="' + n.x + '" y="' + (n.y + r + 17) + '" text-anchor="middle" class="bk-map-label">' + esc(n.label) + "</text>";
-      if (n.sub) s += '<text x="' + n.x + '" y="' + (n.y + r + 31) + '" text-anchor="middle" class="bk-map-sub">' + esc(n.sub) + "</text>";
+      if (n.sub) s += '<text x="' + n.x + '" y="' + (n.y + r + 34) + '" text-anchor="middle" class="bk-map-sub">' + esc(n.sub) + "</text>";
     });
     s += "</svg>";
     var legend = "";
