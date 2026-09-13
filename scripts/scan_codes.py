@@ -148,6 +148,21 @@ def main():
         print(f"  pruned {len(dropped)} codes dead over 180 days: {', '.join(sorted(dropped))}")
     data = {"scanned": now, "sources_checked": checked, "sources_total": len(SOURCES),
             "confident": trustworthy, "codes": out}
+
+    # Only rewrite when something a reader would care about actually moved. The
+    # timestamp alone used to change on every run, so every scan produced a commit
+    # and a redeploy even when no code had appeared, expired or changed status.
+    def payload(d):
+        return json.dumps({k: v for k, v in d.items() if k != "scanned"},
+                          sort_keys=True, ensure_ascii=False)
+    if os.path.exists(OUT):
+        try:
+            if payload(json.load(open(OUT, encoding="utf-8"))) == payload(data):
+                print(f"no change: {sum(c['status']=='active' for c in out)} active, "
+                      f"{len(out)} total, {len(checked)}/{len(SOURCES)} sources; leaving codes.json alone")
+                return
+        except Exception:
+            pass
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(f"wrote {OUT}: {sum(c['status']=='active' for c in out)} active, {len(out)} total, {len(checked)}/{len(SOURCES)} sources")
