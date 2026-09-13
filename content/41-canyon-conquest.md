@@ -1,6 +1,6 @@
 ---
 id: canyon-conquest
-title: Canyon Conquest (Canyon Conquest)
+title: Canyon Conquest
 category: events
 summary: A three-lane league where troops never die. Officers stack two lanes and win two of three.
 tags: canyon conquest, flag war, lanes, glory medals, league

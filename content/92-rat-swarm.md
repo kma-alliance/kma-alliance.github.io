@@ -19,6 +19,8 @@ This is a solo mode, not an alliance event. The alliance "rat" events are Cheese
 
 <div data-widget="rat-swarm-layout"></div>
 
+![A fenced base with a single opening, so every rat comes through one gap. Official App Store art.](img/store/gather-resources.jpg)
+
 Find the 2 or 3 places where paths converge and stack upgraded towers there. A level 5 tower at a choke point beats five level 2 towers spread out. Every source agrees on this.
 
 ## Tower order at a choke
@@ -37,6 +39,8 @@ Guides disagree on the exact order, so here is the reconciled version:
 - Restock medicine before starting the wave.
 
 ## Hero lineup
+
+![Heroes holding a swarm in the open. Official App Store art.](img/store/slay-rats.jpg)
 
 | Slot | Hero | Job |
 |---|---|---|

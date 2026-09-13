@@ -11,12 +11,14 @@ updated: 2026-09-12
 
 *Last Asylum: Plague* has two layers, and most beginner guides mix them up.
 
-- **Inside the walls (the Clinic):** wards, patients, medicine made from herbs, survivors, the Rat Swarm tower defense, and clearing the Cursed Forest around your Sanctuary. This layer produces **Stars**.
+- **Inside the walls:** wards, patients, medicine made from herbs, survivors, the Rat Swarm tower defense, and clearing the Cursed Forest around your Sanctuary. This is where your **Stars** come from.
 - **Outside the walls (the 4X game):** Farms, Lumberyards, Herb Gardens, Training Grounds, Barracks, the Research Lab, the world map, troops T1 to T10, and every alliance event.
 
-Stars gate every Sanctuary level from 3 upward (17 Stars for level 3, 112 for level 10, 326 for level 30) and **cannot be sped up**. That is why you start the Clinic and the forest on day one, even though the 4X side looks more exciting.
+Stars gate every Sanctuary level from 3 upward. You need 17 for level 3, 112 for level 10 and all 326 for level 30, and they are a running total you keep, not a cost you spend. No speedup helps you earn them faster, which is why you start the wards and the forest on day one, even though the 4X side looks more exciting.
 
-![Inside the walls: the Clinic and production layer. Official screenshot.](img/shots/screenshot-production.jpg)
+![Inside the walls: the ward and production layer. Official screenshot.](img/shots/screenshot-production.jpg)
+
+![Treating patients inside the walls. Official App Store art.](img/store/treat-patients.jpg)
 
 ![Clearing plague ruins around the Sanctuary for Stars and plots. Official screenshot.](img/shots/screenshot-ruins.jpg)
 

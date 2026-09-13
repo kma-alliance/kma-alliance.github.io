@@ -1,6 +1,6 @@
 ---
 id: survival-battle
-title: Survival Battle (Survival Battle)
+title: Survival Battle
 category: solo
 summary: Six four-hour rounds a day against players of your size. Line the theme up with the Alliance Duel day so one burn scores twice.
 tags: survival battle, arms race, speedups, brackets

@@ -49,6 +49,8 @@ Reaching Sanctuary 17 costs about **44.5 million** grain plus the same again in 
 
 ## Buildings that matter
 
+![Upgrading the wards. Official App Store art.](img/store/upgrade-facilities.jpg)
+
 <div data-widget="building-grid"></div>
 
 | Building | Unlocks | Count | Why it matters |

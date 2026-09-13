@@ -7,6 +7,8 @@ tags: alliance duel, events, speedups, falcon quests, study scrolls
 updated: 2026-09-12
 ---
 
+<div data-widget="countdown"></div>
+
 ## How it works
 
 Two alliances are matched for six days, **Monday to Saturday**, one theme per day. Days roll at **00:00 server time**, not midnight UTC and not your midnight. Check the [Timezones](#/time-zones) page for what that is on your clock. Each day is scored separately, so an item spent on the wrong day scores nothing.
@@ -54,6 +56,8 @@ The [Duel planner](#/duel-planner) scores your actual banked items against every
 Base values below are from lastasylumplague.com. Your in-game numbers scale with your Alliance Duel research; alliances with Arena Expert see roughly double.
 
 ### Day 1: Raven (Monday)
+
+<img class="side-art" src="img/icons/raven-essence.webp" alt="Raven Essence item icon" loading="lazy">
 
 | Action | Points |
 |---|---|

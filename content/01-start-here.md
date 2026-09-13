@@ -13,6 +13,8 @@ updated: 2026-09-12
 
 ## What this handbook is
 
+![Official App Store art for Last Asylum: Plague.](img/store/survive-the-plague.jpg)
+
 This is the KissMyAzz guide library for *Last Asylum: Plague*. It exists because chat scrolls away and screenshots get lost. Every guide here has a **Last checked** date at the top. A green dot means it was reviewed in the last 45 days. An amber dot means it is due for a review, so double-check anything important in-game before you act on it.
 
 Use the **search box** (press `/` on a keyboard) to find anything. On a phone, the menu button in the top-left opens the guide list.
