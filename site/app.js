@@ -46,6 +46,7 @@
     combat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 20 6-6M14 4l6 6-9 9-6-6 9-9ZM5 14l-1 6 6-1"/></svg>',
     alliance: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4h12v17M6 11h12M10 21v-5h4v5"/></svg>',
     codes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-3-6-3-6-1s3 2 6 1Zm0 0c2-3 6-3 6-1s-3 2-6 1Z"/></svg>',
+    tools: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-2-2 8-8 1.7-1.7ZM9 3 3 9l4 4 6-6Z"/></svg>',
     crown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M4 17 2 7l5 4 5-7 5 7 5-4-2 10Z"/></svg>',
     solo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     ref: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4V4ZM20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7V4Z"/></svg>'
@@ -214,8 +215,8 @@
     }
   };
   function hydrateWidgets(container) {
-    var ext = window.KMA_VISUALS || {};
-    $$("[data-widget]", container).forEach(function (el) { var n = el.getAttribute("data-widget"); var fn = WIDGETS[n] || ext[n]; if (fn) fn(el); });
+    var vis = window.KMA_VISUALS || {}, tools = window.KMA_TOOLS || {};
+    $$("[data-widget]", container).forEach(function (el) { var n = el.getAttribute("data-widget"); var fn = WIDGETS[n] || vis[n] || tools[n]; if (fn) fn(el); });
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest(".copy-btn[data-copy]"); if (!b) return;
@@ -240,6 +241,7 @@
     h += "<span>Newest update <b>" + esc(fmtDate(K.site.updated || "")) + "</b></span>" + (stale ? "<span><b>" + stale + "</b> guides older than 45 days</span>" : "") + "</div>";
 
     h += '<div data-widget="countdown"></div>';
+    h += '<div data-widget="profile-strip"></div>';
 
     var notices = autoNotices().concat(K.notices || []);
     if (notices.length) {
