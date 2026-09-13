@@ -13,6 +13,8 @@ updated: 2026-09-12
 
 **Level → stars → key skills → gear.** Level is the fastest power gain and it drives troop capacity. Keep your main five near the Sanctuary cap. Shards only go into long-term heroes.
 
+The [hero investment planner](#/hero-planner) turns this into shards, Antitoxin and weeks for a specific hero.
+
 Hero level cap is 15 until Sanctuary 5, then **5 × Sanctuary level** (Sanctuary 20 = level 100, Sanctuary 30 = level 150). Overflow XP banks, so campaign XP is never wasted.
 
 ## Levels (Antitoxin)

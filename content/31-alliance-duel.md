@@ -28,6 +28,8 @@ Survival Battle runs in parallel with its own rotating themes. When its theme ma
 
 ## The cheat sheet
 
+The [Duel planner](#/duel-planner) scores your actual banked items against every day.
+
 <div data-widget="duel-week"></div>
 
 | Save these | Spend on | Why |
