@@ -33,6 +33,12 @@
   }
 
   // ---------- icons ----------
+  var MAKER_LIPS = '<svg class="maker-lips" viewBox="0 0 32 20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 10C5 4 10 1 13 3c1.5 1 2.2 1.4 3 1.4S17.5 4 19 3c3-2 8 1 12 7-6 .6-11 1-15 1S7 10.6 1 10Z"/><path fill="currentColor" d="M1.4 10.6C7 11.3 12 11.7 16 11.7s9-.4 14.6-1.1C27 16 22 19 16 19S5 16 1.4 10.6Z"/><path fill="none" stroke="var(--bg-deep)" stroke-width="1.1" stroke-linecap="round" d="M3 10.4c5 .8 9 1.1 13 1.1s8-.3 13-1.1"/></svg>';
+  var MAKER_TIP = "Handcrafted by Erdrickk. Every guide fact-checked, every number tested, and the whole thing sealed with a kiss.";
+  function makerInline(cls) {
+    return '<div class="maker-inline ' + (cls || '') + '" title="' + MAKER_TIP + '">' + MAKER_LIPS +
+      '<span>Created by <b>Erdrickk</b>, <i>God of a 1000 Lips</i></span></div>';
+  }
   var ICO = {
     menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
@@ -69,28 +75,101 @@
   try { var saved = localStorage.getItem("kma-theme"); if (saved && !root.getAttribute("data-theme")) root.setAttribute("data-theme", saved); } catch (e) {}
 
   // ---------- build chrome ----------
+  // The sidebar used to list all 62 guides under 11 headings at once. It now shows a short pinned
+  // block of the pages people open daily, then 7 collapsible sections. The section holding the
+  // current page opens itself; anything a reader opens or closes is remembered on their device.
+  var PINNED = [
+    ["/", "Home", "start"], ["/my-account", "Your account", "tools"], ["/daily-checklist", "Daily checklist", "solo"],
+    ["/alliance-duel", "Alliance Duel", "event"], ["/events-calendar", "Every event at a glance", "event"],
+    ["/gift-codes", "Gift codes", "codes"], ["/tools", "All tools", "tools"]
+  ];
+  var SECTIONS = [
+    { id: "start", title: "Start here", icon: "start", cats: ["start"] },
+    { id: "tools", title: "Tools & planners", icon: "tools", cats: ["tools"] },
+    { id: "build", title: "Heroes & Sanctuary", icon: "hero", cats: ["heroes", "city"] },
+    { id: "events", title: "Alliance & kingdom", icon: "event", cats: ["events", "kingdom"] },
+    { id: "solo", title: "Solo events & modes", icon: "solo", cats: ["solo"] },
+    { id: "combat", title: "Combat & alliance", icon: "combat", cats: ["combat", "alliance"] },
+    { id: "ref", title: "Codes & reference", icon: "ref", cats: ["codes", "ref"] }
+  ];
+  var SIDE_KEY = "kma-side-open";
+  var sideOpen = {};
+  try { sideOpen = JSON.parse(localStorage.getItem(SIDE_KEY) || "{}") || {}; } catch (e) {}
+  function saveSide() { try { localStorage.setItem(SIDE_KEY, JSON.stringify(sideOpen)); } catch (e) {} }
+  var CHEV = '<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2.5 7.5 6 4 9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
   function buildSidebar() {
     var sb = $("#sidebar");
-    var html = "";
     var hasProfile = false;
     try { hasProfile = !!localStorage.getItem("kma-profile"); } catch (e) {}
-    html += '<div class="side-group"><a href="#/" data-route="/">' + ICO.start.replace("<svg", '<svg class="g-ico"') + "Home</a>";
-    html += '<a href="#/my-account" data-route="/my-account" class="side-acct">' + ICO.tools.replace("<svg", '<svg class="g-ico"') + "Your account" + (hasProfile ? "" : '<span class="side-dot" title="not set up yet"></span>') + "</a></div>";
-    K.categories.forEach(function (c) {
-      var gs = K.guides.filter(function (g) { return g.category === c.id; });
-      if (!gs.length) return;
-      html += '<div class="side-group"><h3>' + esc(c.title) + "</h3>";
-      gs.forEach(function (g) {
-        html += '<a href="#/' + esc(g.id) + '" data-route="/' + esc(g.id) + '">' + (ICO[c.icon] || ICO.ref).replace("<svg", '<svg class="g-ico"') + esc(g.title) + "</a>";
-      });
-      html += "</div>";
+    var active = "/" + (location.hash.replace(/^#\/?/, "").split("/")[0] || "");
+    var html = '<div class="side-pins">';
+    PINNED.forEach(function (p) {
+      html += '<a href="#' + p[0] + '" data-route="' + p[0] + '"' + (p[0] === "/my-account" ? ' class="side-acct"' : "") + ">" +
+        (ICO[p[2]] || ICO.ref).replace("<svg", '<svg class="g-ico"') + esc(p[1]) +
+        (p[0] === "/my-account" && !hasProfile ? '<span class="side-dot" title="not set up yet"></span>' : "") + "</a>";
     });
-    html += '<div class="side-foot">' + esc(K.site.tagline || "") + '<br>Site updated ' + esc(fmtDate(K.site.updated || "")) + "</div>";
+    html += "</div>";
+    html += '<div class="side-browse"><span>All ' + K.guides.length + ' guides</span><button type="button" class="side-all">Expand all</button></div>';
+    SECTIONS.forEach(function (sec) {
+      var cats = K.categories.filter(function (c) { return sec.cats.indexOf(c.id) >= 0; });
+      var total = 0, inner = "", holdsActive = false;
+      cats.forEach(function (c) {
+        var gs = K.guides.filter(function (g) { return g.category === c.id && g.id !== "my-account"; });
+        if (!gs.length) return;
+        total += gs.length;
+        if (cats.length > 1) inner += '<div class="side-sub">' + esc(c.title) + "</div>";
+        gs.forEach(function (g) {
+          if ("/" + g.id === active) holdsActive = true;
+          inner += '<a href="#/' + esc(g.id) + '" data-route="/' + esc(g.id) + '">' + esc(g.title) + "</a>";
+        });
+      });
+      if (!total) return;
+      var open = sideOpen[sec.id] === true || (sideOpen[sec.id] !== false && holdsActive);
+      html += '<details class="side-sec" data-sec="' + sec.id + '"' + (open ? " open" : "") + ">" +
+        "<summary>" + CHEV + (ICO[sec.icon] || ICO.ref).replace("<svg", '<svg class="g-ico"') +
+        '<span class="sec-title">' + esc(sec.title) + '</span><span class="sec-count">' + total + "</span></summary>" +
+        '<div class="sec-body">' + inner + "</div></details>";
+    });
+    html += '<div class="side-foot">' + makerInline() + esc(K.site.tagline || "") + "<br>Site updated " + esc(fmtDate(K.site.updated || "")) + "</div>";
     sb.innerHTML = html;
+
+    $$(".side-sec", sb).forEach(function (d) {
+      // "toggle" fires asynchronously, so a programmatic open is tagged on the element
+      // itself rather than with a timing flag that would already be cleared by then.
+      d.addEventListener("toggle", function () {
+        if (d.hasAttribute("data-auto")) { d.removeAttribute("data-auto"); syncAllBtn(); return; }
+        sideOpen[d.getAttribute("data-sec")] = d.open; saveSide(); syncAllBtn();
+      });
+    });
+    var allBtn = $(".side-all", sb);
+    function syncAllBtn() {
+      var secs = $$(".side-sec", sb);
+      allBtn.textContent = secs.every(function (d) { return d.open; }) ? "Collapse all" : "Expand all";
+    }
+    allBtn.addEventListener("click", function () {
+      var secs = $$(".side-sec", sb), openAll = !secs.every(function (d) { return d.open; });
+      secs.forEach(function (d) { if (d.open !== openAll) d.setAttribute("data-auto", ""); d.open = openAll; sideOpen[d.getAttribute("data-sec")] = openAll; });
+      saveSide(); syncAllBtn();
+    });
+    syncAllBtn();
   }
   function setActive(route) {
-    $$("#sidebar a").forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-route") === route); });
+    var hit = null;
+    $$("#sidebar a").forEach(function (a) {
+      var on = a.getAttribute("data-route") === route;
+      a.classList.toggle("active", on);
+      if (on && a.closest(".sec-body")) hit = a;
+    });
+    // open the section holding this page, without recording it as the reader's choice
+    if (hit) {
+      var d = hit.closest(".side-sec");
+      if (d && !d.open) { d.setAttribute("data-auto", ""); d.open = true; }
+      var sb = $("#sidebar"), r = hit.getBoundingClientRect(), br = sb.getBoundingClientRect();
+      if (r.top < br.top + 40 || r.bottom > br.bottom - 20) hit.scrollIntoView({ block: "center" });
+    }
   }
+
 
   // ---------- live gift codes (from scripts/scan_codes.py via GitHub Actions) ----------
   var CODES = K.codes && K.codes.codes ? K.codes : null;
@@ -238,7 +317,7 @@
   function renderHome() {
     var s = K.site;
     var h = '<div class="article">';
-    h += '<section class="hero has-banner"><img class="banner" src="img/shots/hero-official-bg.jpg" alt="" onerror="this.parentNode.classList.remove(\'has-banner\');this.remove()"><div class="hero-inner"><div class="kicker">' + esc(s.game || "") + "</div>";
+    h += '<section class="hero has-banner"><img class="banner" src="img/shots/hero-official-bg.jpg" alt="" onerror="this.parentNode.classList.remove(\'has-banner\');this.remove()"><div class="hero-inner"><div class="kicker">' + esc(s.game || "") + "</div>" + makerInline("maker-mobile");
     h += "<h1>" + esc(s.heroTitle || s.name) + "</h1>";
     h += "<p>" + esc(s.heroText || "") + "</p>";
     h += '<div class="hero-actions">' + (s.heroActions || []).map(function (a, i) {
