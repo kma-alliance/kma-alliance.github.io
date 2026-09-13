@@ -29,6 +29,9 @@
 figure.shot { margin: 16px 0 22px; }
 figure.shot img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); display: block; }
 figure.shot figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+/* official square posters: keep them poster-sized, not page-wide */
+figure.shot:has(img[src*="img/official/"]) { max-width: 440px; }
+figure.shot:has(img[src*="heroes-lineup"]) { max-width: none; }
 @media (max-width: 860px) { .hero.has-banner .hero-inner { padding: 24px 16px 20px; } .gallery { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); } }
 
 /* ---------- interactive tools ---------- */
