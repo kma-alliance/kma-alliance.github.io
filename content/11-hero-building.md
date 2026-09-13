@@ -89,7 +89,9 @@ Push the **Smelting Workshop** toward level 25 early. Gearstones are the bottlen
 
 ## The bench bonus
 
-Every UR and SSR gets a fifth "support" skill at **level 30 and 8 stars**. For URs it is Tenacity: +20% ATK, HP and DEF and +10% cooldown speed for the whole squad. It **works from the bench**. A spare UR sitting outside your five still gives the bonus. Park every 8-star, level-30 UR you own in a bench slot.
+Every UR and SSR gets a fifth "support" skill at **level 30 and 8 stars**. For URs it is Tenacity: +20% ATK, HP and DEF and +10% cooldown speed for the whole squad. It **works from the bench**. A spare UR sitting outside your five still gives the bonus, so park every 8-star, level-30 UR you own in a bench slot.
+
+What no source answers is whether **two** benched URs stack, and whether there is a cap or a diminishing return. Nobody has published a test either way. If you have two qualifying URs, compare your Power with one benched and then with both, and tell an officer what you see.
 
 ## Hero Growth Tasks
 

@@ -38,6 +38,8 @@ Heroes belong to one of three factions. The counter is a flat 20% damage swing.
 | Warlock | Ranger | Ranger |
 | Ranger | Warrior | Warrior |
 
+> **Note before you "fix" this:** the direction above matches the game client, but 37GAMES' own published guide prints the triangle the other way round. If someone quotes the official guide at you, this is why. Test it in the Arena rather than trusting either text.
+
 Faction bonus for the whole squad's HP, ATK and DEF: 3 of one faction +5%, 3 plus 2 of another +10%, 4 of one +15%, 5 of one +20%.
 
 <div data-widget="faction-triangle"></div>

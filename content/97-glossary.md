@@ -14,12 +14,11 @@ updated: 2026-09-12
 | Sanctuary | Your city and its HQ building. Everything is gated by its level. |
 | Territory | Your plot on the world map. |
 | Doctor | A player. |
-| Power | Power score. |
 | Blight | A PvE monster on the world map. Elite and Wandering Blights are rallied. |
-| Clinic, wards | The hospital layer inside the walls. Produces Stars. |
-| Stars | Currency from the Clinic and forest clearing. Gate every Sanctuary level from 3 up. Cannot be sped up. |
-| Antitoxin | Hero XP. |
-| Raven | Your sixth fighter, levelled with Raven Fruit and Essence. |
+| Wards, patients | The hospital layer inside the walls. Some guides call the building the Clinic and others the Infirmary; the publisher's own building list says **Infirmary**. |
+| Stars | A **running total you hold, never a cost you pay**. Every Sanctuary level from 3 up needs a threshold, and you keep them afterwards. There are 326 in the whole game and the last few levels all need all 326, so never add the thresholds together. |
+| Antitoxin | The material that raises a hero's **level**. Not the same as hero XP, which comes from Covert Ops. |
+| Raven | Your sixth fighter. Raven Essence levels it, and Epigraphs slot into it. ("Raven Fruit" appears only on guide blogs, so treat that name with care.) |
 | Falcon Tower, Falcon Quests | The world-map building and its daily quest board (refreshes every 6 hours). |
 | Power (also written Might) | Your total score. Most players say Power; some guides and the press write Might or CP. Same number. |
 | Covert Operations ("Covert Ops") | Timed missions that pay hero XP. Unlocked by the Black Ops building at Sanctuary 9. |
@@ -27,14 +26,22 @@ updated: 2026-09-12
 | Study Scrolls | Currency from Alliance Duel results. Buys the Duel research tree and T10. |
 | Alliance Coins, Alliance Points | Same thing. The Alliance Shop currency. |
 | Lion Coins | Thief Hunt currency. |
-| Fame Medals | Honor Shop currency from Royal City, Canyon Conquest, Kingdom War. |
+| Honor Shop medals | Earned in Royal City, Canyon Conquest and Kingdom War. Guide sites variously call the currency Fame Medals, Glory Medals and Expedition Medals, and no first-party source settles it. Check the shop screen. |
+| Epigraph | Gear that slots into the Raven. Players say "Raven and Epigraphs" in one breath; the Epigraph Workshop opens at Sanctuary 5. |
+| Wishing Wheel | The hero gacha. |
+| Mystic Treasure | The buried-treasure hunt. Seven fragments make one map. Older guides call it Treasure Maps. |
+| Alliance Excavation | A shared site on the alliance map that finishes faster the more members tap it. The publisher's name for it; many players say Alliance Expedition. |
+| Alliance Caravan | The alliance-wide caravan run, separate from your four personal caravans. |
+| Exploration Chain | The long numbered exploration track that pays recruit tickets. |
+| Temple Battle | The alliance fight over the Temple, opens at Sanctuary 15. |
+| Thief Hunt | The world-map event where you hit thief targets for Lion Coins. |
 | War Frenzy | 15-minute shield lock after any military action. |
 | Scope Level | Your Watchtower's anti-scout rating. |
 | NAP | Non-aggression pact between alliances. |
 | R1 to R5 | Alliance ranks. R5 is the leader, R4 officers. |
 | God of War, Diplomat, Recruiter, Inspector (Goddess) | The four alliance titles. |
 | KvK | Kingdom War: kingdom versus kingdom. |
-| Level Supplies | Reward boxes that pay based on your Sanctuary level when opened. Hold them. |
+| Level Supplies | Reward boxes that pay out based on your Sanctuary level when opened, so hold them until after an upgrade. Only one site uses this name for them. |
 | Era | A 56-day season with an Era Pass. |
 | Era of Revival | The July 2026 late-game expansion: awakenings, exclusive weapons, Revival League. |
 
