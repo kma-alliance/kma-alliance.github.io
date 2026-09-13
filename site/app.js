@@ -105,7 +105,7 @@
     if (!CODES) return '<div class="codes-panel"><p class="section-sub">The code scanner has not run yet. It runs automatically every 6 hours on GitHub.</p></div>';
     var list = CODES.codes.filter(function (c) { return full ? c.status !== "expired" : c.status === "active"; });
     var h = '<div class="codes-panel">';
-    h += '<div class="codes-meta">Scanned <b>' + esc(CODES.scanned) + '</b> across ' + CODES.sources_checked.length + ' of ' + CODES.sources_total + ' trackers. Codes are auto-collected; tap copy, redeem in-game, and tell an officer if one fails.</div>';
+    h += '<div class="codes-meta">Last change <b>' + esc(CODES.scanned) + '</b>, from ' + CODES.sources_checked.length + ' of ' + CODES.sources_total + ' trackers. Rechecked every 6 hours. Codes are auto-collected; tap copy, redeem in-game, and tell an officer if one fails.</div>';
     if (CODES.confident === false) {
       h += '<div class="codes-warn">Most trackers were unreachable on the last scan, so these statuses are carried over from the previous run rather than freshly confirmed.</div>';
     }
