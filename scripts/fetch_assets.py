@@ -9,7 +9,7 @@ import json, os, sys, time, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "site", "img")
-UA = "Mozilla/5.0 (X11; Linux x86_64) KMA-handbook-assets/1.0 (+https://github.com/mortalsinn/kma)"
+UA = "Mozilla/5.0 (X11; Linux x86_64) KMA-handbook-assets/1.0 (+https://github.com/kma-alliance/kma-alliance.github.io)"
 
 def get(url, dest):
     if os.path.exists(dest) and os.path.getsize(dest) > 0:

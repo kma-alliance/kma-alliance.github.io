@@ -24,7 +24,7 @@ SOURCES = [
     ("UCNGame",            "https://ucngame.com/codes/last-asylum-codes/"),
     ("wiki-last-asylum",   "https://wiki-last-asylum.com/en/wiki/gift-codes"),
 ]
-UA = "Mozilla/5.0 (X11; Linux x86_64) KMA-handbook-code-scanner/1.0 (+https://github.com/mortalsinn/kma)"
+UA = "Mozilla/5.0 (X11; Linux x86_64) KMA-handbook-code-scanner/1.0 (+https://github.com/kma-alliance/kma-alliance.github.io)"
 
 # Code shapes seen so far: LA + alnum (LA30W7F2M, LAVD26, LAiOSLA), NN + letters (26CHOCO), twlap### (regional).
 CODE_RE = re.compile(r"\b(LA[A-Za-z0-9]{3,12}|\d{2}[A-Z]{3,8}|twlap\d{3})\b")
