@@ -85,7 +85,7 @@ Four slots. Gear levels to 40 with gearstones and herbs, then stars to 5. Legend
 | Boots | DEF, energy resist | 3rd | 2nd |
 | Armor | DEF, physical resist | 4th | 1st |
 
-Push the **Smelting Workshop** toward level 25 early. Gearstones are the bottleneck. Honor Shop: buy Gear Blueprints, not curio chests.
+Push the **Smelting Workshop** toward level 25 early. Gearstone is the bottleneck. Honor Shop: buy Gear Blueprints, not curio chests.
 
 ## The bench bonus
 
@@ -95,7 +95,7 @@ What no source answers is whether **two** benched URs stack, and whether there i
 
 ## Hero Growth Tasks
 
-15 tracks of 10 steps. Each track names specific heroes and counts stars only (not levels or gear). Each completed track pays 25,000 badges and 22,500 gearstones. Heroes in the most tracks: Cynthia 4, Joker 4, Arthur 3, Louis 3. Concentrate shards on the pair from one track; spreading pays nothing.
+15 tracks of 10 steps. Each track names specific heroes and counts stars only (not levels or gear). Each completed track pays 25,000 badges and 22,500 Gearstone. Heroes in the most tracks: Cynthia 4, Joker 4, Arthur 3, Louis 3. Concentrate shards on the pair from one track; spreading pays nothing.
 
 ## Leadership (troop capacity)
 

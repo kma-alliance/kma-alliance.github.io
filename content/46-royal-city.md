@@ -21,7 +21,7 @@ updated: 2026-09-13
 
 First alliance to hold the city for **4 continuous hours** wins; 8 hours unbroken wins instantly; otherwise longest total occupation. (One guide says most total time is the whole rule. Verify on your server.) Enemy-held turrets fire on the city, so take the turrets first. Reinforcements stack onto a structure your alliance already holds.
 
-The winning R5 becomes **King**, gets the Temple Battle court, and mails supply chests to participants.
+The winning R5 becomes **King**, appoints the [court posts](#/court-posts), and mails supply chests to participants.
 
 ## Honor Points for everyone else
 

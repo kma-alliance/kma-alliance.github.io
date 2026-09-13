@@ -7,6 +7,8 @@ tags: thief hunt, gold thief, thief leader, lion coins, raven fruit
 updated: 2026-09-13
 ---
 
+> **Unverified name:** **Thief Leader** and **Lion Coins** are confirmed by player videos. "Gold Thieves" for the small solo targets comes only from guide sites; a player guide calls them "thief clusters".
+
 ## At a glance
 
 | | |

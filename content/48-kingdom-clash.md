@@ -7,7 +7,9 @@ tags: kingdom clash, revival expedition league, cross-server, era of revival
 updated: 2026-09-13
 ---
 
-Both of these are documented only by pre-launch guides, so treat the details as provisional and tell an officer what you see in-game.
+> **Unverified name:** "Kingdom Clash" appears only on guide blogs. The quest-race format below is different from [Kingdom War](#/kingdom-war), so it has not been merged into that page, but its in-game name is unconfirmed. The **Revival Expedition League** is confirmed as part of the Era of Revival.
+
+Both were documented mostly by pre-launch guides, so treat the details as provisional and tell an officer what you see in-game.
 
 ## Kingdom Clash
 
@@ -26,4 +28,4 @@ For servers that have entered the **Era of Revival** (rolling out from 13 July 2
 - Each player deploys their **single strongest march**. Heal before the daily reset. Coordinate to avoid losses.
 - Awakening materials are among the rewards.
 
-See [Era Pass and Era of Revival](#/era) for the systems that come with it.
+See [Era Covenant and Era of Revival](#/era) for the systems that come with it.

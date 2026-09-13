@@ -9,7 +9,7 @@ updated: 2026-09-12
 
 ## About the game
 
-*Last Asylum: Plague* is developed by Cloudwalker Ltd. and published by 37GAMES GLOBAL. Global launch was around 28 February 2026 on iOS and Android, with the first servers dating from December 2025. Client builds ship about weekly (Android 1.0.102 and iOS 1.0.63 as of 9 September 2026) and the store notes only ever say "bug fixes". **There are no public patch notes.** Real content changes are announced in-game, on Discord and on Facebook.
+*Last Asylum: Plague* is published under the 37GAMES GLOBAL brand. The copyright holder and App Store seller is WISENESS GAME ONLINE INTERNATIONAL LTD, and the publisher's support domain is globallap.com. Global launch was around 28 February 2026 on iOS and Android, with the first servers dating from December 2025. Client builds ship about weekly (Android 1.0.102 and iOS 1.0.63 as of 9 September 2026) and the store notes only ever say "bug fixes". **There are no public patch notes.** Real content changes are announced in-game, on Discord and on Facebook.
 
 ## 2026 content timeline
 
@@ -17,7 +17,7 @@ updated: 2026-09-12
 |---|---|
 | Dec 2025 | Servers 1 to 8 open |
 | ~28 Feb 2026 | Global launch. Top 100 free in 42 countries |
-| 24 Mar 2026 | Kingdom Clash announced (cross-server) |
+| 24 Mar 2026 | A cross-server kingdom event announced (guide sites call it Kingdom Clash; the in-game name is unconfirmed) |
 | 3 to 9 Apr 2026 | Easter event: UR Omni Shard, Greenery territory skin, egg hunt |
 | 2 Jul 2026 | **Era of Revival** announced |
 | 10 Jul 2026 | Claire (SSR) can be converted to UR |

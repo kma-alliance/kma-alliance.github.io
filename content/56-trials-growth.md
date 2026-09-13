@@ -25,6 +25,6 @@ Total: 42,250 badges and 14 UR Omni Shards. Check it after every gear promotion 
 
 ## Hero Growth Tasks
 
-15 tracks of 10 steps (150 tasks). Each track names specific heroes and counts **stars only**, not levels or gear. Each finished track pays 25,000 Skill Badges and 22,500 gearstones, plus forging materials: 375,000 badges across all tracks.
+15 tracks of 10 steps (150 tasks). Each track names specific heroes and counts **stars only**, not levels or gear. Each finished track pays 25,000 Skill Badges and 22,500 Gearstone, plus forging materials: 375,000 badges across all tracks.
 
 Heroes that appear in the most tracks give the best return on shards: Cynthia 4, Joker 4, Arthur 3, Louis 3. Concentrate shards on the pair from one track. Spreading pays nothing until a step completes.

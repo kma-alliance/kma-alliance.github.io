@@ -11,7 +11,7 @@ updated: 2026-09-12
 
 ## How it works
 
-Two alliances are matched for six days, **Monday to Saturday**, one theme per day. Days roll at **00:00 server time**, not midnight UTC and not your midnight. Check the [Timezones](#/time-zones) page for what that is on your clock. Each day is scored separately, so an item spent on the wrong day scores nothing.
+Alliances are matched for six days, **Monday to Saturday**, one theme per day. Before your kingdom qualifies for the League it is one alliance against one other; once it qualifies, **six alliances share a weekly group** (see below). Days roll at **00:00 server time**, not midnight UTC and not your midnight. Check the [Timezones](#/time-zones) page for what that is on your clock. Each day is scored separately, so an item spent on the wrong day scores nothing.
 
 | Day | In-game name | What scores |
 |---|---|---|
@@ -22,9 +22,21 @@ Two alliances are matched for six days, **Monday to Saturday**, one theme per da
 | Friday | Preparation | Troop training and promotion |
 | Saturday | Raid | Attacking and killing troops |
 
-The day names above are the publisher's own labels. Longer versions like "Territory Development" or "Raid Enemy" come from third-party guide sites, not from the game.
+These short day names match last-asylum.com's event page. Longer versions like "Territory Development" or "Raid Enemy" come from third-party guide sites. Most players just say "Day 1", "Day 4" and so on.
 
-> **Check your client:** the publisher announced a new **League phase** for Alliance Duel. If your Duel screen shows a league or a seventh day, the six-day structure above is out of date. Tell an officer and this page gets updated.
+## The League
+
+The official Facebook page announced the League on 11 June 2026. It sits on top of the Duel and does **not** add a seventh day or change the six themes.
+
+| | |
+|---|---|
+| Who can enter | Kingdoms active for more than 7 weeks, and only the top 16 alliances in each kingdom per season |
+| Format | Six alliances are grouped together each week instead of a one-on-one match |
+| Movement | Weekly results move alliances up to higher divisions |
+| Top division | Sanctuary Skin and Nameplate |
+| Everyone taking part | Study Scroll, Raven Gear Chest, Gearstone and more |
+
+> **Unverified:** guide sites name the divisions Elite, Epic and Mythic, but that comes from a site that invents English names. Check the League screen. Payout details are on the [Alliance League](#/alliance-league) page.
 
 Rewards: daily milestone chests, daily ranking, daily victory, and weekly alliance victory or defeat rewards. The weekly Study Scroll payout is **840 for a win and 420 for a loss**. A Duel win is also worth 30,000 Kingdom Points in Kingdom War, and the MVP gets 6,000.
 

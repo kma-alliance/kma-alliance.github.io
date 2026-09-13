@@ -2,10 +2,16 @@
 id: alliance-league
 title: Alliance League
 category: events
-summary: The seasonal division ladder that pays Study Scrolls every week. Promotion nearly doubles the payout.
+summary: The seasonal Alliance Duel ladder. Six alliances per weekly group, top 16 alliances per kingdom, and promotion nearly doubles the Study Scroll payout.
 tags: alliance league, study scrolls, divisions
 updated: 2026-09-13
 ---
+
+## What it is
+
+The League is a seasonal layer on top of [Alliance Duel](#/alliance-duel), announced on the official Facebook page on 11 June 2026. Kingdoms active for more than 7 weeks qualify, and only the top 16 alliances in each kingdom enter each season. Six alliances are grouped each week, and weekly results move alliances up through the divisions. The top division earns a Sanctuary Skin and Nameplate; everyone taking part gets Study Scroll, Raven Gear Chest and Gearstone.
+
+> **Unverified:** the division names and the payout ranges below come from a datamined site whose English names are not reliable. The ranges are likely right; check the names on the League screen.
 
 ## How it pays
 

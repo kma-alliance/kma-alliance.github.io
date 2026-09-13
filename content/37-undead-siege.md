@@ -7,6 +7,8 @@ tags: undead siege, death prison, garrison, defense, antitoxin
 updated: 2026-09-13
 ---
 
+> **Unverified:** the wave figures on this page come from one guide site. A detailed player video describes **10 difficulty levels** instead. Both may be true, with waves per attempt inside each difficulty, but nothing confirms it. The **Death Prison** itself is confirmed.
+
 ## At a glance
 
 | | |

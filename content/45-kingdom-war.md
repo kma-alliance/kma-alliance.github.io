@@ -7,6 +7,8 @@ tags: kingdom war, kvk, points, war day, royal city
 updated: 2026-09-13
 ---
 
+> **Unverified:** sources disagree on how Kingdom War runs. This page follows guides describing a points week and a 4-hour Saturday war. Datamined data instead describes a hold-time war: every second holding the Temple or Throne scores a point, 7,200 points wins, and four corner towers each speed the count by 25%. Kingdom War durations conflict between sources, including inside the datamine itself. Check your kingdom's event screen before planning around a time.
+
 ## At a glance
 
 | | |

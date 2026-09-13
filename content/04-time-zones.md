@@ -16,4 +16,4 @@ Two clocks matter:
 
 <div data-widget="timezones"></div>
 
-> **KMA:** When you post an event time, write it as server time **and** UTC, for example "Hunt Battle 20:00 server / 22:00 UTC". Members can then read this page for their own zone. Officer-started events (Hunt Battle, Expedition, Cheese Trap, Undead Siege, Pandemic bosses) are scheduled for the hour with the most members online, which leadership works out from the "Right now there" column.
+> **KMA:** When you post an event time, write it as server time **and** UTC, for example "Blight event 20:00 server / 22:00 UTC". Members can then read this page for their own zone. Officer-started events (Hunt Battle, Expedition, Cheese Trap, Undead Siege, Pandemic bosses) are scheduled for the hour with the most members online, which leadership works out from the "Right now there" column.

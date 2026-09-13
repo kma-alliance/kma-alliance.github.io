@@ -26,13 +26,13 @@ Your ticks are stored in this browser only. They do not reset automatically, so 
 - [ ] **Energy:** spend it on Plague Rat Hordes for recruit tickets, or Blights for Raven Fruit. On Thief Hunt days, hit Gold Thieves for Lion Coins.
 - [ ] **Daily and chapter quests:** 100 activity points opens the chest.
 - [ ] **Alliance:** diamond contribution (all 25 costs 650 diamonds; do what you can afford), donate to alliance tech, and answer any alliance call in chat.
-- [ ] **Alliance events with attempts:** Alliance Expedition (3 attempts, save them for the highest open camp), Alliance Boss (any hit gives a pull), Hunt Battle when called.
+- [ ] **Alliance events with attempts:** Alliance Expedition (3 attempts, save them for the highest open camp), Alliance Boss (any hit gives a pull), the Blight event when called.
 - [ ] **Alliance Duel:** spend the matching items for today's phase. See [Alliance Duel](#/alliance-duel).
 - [ ] Repair towers and restock medicine after Rat Swarm waves.
 
 ## Once a week
 
-- [ ] **Sunday Quiz** (Sanctuary 6+): 15 questions, 75 to 150 diamonds plus milestone chests.
+- [ ] **Quiz of Wisdom (Sundays)** (Sanctuary 6+): 15 questions, 75 to 150 diamonds plus milestone chests.
 - [ ] Buy shields with Alliance Coins before a war week, not diamonds.
 - [ ] Check the Alliance Shop refresh (Mondays) for UR Omni Shards and Raven Essence.
 - [ ] Look at the **Weekly rhythm** on the home page and bank Falcon Quests for Monday.

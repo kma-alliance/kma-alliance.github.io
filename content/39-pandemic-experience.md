@@ -7,6 +7,8 @@ tags: pandemic experience, hell nurse, alliance boss
 updated: 2026-09-13
 ---
 
+> **Unverified name:** Pandemic Experience itself is confirmed. "Hell Nurse" for its enemy comes from one guide blog only; a detailed player guide never names the enemy at all.
+
 ## Personal challenge
 
 The Hell Nurse ladder: 9 difficulties of 30 encounters. Rally if stuck. Your personal Nurse level is what gates the alliance bosses below, so push it early in the window.

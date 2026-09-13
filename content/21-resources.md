@@ -21,14 +21,14 @@ Rules of thumb:
 - Keep grain output at least 1.5× what your camp consumes.
 - Storage should hold 12 hours of production. Production past the cap is silently wasted.
 - Economy research caps: +60% output, +25% gathering, +25% build speed, +50% research speed, +50% protected resources.
-- Idle income from the Clinic banks only 8 hours. Survivors in the Explorer's Camp extend the window.
+- Idle income inside the walls banks only 8 hours. Survivors in the Explorer's Camp extend the window.
 - Anything that lands in the **Bag** (resource stacks, reward boxes) must be opened by hand.
 
 ## Stars
 
 <div data-widget="stars-gate"></div>
 
-Stars gate every Sanctuary level from 3 up and cannot be sped up. Sources, fastest first: Clinic room upgrades, Cursed Forest and territory expansion, exploration battles, world-map Resource Monsters (Celia boosts drops).
+Stars gate every Sanctuary level from 3 up, as a running total you keep. No official source says where they come from. Guide sites list ward room upgrades, Cursed Forest and territory expansion, exploration battles and world-map Resource Monsters, so work all of them.
 
 ## Level Supplies
 
@@ -38,14 +38,14 @@ Event reward boxes that pay out based on your Sanctuary level **at the moment yo
 
 | Currency | From | Spend on |
 |---|---|---|
-| Diamonds | ~100 per $1. Free: Sunday Quiz (75 to 150), Dawn Breakout (80 a run), Hero Road (100 to 900 per difficulty), Thief Leader rallies (20), Development Contract, alliance Golden Eggs | Build queues, VIP 5, emergency shields. Not speedups. |
+| Diamonds | ~100 per $1. Free: Quiz of Wisdom (75 to 150), Dawn Breakout (80 a run), Hero Road (100 to 900 per difficulty), Thief Leader rallies (20), Development Contract, alliance Golden Eggs | Build queues, VIP 5, emergency shields. Not speedups. |
 | Study Scrolls | Alliance Duel (420 a week on a loss, 840 on a win), Alliance League, Lion Coin shop, event chests | Alliance Duel research tree (54,110 total) and Caravan Transport tree (81,950). Gate for T10 troops. |
-| Alliance Coins | Alliance help, tech donations, Hunt Battle (500 per Blight, 2,500 per boss), Expedition, Undead Siege, Royal City honor tiers | Shields, UR Omni Shards, Raven Essence, Direct Relocate, survivor tokens |
+| Alliance Coins | Alliance help, tech donations, the alliance Blight event (500 per Blight, 2,500 per boss), Expedition, Undead Siege, Royal City honor tiers | Shields, UR Omni Shards, Raven Essence, Direct Relocate, survivor tokens |
 | Lion Coins | Gold Thieves and Thief Leader rallies (Thief Hunt) | Awaken Omni Shards (120), Recruit Tickets (80), Study Scrolls (200 per 10), Raven Essence (200) |
 | Raven Fruit and Essence | Blights on the map (800 fruit a hit), Gold Thief (1,360), daily rewards, alliance caravan, shops | Raven levels. Essence is needed at cap breakpoints. Duel day 1 only. |
-| Gearstones | Smelting Workshop, Covert Ops, Expedition shop, Hero Growth Tasks (22,500 per track) | Hero gear |
+| Gearstone | Smelting Workshop, Covert Ops, Expedition shop, Hero Growth Tasks (22,500 per track) | Hero gear |
 | Skill Badges | Hero Growth Tasks (25,000 per track), Hero Road, Trials, Expedition chests, Surprise Encounter | Hero skills |
-| Recruit Tickets | Exploration Chain (145 total), Rat Hordes, Falcon Tower, Era Pass, events | Hero pulls. Duel day 4. |
+| Recruit Tickets | City expansion track (145 total), Rat Hordes, Falcon Tower, Era Covenant, events | Hero summons. Duel day 4. A separate **Survivor Recruit Ticket** recruits survivors. |
 | Fame Medals | Royal City, Canyon Conquest, Kingdom War | Honor Shop: Gear Blueprints (10,000 medals), not curio chests |
 
 ## Shields

@@ -19,7 +19,7 @@ Any damage at all earns a reward slot, so hit it every time it is up. Join the o
 
 ## Alliance Excavation
 
-The publisher's own site calls this **Alliance Excavation**, under Falcon Quests. Many players call it **Alliance Expedition** instead, and older guides on other sites call it "digs" or "dig spots". All three names describe the same thing: a shared site on the alliance map that runs faster the more members tap it.
+last-asylum.com, which presents itself as the official site, calls this **Alliance Excavation**, under Falcon Quests. Many players call it **Alliance Expedition** instead, and older guides on other sites call it "digs" or "dig spots". All three names describe the same thing: a shared site on the alliance map that runs faster the more members tap it.
 
 Speed scales with the **square** of the number of helpers.
 

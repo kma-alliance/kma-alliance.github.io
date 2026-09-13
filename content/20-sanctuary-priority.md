@@ -9,7 +9,7 @@ updated: 2026-09-12
 
 ## Priority in one paragraph
 
-Rush the **Sanctuary** because it gates hero level caps, buildings and troop tiers. Keep the **Research Lab** one level below your target Sanctuary level (hard prerequisite from level 10 up). Keep **Training Grounds** at its prerequisite levels (7, 8, 15, 25, 30) because it decides your troop tier. Start the **Clinic and forest clearing** on day one for Stars. Build enough **Herb Gardens and Farms** that you never stall on herbs. Push the **Smelting Workshop** toward 25. Keep the **Infirmary** never behind the Barracks.
+Rush the **Sanctuary** because it gates hero level caps, buildings and troop tiers. Keep the **Research Lab** one level below your target Sanctuary level (hard prerequisite from level 10 up). Keep **Training Grounds** at its prerequisite levels (7, 8, 15, 25, 30) because it decides your troop tier. Start the **wards and forest clearing** on day one, because Stars gate every level from 3 up. Build enough **Herb Gardens and Farms** that you never stall on herbs. Push the **Smelting Workshop** toward 25. Keep the **Infirmary** never behind the Barracks.
 
 The generic "production first, storage second, Sanctuary third" advice you will see on content sites is a 4X template. Experienced players on this game put the Sanctuary, Lab and Training Grounds first and treat resource buildings as visible-score padding.
 
@@ -33,7 +33,7 @@ Grain and timber costs are equal at every level.
 | 10 | 749K | 233K | 112 | 5 h 35 | Walls 9, Infirmary 7 | Private Stable (caravans), Lord Statue. Alliance Duel, Canyon Conquest | 50 |
 | 11 | ~1.2M | ~368K | 130* | ~7 h 22 | Research Lab 7, Training Grounds 10 | Warlock Statue, Alliance Stable | 55 |
 | 12 | ~1.8M | ~581K | 148* | ~9 h 42 | ~Research Lab 11, Training Grounds 11 | Ranger Statue | 60 |
-| 15 | 6.5M | 2.3M | 201 | 22 h 15 | Research Lab 14, Training Grounds 14, Herb Garden 7 | Raven Workshop. Elixir Scramble, Crystal Valley, Royal City, Temple Battle, Undead Siege | 75 |
+| 15 | 6.5M | 2.3M | 201 | 22 h 15 | Research Lab 14, Training Grounds 14, Herb Garden 7 | Raven Workshop. Elixir Scramble, Crystal Valley, Royal City, Undead Siege | 75 |
 | 16 | ~10M | ~3.5M | 210* | ~1 d 7 h | ~Research Lab 15, Training Grounds 15 | Expedition | 80 |
 | 20 | 60M | 18M | 247 | 4 d 23 h | Research Lab 19, Alliance Hall 18, Farm 10 | Squad 3. T7 troops via Training Grounds 20 | 100 |
 | 25 | 278M | 98M | 292 | 22 d 3 h | Research Lab 24, Training Grounds 24, Herb Storage 10 | T8 troops via Training Grounds 24 | 125 |
@@ -65,7 +65,7 @@ Reaching Sanctuary 17 costs about **44.5 million** grain plus the same again in 
 | Watchtower | Sanctuary 8 | 1 | March warnings and Scope Level, which hides your troops from enemy scouts. |
 | Alliance Hall | Sanctuary 5 | 1 | Help count per queue: 4 at level 1, 20 at level 30. Prerequisite at 7, 8, 9 and 20. |
 | Antitoxin Workshop | Sanctuary 5 | 1 to 5 | Hero XP. 1,556 an hour at level 1, 259,666 at level 30. Tap to collect. |
-| Smelting Workshop | Sanctuary 5 | up to 5 | Gearstones for hero gear. Push to 25. |
+| Smelting Workshop | Sanctuary 5 | up to 5 | Gearstone for hero gear. Push to 25. |
 | Herb Garden | Sanctuary 1 | up to 4 (2nd at Sanctuary 2, 4th at 19) | Herbs enter Sanctuary costs at level 9 and never leave. |
 | Farm and Lumberyard | Sanctuary 1 | up to 4 each | Grain and timber. |
 | Granary, Lumber Depot, Herb Storage | Sanctuary 3 | 1 each | Protected resources (raid-safe amount). |

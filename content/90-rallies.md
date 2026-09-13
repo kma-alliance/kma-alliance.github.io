@@ -26,7 +26,7 @@ Set auto-rally to **officer rallies only**. When you are offline, your strongest
 
 ## March times
 
-Event Blights in Hunt Battle use a fixed 15-second march each way. Normal world-map marches scale with distance, reduced by alliance War Research (rally speed) and territory bonuses. Live near the rally leaders.
+Event Blights in the [alliance Blight event](#/blight-event) use a fixed 15-second march each way. Normal world-map marches scale with distance, reduced by alliance War Research (rally speed) and territory bonuses. Live near the rally leaders.
 
 Cheese Trap rallies are 3 minutes each. With two lineups you can keep one marching while the other queues, which fits 45 to 50 rallies into the 30-minute window.
 
@@ -35,7 +35,7 @@ Cheese Trap rallies are 3 minutes each. With two lineups you can keep one marchi
 | Target | Notes |
 |---|---|
 | Elite and Wandering Blights | World map PvE. Wandering Phantom from Sanctuary 8. Rally rewards for the organiser run from 16,851 at level 1 to 616,794 at level 30; participants 3,000 to 64,000. |
-| Cheese Thief | Cheese Trap. 20 members, Mouse Lure buff. |
+| Cheese Trap target (name disputed) | Cheese Trap. 20 members, Mouse Lure buff. |
 | Alliance Boss | Any hit gives a pull. Faction bonus does not apply. |
 | Thief Leader | Thief Hunt. No stamina cost to join. 78 Lion Coins, 20 diamonds, 1 Recruit Ticket per rally. |
 | Cities and fortresses | You can only attack a city adjacent to one you already hold. Take the perimeter turrets first or they shred your garrison. |

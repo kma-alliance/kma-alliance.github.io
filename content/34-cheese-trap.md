@@ -2,10 +2,12 @@
 id: cheese-trap
 title: Cheese Trap
 category: events
-summary: Rally the Cheese Thief for 30 minutes with 20 members. Donate lures, bring two lineups, and keep a rally marching at all times.
+summary: Rally the Cheese Trap target for 30 minutes with 20 members. Donate lures, bring two lineups, and keep a rally marching at all times.
 tags: cheese trap, rally, cheese thief, mouse lure
 updated: 2026-09-13
 ---
+
+> **Unverified name:** guide sites disagree on what you fight here. Some say you rally a **Cheese Thief**, others say you summon a **Cheese Rat**, and they describe the mechanic differently too. This page follows the more common description. Check the event screen.
 
 ## At a glance
 

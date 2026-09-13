@@ -1,9 +1,9 @@
 ---
 id: quiz
-title: Sunday Quiz
+title: Quiz of Wisdom
 category: solo
 summary: Fifteen questions from a pool of 81. Ten right clears every milestone. Never back out mid-run.
-tags: quiz, sunday, diamonds
+tags: quiz of wisdom, quiz, sunday, diamonds
 updated: 2026-09-13
 ---
 
@@ -21,10 +21,10 @@ updated: 2026-09-13
 | Correct | Rewards |
 |---|---|
 | 1 | 10 diamonds, 5 resource supplies, 3 Level Supplies |
-| 3 | 2 Survivor Tickets, 10 supplies, 5 Level Supplies |
+| 3 | 2 Survivor Recruit Tickets, 10 supplies, 5 Level Supplies |
 | 5 | 30 diamonds, 20 supplies, 8 Level Supplies |
-| 7 | 3 Survivor Tickets, 30 supplies, 10 Level Supplies |
-| 10 | 5 Survivor Tickets, 60 diamonds, 80 supplies |
+| 7 | 3 Survivor Recruit Tickets, 30 supplies, 10 Level Supplies |
+| 10 | 5 Survivor Recruit Tickets, 60 diamonds, 80 supplies |
 
 ## Tips
 

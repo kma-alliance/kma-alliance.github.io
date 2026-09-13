@@ -19,7 +19,7 @@ Rows highlighted in red are ones your account cannot currently start. Fix those 
 
 ## Stars are the other wall
 
-Stars come from Clinic room upgrades and clearing the Cursed Forest, and **they cannot be sped up with anything**. Sanctuary 30 needs 326 of them. That is why the first advice in [Your first week](#/first-week) is to start the Clinic on day one even though the 4X side looks more interesting.
+Guide sites say Stars come from upgrading ward rooms and clearing the Cursed Forest; no official source states where they come from. Sanctuary 30 needs all 326 of them, and they are a running total you keep rather than a cost you pay. That is why [Your first week](#/first-week) tells you to start the wards and the forest on day one, even though the 4X side looks more interesting.
 
 ## Speeding it up, in order
 

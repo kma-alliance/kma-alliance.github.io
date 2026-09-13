@@ -1,13 +1,15 @@
 ---
 id: era
-title: Era Pass and the Era of Revival
+title: Era Covenant and the Era of Revival
 category: solo
 summary: Fifty-six-day seasons with a pass that finishes itself by day 26, and the endgame expansion that adds Awakening, Exclusive Weapons and the Revival League.
-tags: era pass, era of revival, awakening, exclusive weapons, lord specialty
+tags: era covenant, era pass, battle pass, era of revival, awakening, exclusive weapons, lord specialty
 updated: 2026-09-13
 ---
 
-## Era Pass
+## Era Covenant
+
+The season's battle pass. Player videos and a player's own screenshots call it the **Era Covenant**; some guide sites call it the Era Pass. It is the same thing.
 
 | | |
 |---|---|

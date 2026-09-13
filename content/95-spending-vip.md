@@ -62,8 +62,8 @@ VIP Shop priorities: Raven Essence, Universal Curio Shards, UR Hero Omni Shards,
 4. Direct Relocate to get into the alliance core.
 5. A 24-hour shield in an emergency.
 
-Skip the rest of the Diamond Shop. Free diamonds come from the Sunday Quiz, Dawn Breakout, Hero Road, Thief Leader rallies, Golden Eggs and the Era Pass free track.
+Skip the rest of the Diamond Shop. Free diamonds come from the Quiz of Wisdom, Dawn Breakout, Hero Road, Thief Leader rallies, Golden Eggs and the Era Covenant free track.
 
-## Era Pass
+## Era Covenant (the season pass)
 
 Each era is 56 days. The pass has 50 levels and can be finished in about 26 days. Free track: 4 Recruit Tickets and 5 UR Omni Shards. Pass: 45 tickets and 17 shards plus diamonds. Large Pass: 70 tickets and 34 shards. Recruit tickets are the headline reward.
