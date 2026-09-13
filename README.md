@@ -56,11 +56,15 @@ troop tiers, and building unlock levels. It also runs in CI on every push.
 
 Sources for this game disagree, so the handbook follows an order:
 
-1. **last-asylum.com** and the app store listing. First-party, and the source of truth for names.
-2. **Player videos and posts.** The best evidence for what the client actually displays.
-3. **wiki-last-asylum.com** for numbers only. Its building data is datamined from the game client,
-   but its English names are invented, so never take terminology from it.
-4. **Monetised guide blogs** count as one weak source between them. They copy each other.
+1. **The official Facebook page, the App Store and Google Play listings, and globallap.com.** These are
+   the only verifiably first-party sources. The publisher's patch notes on Facebook are the best
+   place to settle a name.
+2. **Player videos and posts**, especially YouTube chapter lists, which quote in-game labels word for word.
+3. **last-asylum.com.** It calls itself the official site, but neither store listing links to it. Its
+   terms have matched player evidence every time they could be checked, so it is a strong secondary source.
+4. **wiki-last-asylum.com** for numbers only. Its data is datamined from the game client, but its
+   English names are invented translations, so never take terminology from it.
+5. **Monetised guide blogs** count as one weak source between them. They copy each other.
 
 Anything resting on a single source gets an `> **Unverified:**` callout rather than being stated
 plainly. If you confirm or disprove one in-game, edit the page and drop the callout.
