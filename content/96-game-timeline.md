@@ -29,24 +29,30 @@ updated: 2026-09-12
 
 ## Server-day unlocks
 
+Days are **Monument days**: the day the server opened is day 1. The full, dated version for your own server is on [Your server's first 60 days](#/new-server).
+
 | Server day | What happens |
 |---|---|
 | 2 | Survival Battle (needs Sanctuary 7) |
-| 4 | Cheese Trap |
-| 7 | Alliance Boss level 3, Cheese Trap level 3 |
-| 14 | Alliance Boss 4, Cheese Trap 4, Joker unlocks, Undead Siege clues |
-| 15 | Canyon Conquest, Annie in the Hero Pass |
-| 22 | Harper in the Daily Offer |
+| 4 | Cheese Trap, Caravans, Top Healer starts |
+| 8 | Cynthia (hero wheel), Shadow (hero pass) |
+| First Monday on or after day 8 | First Alliance Duel week (AvA), same server, no raid day |
+| 14 | Cheese Trap level 4 |
+| 15 | Undead Siege, Joker (hero wheel), Annie (hero pass), Canyon Conquest days 15 to 21 |
+| 22 | Harper (hero pass) |
 | 27 | First Royal City Scramble |
-| 29 | Kingdom War announced, Daskal in the Daily Offer |
+| 29 | Kingdom War announced, Duels go cross-server, Daskal (hero pass) |
+| 31 | Harper joins the Tavern |
+| About 35 to 48 | First Kingdom War battles |
 | 36 | Red Lady |
-| 56 | Era rollover (every 56 days) |
+| 43 | Ulfrid (formerly Brian) |
+| 50+ | Alliance League eligibility |
 | 57 | Zoya |
 | 64 | Louis |
 | 71 | Bell |
 | 85 | Billy |
 | 99 | Nicole |
-| ~130+ | Era of Revival. Server closes to new characters |
+| About 136 to 160 | Era of Revival, in groups of 32 servers. Server closes to new characters |
 
 Most other unlocks are gated by Sanctuary level, not calendar days. See [Sanctuary and build order](#/sanctuary-priority).
 

@@ -77,7 +77,7 @@ Day 5 has no big single action, so training volume and speedups carry it. Higher
 
 There are two versions of the event. One opens with **Resource Acquisition**; the other opens with **Raven Boost**, where a Falcon Quest pays 1,350 and each Raven Essence 300, with stage lines running as high as 180,000 points. One player on a server in its first week saw the Raven version.
 
-> **Unverified:** when it starts. One player saw it on **server day 5**. Another, on an older server, thought it starts on the **second Monday** and runs once per server. Watch the Monument timeline in your city and tell an officer what you see.
+> **Note:** on a new server Top Healer starts around **server day 4 to 5**. One new server had it running on day 5, and a player milestone list puts it on day 4. The older "second Monday" claim does not hold: on that server the second Monday was day 11.
 
 ## Rewards
 

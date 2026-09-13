@@ -14,7 +14,7 @@ updated: 2026-09-13
   "art": "img/shots/screenshot-city.jpg",
   "headline": "Catch thieves for **Lion Coins**, rally the Thief Leader, and turn the coins into Omni Shards and Recruit Tickets.",
   "facts": [
-    ["Duration", "3 days, back about every 3 weeks"],
+    ["Duration", "3 days, back roughly every 2 to 3 weeks"],
     ["Where", "World map, thieves visible to everyone"],
     ["Cost", "10 energy per small thief · joining a rally is free"],
     ["Fight", "Solo on small thieves, rally on the Thief Leader"]

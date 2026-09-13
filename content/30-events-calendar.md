@@ -38,6 +38,8 @@ Use this page to answer one question fast: **what is on today, and do I qualify?
 }
 ```
 
+> **Tip:** on a new server, [Your server's first 60 days](#/new-server) lists the day each of these first opens.
+
 **Not on a fixed weekday:** the [Royal City Scramble](#/royal-city) runs weekly from server day 27, but no source ties it to one day, so check the event screen. Guide sites put [Kingdom War](#/kingdom-war)'s points stage on Sunday to Friday and its battle on Saturday, which datamined rules dispute. Officer-started events (Hunt Battle, Alliance Expedition, Cheese Trap, Undead Siege, Pandemic Experience bosses, Thief Leader rallies) are announced in alliance mail with a server time.
 
 ## When you qualify
@@ -66,6 +68,7 @@ Use this page to answer one question fast: **what is on today, and do I qualify?
 | Event | Started by | Needs | When | Guide |
 |---|---|---|---|---|
 | Alliance Duel | Automatic | Sanctuary 10, alliance in top 32 by Power | Weekly, Mon to Sat | [Alliance Duel](#/alliance-duel) |
+| AvA (players' name for the Alliance Duel) | Automatic | First Monday on or after server day 8 | Same server until day 29, then cross-server | [AvA](#/ava) |
 | Alliance League | Automatic | Kingdom 7+ weeks old, top 16 alliances | Seasonal, on top of the Duel | [Alliance League](#/alliance-league) |
 | Hunt Battle | R4 or R5 | 20+ members | Once per event, 5 waves | [Hunt Battle](#/hunt-battle) |
 | Alliance Expedition | R4 or R5 | 10+ members at Sanctuary 6 | 6 camps, 3 attempts each | [Alliance Expedition](#/alliance-expedition) |
@@ -73,9 +76,9 @@ Use this page to answer one question fast: **what is on today, and do I qualify?
 | Alliance Boss and Excavation | Alliance | Boss level 3 from server day 7 | Boss levels weekly; digs any time | [Alliance Boss and Excavation](#/alliance-boss-excavation) |
 | Undead Siege | R4 or R5 after 300,000 clues | 48 h in alliance, active in last 72 h | 48-hour cooldown | [Undead Siege](#/undead-siege) |
 | Elixir Scramble | R4 or R5 roster | Sanctuary 15, top 32 alliance | Register Mon to Wed, fight Fri | [Elixir Scramble](#/elixir-scramble) |
-| Thief Hunt | Automatic; R4 or R5 rally Leaders | – | 3 days, about every 3 weeks | [Thief Hunt](#/thief-hunt) |
+| Thief Hunt | Automatic; R4 or R5 rally Leaders | – | 3 days, roughly every 2 to 3 weeks; first around server day 20 | [Thief Hunt](#/thief-hunt) |
 | Pandemic Experience | Automatic; R4 or R5 summon bosses | Enough members at high difficulty | Every two weeks | [Pandemic Experience](#/pandemic-experience) |
-| Canyon Conquest | Registration | 15 members | From server day 15, 5 rounds | [Canyon Conquest](#/canyon-conquest) |
+| Canyon Conquest | Registration | 15 members at Sanctuary 15+ | From server days 15 to 21, 5 rounds | [Canyon Conquest](#/canyon-conquest) |
 | Crystal Cluster Valley | Automatic | Sanctuary 15 | Three 30-minute windows a day from week 3 | [Crystal Cluster Valley](#/crystal-valley) |
 
 > **Unverified:** the Alliance League's Study Scroll payouts may be per season rather than weekly. See the League guide before counting on them.
@@ -96,7 +99,7 @@ Use this page to answer one question fast: **what is on today, and do I qualify?
 | Event | Needs | When | Guide |
 |---|---|---|---|
 | Survival Battle | Sanctuary 7 | Daily, 6 rounds of 4 hours | [Survival Battle](#/survival-battle) |
-| Top Healer | Sanctuary 6 | 7 days in a row, early in a server | [Top Healer](#/top-healer) |
+| Top Healer | Sanctuary 6 | 7 days in a row, from about server day 4 | [Top Healer](#/top-healer) |
 | Quiz of Wisdom | Sanctuary 6 | Sundays | [Quiz of Wisdom](#/quiz) |
 | Arena | Sanctuary 7 | 5 free fights daily | [Arena](#/arena) |
 | Expedition | Sanctuary 16 | Arenas refresh Sun, Tue, Thu | [Expedition](#/expedition) |

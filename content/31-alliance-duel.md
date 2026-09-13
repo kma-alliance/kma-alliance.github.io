@@ -3,7 +3,7 @@ id: alliance-duel
 title: Alliance Duel
 category: events
 summary: Six days, six themes, Monday to Saturday. What scores on each day, the best point sources, what to save all week, how the League fits on top, and the mistakes that throw points away.
-tags: alliance duel, events, league, speedups, falcon quests, study scrolls, raven gear chests, caravans, covert operations
+tags: alliance duel, ava, alliance vs alliance, events, league, speedups, falcon quests, study scrolls, raven gear chests, caravans, covert operations
 updated: 2026-09-13
 ---
 
@@ -26,6 +26,8 @@ updated: 2026-09-13
 
 Alliance Duel is the event the whole week is built around. Every day has one theme, and only that theme's actions score. So the Duel is not won by spending the most. It is won by **spending the right items on the right day**, and by every member clearing their daily milestones.
 
+> **Note:** players call the Alliance Duel **AvA** (alliance vs alliance). On a new server the first Duel week starts on the first Monday on or after server day 8, against an alliance on your own server with no raid day, and Duels go cross-server around day 29. See [AvA](#/ava) for how it changes as your server ages.
+
 ## How it works
 
 Alliances are matched for six days, **Monday to Saturday**. Before your kingdom qualifies for the League it is one alliance against one other; once it qualifies, **six alliances share a weekly group** (see below). Days roll at **00:00 server time**, not midnight UTC and not your midnight. Check the [Timezones](#/time-zones) page for what that is on your clock. Each day is scored separately, so an item spent on the wrong day scores nothing.
@@ -41,7 +43,7 @@ Alliances are matched for six days, **Monday to Saturday**. Before your kingdom 
     { "label": "Preparation", "when": "Day 5 · Fri", "text": "**Troop training** and promotion, every kind of speedup, Falcon Quests." },
     { "label": "Raid", "when": "Day 6 · Sat", "text": "**Kills** on the matched alliance, UR Caravans and Covert Operations, healing speedups." }
   ],
-  "note": "These short day names match last-asylum.com's event page. Longer versions like \"Territory Development\" or \"Raid Enemy\" come from third-party guide sites. Most players just say \"Day 1\", \"Day 4\" and so on."
+  "note": "These short day names match last-asylum.com's event page. The game's own quiz text uses longer theme names such as \"Enhance Raven\", \"Territory Development\" and \"Tech Research\", so you may see either. Most players just say \"Day 1\", \"Day 4\" and so on."
 }
 ```
 

@@ -7,6 +7,8 @@ tags: beginner, sanctuary, stars, clinic
 updated: 2026-09-12
 ---
 
+> **Tip:** this page is about your own city. For what the **server** unlocks each day, including when AvA and KvK start, see [Your server's first 60 days](#/new-server).
+
 ## Two games in one
 
 *Last Asylum: Plague* has two layers, and most beginner guides mix them up.

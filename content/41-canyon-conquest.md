@@ -14,7 +14,7 @@ updated: 2026-09-13
   "art": "img/store/survive-the-plague.jpg",
   "headline": "Three lanes, fifteen fighters each. Take **two lanes** and the round is yours.",
   "facts": [
-    ["Opens", "Server day 15 · Sanctuary 10"],
+    ["Opens", "Server days 15 to 21 · Sanctuary 15"],
     ["Who", "15+ members at Sanctuary 15+, registered by hand"],
     ["Format", "6 alliances per group, 5 rounds · up to 3 squads each"],
     ["Cost", "No troops die, no march queue used"]

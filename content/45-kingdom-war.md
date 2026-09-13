@@ -1,9 +1,9 @@
 ---
 id: kingdom-war
-title: Kingdom War (KvK)
+title: Kingdom War (KvK / SvS)
 category: kingdom
 summary: Your whole kingdom against a matched kingdom. A points stage decides who attacks, then a battle over the Royal City and its towers. What is solid, what sources still disagree on, and how KMA plays it.
-tags: kingdom war, kvk, svs, kingdom points, throne, temple, towers, royal city, cross-server
+tags: kingdom war, kvk, svs, server vs server, kingdom vs kingdom, new server, kingdom points, throne, temple, towers, royal city, cross-server
 updated: 2026-09-13
 ---
 
@@ -26,6 +26,40 @@ updated: 2026-09-13
 > **Unverified:** sources agree on the shape of Kingdom War but not on the war stage's rules. Guide sites describe a 4-hour Saturday assault that needs 100% occupation of the defender's Royal City. Datamined client rules describe a hold-time war instead: 1 point per second holding the Temple or Throne, 7,200 points to win, corner towers speeding the count. Durations conflict too, even inside the datamine. The table under "What sources still disagree on" lists every conflict. Check your kingdom's Kingdom War screen before planning around a time.
 
 Kingdom War (players say KvK, some say SvS) is the event where your server stops fighting itself. The official patch notes of 26 March 2026 added it as an event where players "complete Quests to earn Points and help their Kingdom achieve victory". What decides it is **turnout**: points come from ordinary events that every member plays, and the stage that follows is won by the kingdom that shows up together.
+
+## On a new server: the road to your first KvK
+
+A new server does not start in Kingdom War. It grows into it, and the build-up is where wars are won.
+
+```kma-steps
+{
+  "title": "From a new server to your first Kingdom War",
+  "steps": [
+    { "label": "AvA on your own server", "when": "First Monday after day 8", "text": "Alliance Duels start inside your server with no raid day. See [AvA](#/ava)." },
+    { "label": "First Royal City Scramble", "when": "Day 27", "text": "Decides your first King. The kingdom goes into war with that leadership." },
+    { "label": "Kingdom War announced", "when": "Day 29", "text": "Duels and caravans go cross-server. The announcement comes two days after the first Royal City Scramble." },
+    { "label": "First battles", "when": "About days 35 to 48", "text": "Points week Sunday to Friday, battle on Saturday. The exact first Saturday varies by server." },
+    { "label": "Brackets grow", "when": "Later rounds", "text": "Young servers are grouped with servers of the same age. One server's first bracket was **4 kingdoms** opened within two days of each other; later brackets are 8." }
+  ]
+}
+```
+
+```kma-tiles
+{
+  "tiles": [
+    ["29", "server day", "Kingdom War announced"],
+    ["35–48", "server days", "first battles, on a Saturday"],
+    ["4", "kingdoms", "in one young server's first bracket"],
+    ["8", "kingdoms", "in later brackets"]
+  ]
+}
+```
+
+On one server that opened on 20 April 2026, Kingdom War was announced around day 29, the first round was fought around day 41 to 48, and the final of its 4-kingdom bracket (servers #177 to #180, all opened within two days) came around day 55.
+
+> **Unverified:** datamined data lists nine battle zones opening on server days 2, 11, 18, 25, 46, 74, 102 and 130, with groups growing from 4 kingdoms to 32. That list names only eight days for nine zones and no player source confirms the days, so do not plan around it. Sources also disagree on the bracket: single elimination in the datamine, a losers' bracket in one player's March 2026 guide.
+
+> **KMA:** Use days 1 to 28 to get ready. Target **T9 troops** and a deep Infirmary before the first war Saturday, keep every Duel week at full effort because Duel wins become Kingdom War points, and settle city and throne diplomacy before the first Royal City Scramble on day 27.
 
 ## How it works
 

@@ -13,6 +13,8 @@ updated: 2026-09-12
 
 ## What this handbook is
 
+> **Tip:** on a brand-new server? Start with [Your server's first 60 days](#/new-server). It shows what opens on each server day, when AvA and KvK arrive, and puts real dates on all of it once you enter your server day.
+
 ![Official App Store art for Last Asylum: Plague.](img/store/survive-the-plague.jpg)
 
 This is the KissMyAzz guide library for *Last Asylum: Plague*. It exists because chat scrolls away and screenshots get lost. Every guide here has a **Last checked** date at the top. A green dot means it was reviewed in the last 45 days. An amber dot means it is due for a review, so double-check anything important in-game before you act on it.
