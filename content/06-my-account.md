@@ -7,7 +7,9 @@ tags: account, profile, personalise, setup
 updated: 2026-09-13
 ---
 
-This is stored in your browser's local storage on this device. It never leaves your phone or computer, it is not uploaded anywhere, and officers cannot see it. Clearing your browser data clears it.
+This is stored in your browser's local storage on this device. Your numbers never leave your phone or computer, and officers cannot see them. Clearing your browser data clears it.
+
+The site does keep an anonymous count of visits: which guides get opened, and how many accounts get set up. No names, no numbers you type, and no cookies.
 
 <div data-widget="profile"></div>
 
