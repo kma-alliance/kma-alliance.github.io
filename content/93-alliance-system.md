@@ -25,7 +25,7 @@ Joining pays the member 300 diamonds and, below Sanctuary 8, a free teleport nex
 
 ## Titles
 
-Four honorary posts, one holder each, given to R4s by the R5. Sources disagree on the fourth name (Inspector or Goddess). No title gives a stat buff on its own; the only documented perk is the **+5% rally damage** that R5 and title holders share.
+Four honorary posts, one holder each, given to R4s by the R5. Sources disagree on the fourth name (Inspector or Goddess). No title gives a stat buff on its own; the only documented perk is **+5% damage** for R5 and title holders (+2.5% for R4), and it is only documented for Cheese Trap and the Alliance Boss.
 
 | Title | Job in KMA |
 |---|---|

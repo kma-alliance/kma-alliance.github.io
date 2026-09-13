@@ -23,11 +23,11 @@ Start with [your account](#/my-account). It takes a minute, it is saved on your 
 
 ## Quick calculators
 
-### Shared alliance spot (unverified)
+### Alliance Excavation speed
 
 <div data-widget="calc-dig"></div>
 
-This one is kept only because the underlying maths is interesting: a mechanic where speed scales with the square of the participants rewards piling on enormously. Whether the game actually has it is [not confirmed](#/alliance-boss-excavation).
+Treasure digging is confirmed in-game: player videos show a Treasure Digger tab on the Black Ops screen and chat lines when a member unearths treasure. The speed rule behind this calculator, where time shrinks with the square of the helpers, comes from datamined numbers only, so treat the result as an estimate. Details on the [Alliance Boss and Alliance Excavation](#/alliance-boss-excavation) page.
 
 ### Troop promotion
 

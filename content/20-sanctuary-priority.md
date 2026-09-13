@@ -62,7 +62,7 @@ Reaching Sanctuary 17 costs about **44.5 million** grain plus the same again in 
 | Infirmary | Sanctuary 7 | up to 3 | Heals severely wounded. Overflow wounded die. Keep at or above Barracks. |
 | Soldier's Rest | Sanctuary 1 | 1 | Converts fallen troops into resting soldiers who return. Cuts revive cost. |
 | Walls | Sanctuary 4 | 1 | City defense and a prerequisite at 5, 6, 9 and 10. Stay within 5 levels of the Sanctuary. |
-| Watchtower | Sanctuary 8 | 1 | March warnings and Scope Level, which hides your troops from enemy scouts. |
+| Watchtower | Sanctuary 8 | 1 | March warnings, and an anti-scout rating that hides details from enemy scout reports. |
 | Alliance Hall | Sanctuary 5 | 1 | Help count per queue: 4 at level 1, 20 at level 30. Prerequisite at 7, 8, 9 and 20. |
 | Antitoxin Workshop | Sanctuary 5 | 1 to 5 | Hero XP. 1,556 an hour at level 1, 259,666 at level 30. Tap to collect. |
 | Smelting Workshop | Sanctuary 5 | up to 5 | Gearstone for hero gear. Push to 25. |

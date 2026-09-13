@@ -44,7 +44,7 @@ The wiki says the game has up to 3 Training Grounds; every guide describes four.
 
 ## Alliance Duel day 5
 
-Training scores 20 points per T1 trained up to 110 per T10. Promotion steps count as training the new tier, so **promote one tier at a time** on day 5 and keep a stockpile of low-tier soldiers all week for it. Training speedups score 50 per minute on days 5 and 6.
+Training scores 20 points per T1 trained up to 110 per T10. Promoted soldiers count as training the new tier, so keep a stockpile of low-tier soldiers all week and promote them on day 5. Guides disagree on whether promoting one tier at a time scores more than promoting straight to your top tier; players have been seen doing both, so test with a small batch and compare the points. Training speedups score 50 per minute on days 5 and 6.
 
 ## Healing
 

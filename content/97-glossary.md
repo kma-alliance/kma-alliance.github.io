@@ -20,25 +20,27 @@ updated: 2026-09-12
 | Antitoxin | The material that raises a hero's **level**. Not the same as hero XP, which comes from Covert Ops. |
 | Raven | Your sixth fighter. Raven Fruit and Raven Essence are two separate items that level it, and Epigraphs slot into it. |
 | Falcon Tower, Falcon Quests | The world-map building and its daily quest board (refreshes every 6 hours). |
-| Power (also written Might) | Your total score. Most players say Power; some guides and the press write Might or CP. Same number. |
+| Power (also written Might) | Your total score. Most players say Power; the game's own quiz text and some guides say Might. Same number. |
 | Covert Operations ("Covert Ops") | Timed missions that pay hero XP. Unlocked by the Black Ops building at Sanctuary 9. |
 | Black Ops Chest | A reward crate from raiding caravans on other servers. Not a game mode. |
 | Study Scrolls | Currency from Alliance Duel results. Buys the Duel research tree and T10. |
 | Alliance Coins, Alliance Points | Same thing. The Alliance Shop currency. |
 | Lion Coins | Thief Hunt currency. |
-| Fame Medals | The name guide sites give the Honor Shop currency, earned in Royal City, Canyon Conquest and Kingdom War. Unconfirmed in-game. Glory Medals and Expedition Medals are probably currencies for other shops, not rival names for this one. |
+| Glory Medals, Fame Medals | The medals earned in the Arena, Canyon Conquest and Kingdom War. Datamined data calls them glory medals, spent in a Glory Shop; guide sites and one player video say Fame Medals and Honor Shop. Probably one currency with two names, but unconfirmed. |
 | Epigraph | Gear that slots into the Raven. Players say "Raven and Epigraphs" in one breath; the Epigraph Workshop opens at Sanctuary 5. |
 | Recruit Ticket | Summons heroes. The main hero pull, with a guaranteed UR shard reward every 50 summons. A separate **Survivor Recruit Ticket** recruits survivors. |
 | Wishing Wheel | A side prize wheel, not the main hero pull. There is a hero wheel and a Raven wheel, and one free spin coin arrives daily. |
 | Gearstone | The material hero gear is crafted and upgraded with. The item name is singular. |
-| Mystic Treasure | The buried-treasure hunt. Seven fragments make one map. Older guides call it Treasure Maps. |
-| Alliance Excavation | A shared site on the alliance map that finishes faster the more members tap it. The publisher's name for it; many players say Alliance Expedition. |
+| Mystic Treasure | A limited pirate-themed event with daily Buried Treasure runs and a treasure store. Several players say "Mythic Treasure". A separate fragment-based "Treasure Maps" system in datamined data is not confirmed in-game. |
+| Alliance Excavation | Treasure digging on the alliance map, which runs faster when members help. Player videos show a Treasure Digger tab on the Black Ops screen. Not the same thing as Alliance Expedition, which is a separate event. |
 | Alliance Caravan | The alliance-wide caravan run, separate from your four personal caravans. |
 | City expansion track | The numbered plots around your Sanctuary you clear to expand the city. 153 steps, 145 Recruit Tickets. One site calls it the Exploration Chain, which is not a game label. |
 | King, court posts | The Royal City Scramble winner's leader becomes King and appoints posts with standing buffs under Royal City, Manage, Official Appointment. |
-| Thief Hunt | The world-map event where you hit thief targets for Lion Coins. |
+| Hunt Battle | The officer-started alliance event where waves of Blights spawn on alliance land. Official name, per the 30 July 2026 update notes. |
+| Hell Doctor | The enemy in Pandemic Experience, per the official update notes. Guide blogs say Hell Nurse. |
+| Thief Hunt | The world-map event where you hit thief targets for Lion Coins. The 2 July 2026 update notes called it Bandit Hunt. |
 | War Frenzy | 15-minute shield lock after any military action. |
-| Scope Level | Your Watchtower's anti-scout rating. |
+| Anti-scout rating | What your Watchtower gives you against enemy scouting: a chance to block scouts and, at higher levels, hidden report fields. Older notes call it Scope Level, which is not a confirmed game label. |
 | NAP | Non-aggression pact between alliances. |
 | R1 to R5 | Alliance ranks. R5 is the leader, R4 officers. |
 | God of War, Diplomat, Recruiter, Inspector (Goddess) | The four alliance titles. |

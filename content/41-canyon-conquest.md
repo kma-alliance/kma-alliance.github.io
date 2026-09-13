@@ -3,7 +3,7 @@ id: canyon-conquest
 title: Canyon Conquest
 category: events
 summary: A three-lane alliance league where nobody loses troops. Win two lanes of three, and let officers decide where your Power does the most good.
-tags: canyon conquest, lanes, glory medals, fame medals, league, alliance event
+tags: canyon conquest, lanes, glory medals, league, alliance event
 updated: 2026-09-13
 ---
 
@@ -15,11 +15,11 @@ updated: 2026-09-13
   "headline": "Three lanes, fifteen fighters each. Take **two lanes** and the round is yours.",
   "facts": [
     ["Opens", "Server day 15 · Sanctuary 10"],
-    ["Who", "15 registered members with level 10+ territories"],
-    ["Format", "6 alliances per group, 5 round-robin rounds"],
+    ["Who", "15+ members at Sanctuary 15+, registered by hand"],
+    ["Format", "6 alliances per group, 5 rounds · up to 3 squads each"],
     ["Cost", "No troops die, no march queue used"]
   ],
-  "rewards": ["Glory Medals", "Fame Medals", "League promotion"]
+  "rewards": ["Glory Medals", "League promotion", "Shop medals"]
 }
 ```
 
@@ -27,7 +27,7 @@ Canyon Conquest is the easiest alliance event to get right and the easiest to th
 
 ## How a round is won
 
-Every alliance in the round splits its fighters across three lanes: Left, Mid and Right. Each lane is fought on its own, and the round is decided by how many lanes you take.
+Every alliance in the round splits its fighters across three lanes: Left, Mid and Right. The official update notes say **each player may dispatch three squads**, and each squad goes into a lane. Each lane is fought on its own, and the round is decided by how many lanes you take.
 
 ```kma-map
 {
@@ -69,7 +69,7 @@ Arrangements **lock when the entry phase starts**. If a lane has more people ass
 {
   "title": "From sign-up to rewards",
   "steps": [
-    { "label": "Register", "text": "At least **15 members** with level 10+ territories must be registered, or the alliance cannot enter." },
+    { "label": "Register", "text": "Registration is manual. The alliance needs at least **15 members at Sanctuary 15+** signed up, or it cannot enter." },
     { "label": "Lanes assigned", "text": "Officers place every member in Left, Mid or Right. Lanes can be changed any time before battle." },
     { "label": "Entry locks", "text": "Once the entry phase starts, lanes are frozen. Higher Power deploys first if a lane is full." },
     { "label": "5 rounds", "text": "Round-robin against the other five alliances in the group. A win is 3 points, a draw 1, a loss 0. A bye counts as a win." },
@@ -108,11 +108,13 @@ Your alliance's Glory Medal total decides its league. Higher leagues pay more fo
 | Epic | 4,500 to 6,999 | 20 | 800 | 240 | 240 |
 | Mythic | 7,000+ | 20 | 1,000 | 300 | 300 |
 
-At the end of the group, **rank 1 gains 750 Glory Medals and rank 6 loses 500**, so a bad week can drop the alliance a league. Rank 1 also pays **8,000 to 16,000 Fame Medals** depending on league.
+At the end of the group, **rank 1 gains 750 Glory Medals and rank 6 loses 500**, so a bad week can drop the alliance a league. Rank 1 also pays **8,000 to 16,000 medals** for the shop, depending on league.
+
+> **Unverified:** guide sites call the shop reward Fame Medals, separate from league Glory Medals. Datamined data uses a single glory medal currency for the Arena, Canyon Conquest and Kingdom War, spent in a Glory Shop. Check the reward screen to see whether you receive one medal type or two.
 
 ## The KMA plan: stack two, concede one
 
-Because a round only needs two lanes, the strongest play is usually to **pile the alliance's best fighters into two lanes** and put the rest in the third. Losing one lane heavily costs nothing extra; losing two lanes narrowly costs the round.
+Because a round only needs two lanes, the strongest play is usually to **pile the alliance's best fighters into two lanes** and put the rest in the third. The game's own launch announcement gives the same advice: concentrate your forces on two lanes instead of spreading thin. Losing one lane heavily costs nothing extra; losing two lanes narrowly costs the round.
 
 ```kma-map
 {
@@ -151,7 +153,7 @@ Because a round only needs two lanes, the strongest play is usually to **pile th
 
 **Do I lose anything by joining?** No. Troops do not die and no march queue is used.
 
-**I am weak. Should I still register?** Yes. You count toward the 15-member minimum, you can fill the conceded lane, and you get rewards even if you never deploy.
+**I am weak. Should I still register?** If you are Sanctuary 15 or higher, yes. You count toward the 15-member minimum, you can fill the conceded lane, and you get rewards even if you never deploy.
 
 **What happens if we tie a round?** Total deployed Power breaks the tie, so every registered member's Power counts, even in the conceded lane.
 

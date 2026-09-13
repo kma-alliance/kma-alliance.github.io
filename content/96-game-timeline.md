@@ -17,11 +17,11 @@ updated: 2026-09-12
 |---|---|
 | Dec 2025 | Servers 1 to 8 open |
 | ~28 Feb 2026 | Global launch. Top 100 free in 42 countries |
-| 24 Mar 2026 | A cross-server kingdom event announced (guide sites call it Kingdom Clash; the in-game name is unconfirmed) |
+| 24 Mar 2026 | Kingdom War announced as the first cross-server kingdom event (guide sites called it Kingdom Clash) |
 | 3 to 9 Apr 2026 | Easter event: UR Omni Shard, Greenery territory skin, egg hunt |
 | 2 Jul 2026 | **Era of Revival** announced |
 | 10 Jul 2026 | Claire (SSR) can be converted to UR |
-| 13 Jul 2026 | Era of Revival live on Kingdoms 33 to 64, rolling to servers at roughly 130+ days old. Hero Awakening (Marlena and Annie first), Exclusive Weapons, Lord Specialty and Skills, Lord Resistance, Revival Expedition League (16 kingdoms, replaces Kingdom War), city and hero skins gain stats. Servers in the Era close to new characters |
+| 13 Jul 2026 | Era of Revival live on Kingdoms 33 to 64, rolling to servers at roughly 130+ days old. Hero Awakening (Marlena and Annie first), Exclusive Weapons, Lord Specialty and Skills, Lord Resistance (a stat that only protects up to the enemy's own value; see [Era](#/era)), Revival Expedition League (16 kingdoms, replaces Kingdom War), city and hero skins gain stats. Servers in the Era close to new characters |
 | Jul 2026 | New UR **Ulfrid (Brian)**, Warlock tank with 147% damage reflect |
 | Aug 2026 | Qixi code, LADOG26 |
 | 11 and 14 Aug 2026 | Updates announced in-game; contents not recoverable from public sources |

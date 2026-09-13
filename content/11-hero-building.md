@@ -30,7 +30,7 @@ Hero level cap is 5 at Sanctuary 1 to 3, 15 at Sanctuary 4, then **5 × Sanctuar
 | 90 | 20,800,000 |
 | 150 | not published |
 
-Antitoxin sources: the Antitoxin Workshop (1 at Sanctuary 5, up to 5 at Sanctuary 16, tap to collect), Covert Operations (the biggest source, up to 12 million per top-tier op), Arena (up to 250,000 a day free), Undead Siege, Level Supplies, blight hunting.
+Antitoxin sources: the Antitoxin Workshop (1 at Sanctuary 5, up to 5 at Sanctuary 16, tap to collect), Covert Operations (the biggest source; datamined data lists up to 12,177,000 hero XP for a top-tier op), Arena (up to 250,000 a day free), Undead Siege, Level Supplies, blight hunting.
 
 > **Tip:** Hold Level Supplies until your Sanctuary is high. They pay out based on your level when opened, and Antitoxin supplies jump from 670k at level 1 to 38 million at level 35.
 

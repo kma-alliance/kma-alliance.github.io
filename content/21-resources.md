@@ -40,7 +40,7 @@ Event reward boxes that pay out based on your Sanctuary level **at the moment yo
 |---|---|---|
 | Diamonds | ~100 per $1. Free: Quiz of Wisdom (75 to 150), Dawn Breakout (80 a run), Hero Road (100 to 900 per difficulty), Thief Leader rallies (20), Development Contract, alliance Golden Eggs | Build queues, VIP 5, emergency shields. Not speedups. |
 | Study Scrolls | Alliance Duel (420 a week on a loss, 840 on a win), Alliance League, Lion Coin shop, event chests | Alliance Duel research tree (54,110 total) and Caravan Transport tree (81,950). Gate for T10 troops. |
-| Alliance Coins | Alliance help, tech donations, the alliance Blight event (500 per Blight, 2,500 per boss), Expedition, Undead Siege, Royal City honor tiers | Shields, UR Omni Shards, Raven Essence, Direct Relocate, survivor tokens |
+| Alliance Coins | Alliance help, tech donations, Hunt Battle (500 per Blight, 2,500 per boss), Expedition, Undead Siege, Royal City honor tiers | Shields, UR Omni Shards, Raven Essence, Direct Relocate, survivor tokens |
 | Lion Coins | Gold Thieves and Thief Leader rallies (Thief Hunt) | Awaken Omni Shards (120), Recruit Tickets (80), Study Scrolls (200 per 10), Raven Essence (200) |
 | Raven Fruit and Essence | Blights on the map (800 fruit a hit), Gold Thief (1,360), daily rewards, alliance caravan, shops | Raven levels. Essence is needed at cap breakpoints. Duel day 1 only. |
 | Gearstone | Smelting Workshop, Covert Ops, Expedition shop, Hero Growth Tasks (22,500 per track) | Hero gear |

@@ -1,0 +1,412 @@
+{
+ "source": "Game data from client version 1.0.87, via wiki-last-asylum.com",
+ "checked": "2026-09-13",
+ "count": 81,
+ "questions": [
+  {
+   "q": "At which Sanctuary level is Raven Gear unlocked?",
+   "a": "15",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "At which VIP level is Auto Dispatch for Covert Operations unlocked?",
+   "a": "10",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "At which VIP level is the Quick Challenge feature for Expedition Battle unlocked?",
+   "a": "8",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "At which VIP level is the Super Mode for Covert Operations unlocked?",
+   "a": "12",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "At which VIP level is the VIP Level Display in Chat feature unlocked?",
+   "a": "3",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "Does the Covert Operation take up a march queue?",
+   "a": "No",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How did the disease enter the town?",
+   "a": "Flea or rat bite",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "How do you enhance a squad's might after a failed exploration?",
+   "a": "Both",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "How do you enhance the rewards obtained from the Explorer's Camp?",
+   "a": "Clear more stages",
+   "cat": "City and resources"
+  },
+  {
+   "q": "How do you obtain survivors?",
+   "a": "Both of the above",
+   "cat": "City and resources"
+  },
+  {
+   "q": "How do you raise the star of the Infirmary?",
+   "a": "Upgrade buildings in the Infirmary",
+   "cat": "City and resources"
+  },
+  {
+   "q": "How do you select heroes to maximize their overall damage dealt when building a hero lineup?",
+   "a": "5 members from the same faction",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "How do you upgrade soldiers?",
+   "a": "Upgrade Training Grounds",
+   "cat": "City and resources"
+  },
+  {
+   "q": "How long is the time interval between the two opportunities to claim Stamina each day?",
+   "a": "4 Hours",
+   "cat": "City and resources"
+  },
+  {
+   "q": "How many Covert Operations can a march queue execute simultaneously?",
+   "a": "2",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How many hours does each Survival Battle last in the game?",
+   "a": "4",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How many minutes does an Elixir Scramble last?",
+   "a": "30 Minutes",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How many times can non-Alliance members' Covert Operations be plundered each day?",
+   "a": "5",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How many times can you assist Alliance members in completing Covert Operations daily?",
+   "a": "5",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "How many times can you plunder others' Trade Caravan daily?",
+   "a": "4",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "In the Elixir Scramble, what is the initial free relocation interval (in minutes)?",
+   "a": "2 Minutes",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "In which building can players quickly dispatch survivors?",
+   "a": "Residence",
+   "cat": "City and resources"
+  },
+  {
+   "q": "On which days is the Alliance Duel event not available?",
+   "a": "Sundays",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "Researching Alliance Duel technology can increase the points gained per Alliance Duel.",
+   "a": "Correct",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "There is no limit to the number of Soldiers.",
+   "a": "Incorrect",
+   "cat": "City and resources"
+  },
+  {
+   "q": "We need to place Arthur (Tank Hero) in the back row.",
+   "a": "Incorrect",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What are the advantages of forming a team with Heroes from the same faction?",
+   "a": "Damage increased by faction bonus",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What are the roles of different Hero classes?",
+   "a": "All of the above",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What are the ways to obtain Copper Coins?",
+   "a": "Collect in the Sanctuary",
+   "cat": "City and resources"
+  },
+  {
+   "q": "What benefits can Alliance members provide?",
+   "a": "Both of the above",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What Buffs are available after joining an Alliance?",
+   "a": "Both",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What buffs are not unlocked by raising your VIP level?",
+   "a": "Enhance Soldier Stats",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "What can the items produced in the Weaving Workshop be used for?",
+   "a": "Craft Gear",
+   "cat": "City and resources"
+  },
+  {
+   "q": "What can the Raven do in the game?",
+   "a": "All of the above",
+   "cat": "City and resources"
+  },
+  {
+   "q": "What can you do when lacking resources for building/technology upgrades?",
+   "a": "All of the above",
+   "cat": "City and resources"
+  },
+  {
+   "q": "What changes when the Star level of Covert Operations increases?",
+   "a": "All of the above",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What effects does Arthur's Active Skill have?",
+   "a": "Add Shields",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is Shadow's role in the game?",
+   "a": "Tank",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is the benefit of having higher level Barracks in the game?",
+   "a": "Soldier capacity increased",
+   "cat": "City and resources"
+  },
+  {
+   "q": "What is the Caravan slot related to?",
+   "a": "Squad Count",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is the function of Antitoxin?",
+   "a": "Enhances or upgrades hero",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is the item that serves as proof of being the Mayor in the game?",
+   "a": "Signet Ring",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What is the most magnificent building in the town?",
+   "a": "Sanctuary",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What is the primary use of the plague doctor's staff?",
+   "a": "Keep a distance from patients",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What is the purpose of Curios?",
+   "a": "Both of the above",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is the purpose of donating Mouse Lure in the Cheese Trap event?",
+   "a": "To increase player's damage dealt",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is the quality of Arthur in the game?",
+   "a": "UR",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is the quality of Celia in the game?",
+   "a": "SSR",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What is the theme for Alliance Duel on Mondays?",
+   "a": "Enhance Raven",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is the theme for Alliance Duel on Thursdays?",
+   "a": "Enhance Heroes",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is the theme for Alliance Duel on Tuesdays?",
+   "a": "Territory Development",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is the theme for Alliance Duel on Wednesdays?",
+   "a": "Tech Research",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "What is typically placed inside the beak of a Plague Doctor's mask?",
+   "a": "Spices and herbs",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What limits the hero level cap?",
+   "a": "Sanctuary Level",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What limits the hero skill level cap?",
+   "a": "Hero Stars",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What should be done after getting infected?",
+   "a": "See a doctor for treatment",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What special attire is needed to prevent the disease?",
+   "a": "Plague Doctor's Garb",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "What type of hero is Marlena?",
+   "a": "Warrior (Red)",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What type of heroes do Rangers counter?",
+   "a": "Warrior",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What type of heroes do Warlocks counter?",
+   "a": "Ranger",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What type of heroes do Warriors counter?",
+   "a": "Warlock",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "What will infected individuals turn into if they are not treated in time?",
+   "a": "Blight",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "When a hero hits the level cap, which building do you need to upgrade?",
+   "a": "Sanctuary",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "When does the faction bonus feature unlock?",
+   "a": "First Royal City Scramble",
+   "cat": "Alliance and events"
+  },
+  {
+   "q": "When is faction restraint applicable?",
+   "a": "All of the above",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Where is Grain produced?",
+   "a": "Farm",
+   "cat": "City and resources"
+  },
+  {
+   "q": "Where is Timber produced?",
+   "a": "Lumberyard",
+   "cat": "City and resources"
+  },
+  {
+   "q": "Which building produces Antitoxin in the game?",
+   "a": "Antitoxin Workshop",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which building produces Gearstone?",
+   "a": "Smelting Workshop",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which faction counters the Ranger",
+   "a": "Warlock",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which faction counters the Warrior",
+   "a": "Ranger",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which faction's heroes counter Warlock?",
+   "a": "Warrior",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which gear boosts a hero's Might the most significantly?",
+   "a": "UR",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which methods do not boost squad Might after defeat?",
+   "a": "Recruit Survivors",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which of the following can be obtained via promotion?",
+   "a": "Clinic Buff",
+   "cat": "VIP and features"
+  },
+  {
+   "q": "Which of the following heroes is of UR quality?",
+   "a": "Marlena",
+   "cat": "Heroes and combat"
+  },
+  {
+   "q": "Which of the following materials is not a main resource in the game?",
+   "a": "Iron Ore",
+   "cat": "City and resources"
+  },
+  {
+   "q": "Which type of Quest rewards can survivor Freya boost?",
+   "a": "Falcon Quest",
+   "cat": "City and resources"
+  },
+  {
+   "q": "Who controls the black rats and attacks the town?",
+   "a": "Black Wizard",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "Who is responsible for severely injuring and infecting Celia?",
+   "a": "Rat King",
+   "cat": "Story and lore"
+  },
+  {
+   "q": "Who was the first emergency patient rescued by the Sanctuary?",
+   "a": "William",
+   "cat": "Story and lore"
+  }
+ ]
+}
