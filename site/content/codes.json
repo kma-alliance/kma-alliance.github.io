@@ -1,5 +1,5 @@
 {
- "scanned": "2026-09-13 16:32 UTC",
+ "scanned": "2026-09-13 16:33 UTC",
  "sources_checked": [
   "PocketGamer",
   "lastasylumplague",
@@ -11,6 +11,7 @@
   "wiki-last-asylum"
  ],
  "sources_total": 8,
+ "confident": true,
  "codes": [
   {
    "code": "LAKR10K6L",
