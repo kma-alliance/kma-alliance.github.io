@@ -1,8 +1,9 @@
 {
- "scanned": "2026-09-20 04:53 UTC",
+ "scanned": "2026-09-20 11:23 UTC",
  "sources_checked": [
   "PocketGamer",
   "lastasylumplague",
+  "lastasylumguide",
   "LDShop",
   "LDPlayer",
   "Lootbar",
@@ -52,6 +53,7 @@
    "last_active": "2026-09-20",
    "active_sources": [
     "UCNGame",
+    "lastasylumguide",
     "lastasylumplague"
    ],
    "expired_sources": [],
@@ -116,6 +118,7 @@
    "active_sources": [
     "LDPlayer",
     "UCNGame",
+    "lastasylumguide",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
