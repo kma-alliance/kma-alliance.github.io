@@ -1,7 +1,8 @@
 {
- "scanned": "2026-10-02 12:34 UTC",
+ "scanned": "2026-10-02 22:14 UTC",
  "sources_checked": [
   "PocketGamer",
+  "lastasylumplague",
   "lastasylumguide",
   "LDShop",
   "Lootbar",
@@ -62,7 +63,8 @@
    "last_active": "2026-10-02",
    "active_sources": [
     "UCNGame",
-    "lastasylumguide"
+    "lastasylumguide",
+    "lastasylumplague"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -136,6 +138,7 @@
     "LDShop",
     "Lootbar",
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -150,6 +153,7 @@
     "LDShop",
     "Lootbar",
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -162,6 +166,7 @@
    "last_active": "2026-10-02",
    "active_sources": [
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -174,6 +179,7 @@
    "last_active": "2026-10-02",
    "active_sources": [
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -189,6 +195,7 @@
     "Lootbar",
     "PocketGamer",
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -204,6 +211,7 @@
     "Lootbar",
     "PocketGamer",
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
