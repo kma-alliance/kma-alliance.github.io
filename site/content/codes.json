@@ -1,5 +1,5 @@
 {
- "scanned": "2026-11-01 06:03 UTC",
+ "scanned": "2026-11-01 13:24 UTC",
  "sources_checked": [
   "PocketGamer",
   "lastasylumplague",
@@ -12,12 +12,57 @@
  "confident": true,
  "codes": [
   {
+   "code": "LAAS777",
+   "status": "active",
+   "first_seen": "2026-11-01",
+   "last_active": "2026-11-01",
+   "active_sources": [
+    "lastasylumplague"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LACAFE26",
+   "status": "active",
+   "first_seen": "2026-11-01",
+   "last_active": "2026-11-01",
+   "active_sources": [
+    "lastasylumplague"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAPJAP777",
+   "status": "active",
+   "first_seen": "2026-11-01",
+   "last_active": "2026-11-01",
+   "active_sources": [
+    "lastasylumplague"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAPKOR777",
+   "status": "active",
+   "first_seen": "2026-11-01",
+   "last_active": "2026-11-01",
+   "active_sources": [
+    "lastasylumplague"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
    "code": "LAHAL26",
    "status": "active",
    "first_seen": "2026-10-31",
    "last_active": "2026-11-01",
    "active_sources": [
-    "UCNGame"
+    "UCNGame",
+    "lastasylumplague"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -28,8 +73,7 @@
    "first_seen": "2026-10-16",
    "last_active": "2026-11-01",
    "active_sources": [
-    "UCNGame",
-    "lastasylumplague"
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -62,6 +106,7 @@
    "first_seen": "2026-09-12",
    "last_active": "2026-11-01",
    "active_sources": [
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -98,6 +143,7 @@
    "last_active": "2026-11-01",
    "active_sources": [
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -121,6 +167,7 @@
    "last_active": "2026-11-01",
    "active_sources": [
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -133,6 +180,7 @@
    "last_active": "2026-11-01",
    "active_sources": [
     "UCNGame",
+    "lastasylumplague",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
