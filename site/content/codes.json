@@ -1,5 +1,5 @@
 {
- "scanned": "2026-11-13 06:44 UTC",
+ "scanned": "2026-11-13 19:41 UTC",
  "sources_checked": [
   "PocketGamer",
   "lastasylumplague",
@@ -11,6 +11,17 @@
  "sources_total": 8,
  "confident": true,
  "codes": [
+  {
+   "code": "LAKIND26",
+   "status": "active",
+   "first_seen": "2026-11-13",
+   "last_active": "2026-11-13",
+   "active_sources": [
+    "UCNGame"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
   {
    "code": "LA350K6CN",
    "status": "active",
