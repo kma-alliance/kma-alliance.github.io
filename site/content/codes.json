@@ -1,5 +1,5 @@
 {
- "scanned": "2026-11-20 07:14 UTC",
+ "scanned": "2026-11-20 20:18 UTC",
  "sources_checked": [
   "PocketGamer",
   "lastasylumplague",
@@ -17,6 +17,7 @@
    "first_seen": "2026-11-13",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague"
    ],
    "expired_sources": [],
@@ -28,6 +29,7 @@
    "first_seen": "2026-11-04",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague"
    ],
    "expired_sources": [],
@@ -83,7 +85,41 @@
    "first_seen": "2026-10-31",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAGRAN26",
+   "status": "active",
+   "first_seen": "2026-10-16",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAMAU26",
+   "status": "active",
+   "first_seen": "2026-09-25",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAOKT26",
+   "status": "active",
+   "first_seen": "2026-09-20",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -117,6 +153,7 @@
    "first_seen": "2026-09-09",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumguide",
     "lastasylumplague"
    ],
@@ -129,8 +166,20 @@
    "first_seen": "2026-09-01",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAWTD16F",
+   "status": "active",
+   "first_seen": "2026-09-01",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -141,6 +190,7 @@
    "first_seen": "2026-09-01",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -153,6 +203,7 @@
    "first_seen": "2026-09-01",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -165,6 +216,7 @@
    "first_seen": "2026-08-27",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumguide",
     "wiki-last-asylum"
    ],
@@ -178,6 +230,7 @@
    "last_active": "2026-11-20",
    "active_sources": [
     "LDShop",
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -191,6 +244,7 @@
    "last_active": "2026-11-20",
    "active_sources": [
     "LDShop",
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -203,6 +257,7 @@
    "first_seen": "2026-08-25",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -215,6 +270,7 @@
    "first_seen": "2026-08-20",
    "last_active": "2026-11-20",
    "active_sources": [
+    "UCNGame",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -228,6 +284,7 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -242,6 +299,7 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "lastasylumplague",
     "wiki-last-asylum"
    ],
@@ -254,7 +312,19 @@
    "first_seen": "2026-06-01",
    "last_active": "2026-11-20",
    "active_sources": [
-    "LDShop"
+    "LDShop",
+    "UCNGame"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LA26ALLY",
+   "status": "active",
+   "first_seen": "2026-06-01",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -267,7 +337,30 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "wiki-last-asylum"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LA26LOVE",
+   "status": "active",
+   "first_seen": "2026-06-01",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LA26PLAY",
+   "status": "active",
+   "first_seen": "2026-06-01",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -280,6 +373,7 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -291,7 +385,8 @@
    "first_seen": "2026-06-01",
    "last_active": "2026-11-20",
    "active_sources": [
-    "LDShop"
+    "LDShop",
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -304,6 +399,7 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -317,7 +413,19 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "wiki-last-asylum"
+   ],
+   "expired_sources": [],
+   "rewards": ""
+  },
+  {
+   "code": "LAXMAS25",
+   "status": "active",
+   "first_seen": "2026-06-01",
+   "last_active": "2026-11-20",
+   "active_sources": [
+    "UCNGame"
    ],
    "expired_sources": [],
    "rewards": ""
@@ -330,6 +438,7 @@
    "active_sources": [
     "LDShop",
     "PocketGamer",
+    "UCNGame",
     "wiki-last-asylum"
    ],
    "expired_sources": [],
@@ -341,7 +450,8 @@
    "first_seen": "2026-06-01",
    "last_active": "2026-11-20",
    "active_sources": [
-    "LDShop"
+    "LDShop",
+    "UCNGame"
    ],
    "expired_sources": [
     "PocketGamer"
@@ -359,78 +469,6 @@
    "expired_sources": [
     "PocketGamer"
    ],
-   "rewards": ""
-  },
-  {
-   "code": "LAGRAN26",
-   "status": "unconfirmed",
-   "first_seen": "2026-10-16",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LAMAU26",
-   "status": "unconfirmed",
-   "first_seen": "2026-09-25",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LAOKT26",
-   "status": "unconfirmed",
-   "first_seen": "2026-09-20",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LAWTD16F",
-   "status": "unconfirmed",
-   "first_seen": "2026-09-01",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LA26ALLY",
-   "status": "unconfirmed",
-   "first_seen": "2026-06-01",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LA26LOVE",
-   "status": "unconfirmed",
-   "first_seen": "2026-06-01",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LA26PLAY",
-   "status": "unconfirmed",
-   "first_seen": "2026-06-01",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
-   "rewards": ""
-  },
-  {
-   "code": "LAXMAS25",
-   "status": "unconfirmed",
-   "first_seen": "2026-06-01",
-   "last_active": "2026-11-19",
-   "active_sources": [],
-   "expired_sources": [],
    "rewards": ""
   }
  ]
